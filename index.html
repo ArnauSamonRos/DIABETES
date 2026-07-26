@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DiabetesHoy · Novedades sobre diabetes</title>
+  <meta name="description" content="Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlaces a las fuentes originales." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Novedades sobre diabetes</h1>
+      <p>Sensores, medicación, estudios clínicos y dietas: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
+    </section>
+
+    <div class="filters">
+      <button class="filter-btn" data-filtro="todas">Todas</button>
+      <button class="filter-btn" data-filtro="sensores">Sensores</button>
+      <button class="filter-btn" data-filtro="medicacion">Medicación</button>
+      <button class="filter-btn" data-filtro="estudios">Estudios</button>
+      <button class="filter-btn" data-filtro="dietas">Dietas</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="disclaimer">
+      Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/partials.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
