@@ -128,6 +128,69 @@ const PUMPS = [
   }
 ];
 
+const INSULIN_TYPES = [
+  {
+    tipo: "Ultrarrápida (rápida)",
+    ejemplos: "Análogos como lispro, aspart o glulisina",
+    inicio: "~15 minutos",
+    pico: "Alrededor de 1 hora",
+    duracion: "2 a 4 horas",
+    uso: "Se inyecta justo antes de comer, para cubrir la subida de glucosa de esa comida.",
+    detalle:
+      "Es la insulina que actúa más rápido. Al empezar a hacer efecto casi enseguida, se usa para cubrir lo que se come en cada comida principal, y por eso normalmente se inyecta justo antes (o, en algunos casos, justo después) de empezar a comer."
+  },
+  {
+    tipo: "Corta (regular)",
+    ejemplos: "Insulina humana regular",
+    inicio: "~30 minutos",
+    pico: "2 a 3 horas",
+    duracion: "3 a 6 horas",
+    uso: "Se inyecta entre 30 y 60 minutos antes de comer.",
+    detalle:
+      "Es de las insulinas más antiguas y tarda algo más en empezar a actuar que los análogos ultrarrápidos, por lo que necesita inyectarse con más antelación respecto a la comida. Hoy en día se usa con menos frecuencia que las insulinas rápidas más modernas."
+  },
+  {
+    tipo: "Intermedia",
+    ejemplos: "NPH",
+    inicio: "2 a 4 horas",
+    pico: "4 a 12 horas",
+    duracion: "12 a 18 horas",
+    uso: "Cubre medio día o la noche; suele combinarse con una insulina rápida.",
+    detalle:
+      "Actúa de forma más lenta y prolongada, cubriendo las necesidades de insulina durante buena parte del día o de la noche. Es habitual combinarla con una insulina rápida para cubrir también lo que se come en las comidas."
+  },
+  {
+    tipo: "Prolongada (basal)",
+    ejemplos: "Glargina, detemir",
+    inicio: "~2 horas",
+    pico: "Sin pico marcado",
+    duracion: "Hasta 24 horas",
+    uso: "Aporta un nivel de fondo estable durante casi todo el día, sin relación directa con las comidas.",
+    detalle:
+      "Se conoce como insulina \"basal\": no está pensada para cubrir una comida en concreto, sino para mantener un nivel de fondo de insulina estable a lo largo del día, de forma parecida a como lo haría un páncreas que funciona con normalidad fuera de las comidas."
+  },
+  {
+    tipo: "Ultraprolongada",
+    ejemplos: "Degludec",
+    inicio: "~6 horas",
+    pico: "Sin pico",
+    duracion: "36 horas o más",
+    uso: "Insulina basal de acción muy larga, con más margen de flexibilidad horaria.",
+    detalle:
+      "Funciona de forma parecida a la insulina prolongada, pero dura todavía más tiempo y su efecto es aún más estable, lo que en la práctica puede dar algo más de margen si un día se retrasa la inyección respecto al horario habitual (siempre según lo pautado por el equipo médico)."
+  },
+  {
+    tipo: "Premezclada (bifásica)",
+    ejemplos: "Combinaciones de insulina intermedia y corta o rápida en un mismo vial o pluma",
+    inicio: "5 a 60 minutos",
+    pico: "Variable (doble pico)",
+    duracion: "10 a 16 horas",
+    uso: "Se inyecta entre 10 y 30 minutos antes del desayuno y de la cena.",
+    detalle:
+      "Combina en una sola inyección una parte de insulina de acción corta o rápida con otra de acción intermedia, en una proporción fija. Simplifica el número de pinchazos al día, aunque ofrece menos flexibilidad para ajustar cada componente por separado."
+  }
+];
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -160,6 +223,7 @@ function renderHeader(prefix, activeCat) {
     { href: `${prefix}index.html`, label: "Portada", cat: "inicio" },
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
     { href: `${prefix}bombas-de-insulina.html`, label: "Bombas de insulina", cat: "bombas" },
+    { href: `${prefix}tipos-de-insulina.html`, label: "Tipos de insulina", cat: "tipos-insulina" },
     ...categoryLinks
   ];
 
@@ -659,13 +723,119 @@ ${renderFooter("")}
 `;
 }
 
+function renderInsulinTypesPage() {
+  const title = `Tipos de insulina: guía sencilla de cómo actúan · ${SITE_NAME}`;
+  const description =
+    "Insulina rápida, corta, intermedia, prolongada, ultraprolongada y premezclada explicadas en palabras sencillas: cuándo empiezan a actuar, cuánto duran y para qué se usa cada una.";
+  const url = `${SITE_URL}/tipos-de-insulina.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Tipos de insulina: guía sencilla de cómo actúan",
+    description,
+    inLanguage: "es",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+  };
+
+  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  const tableRows = INSULIN_TYPES.map(
+    t => `        <tr>
+          <td>${escapeHtml(t.tipo)}</td>
+          <td>${escapeHtml(t.ejemplos)}</td>
+          <td>${escapeHtml(t.inicio)}</td>
+          <td>${escapeHtml(t.pico)}</td>
+          <td>${escapeHtml(t.duracion)}</td>
+        </tr>`
+  ).join("\n");
+
+  const detailBlocks = INSULIN_TYPES.map(
+    t => `      <h3>Insulina ${escapeHtml(t.tipo.toLowerCase())}</h3>
+      <p>${escapeHtml(t.detalle)} <strong>¿Cuándo se usa?</strong> ${escapeHtml(t.uso)}</p>`
+  ).join("\n\n");
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", "tipos-insulina")}
+
+  <main class="article-wrap article-wrap--wide">
+    <h1>Tipos de insulina: guía sencilla de cómo actúan</h1>
+    <p class="lead">Explicamos en palabras sencillas, sin tecnicismos, los principales tipos de insulina que existen y en qué se diferencian.</p>
+
+    <div class="disclaimer">
+      Esta guía es divulgativa y general: no está pensada para ajustar dosis ni para sustituir la pauta que te haya indicado tu médico o educador en diabetes. El tipo, la dosis y el horario de insulina siempre deben decidirse con tu equipo médico, de forma individualizada.
+    </div>
+
+    <div class="article-body">
+      <h2>La idea básica: insulina "basal" e insulina "en bolo"</h2>
+      <p>Un páncreas que funciona con normalidad libera insulina de dos formas: un poco constantemente durante todo el día (para mantener la glucosa estable entre comidas y durante la noche) y bastante más de golpe cuando se come (para gestionar la subida de glucosa de esa comida). Los tratamientos con insulina intentan imitar ese mismo patrón combinando dos tipos de insulina con perfiles distintos: una insulina de acción lenta que hace de "insulina basal" (el nivel de fondo) y una insulina de acción rápida que hace de "insulina en bolo" (la que cubre las comidas). El resto de tipos de insulina son, básicamente, variaciones de estos dos perfiles.</p>
+
+      <h2>Comparativa rápida de los tipos de insulina</h2>
+    </div>
+
+    <div class="table-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Ejemplos</th>
+            <th>Inicio de acción</th>
+            <th>Pico de acción</th>
+            <th>Duración</th>
+          </tr>
+        </thead>
+        <tbody>
+${tableRows}
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Los tiempos son orientativos: pueden variar de una persona a otra y según la zona del cuerpo donde se inyecte. Datos basados en los <a href="https://www.cdc.gov/diabetes/es/about/tipos-de-insulina.html" target="_blank" rel="noopener noreferrer">tipos de insulina de los CDC (Centros para el Control y la Prevención de Enfermedades de EE. UU.)</a>.</p>
+
+    <div class="article-body">
+      <h2>Cada tipo de insulina, explicado con más detalle</h2>
+${detailBlocks}
+
+      <h2>Preguntas habituales</h2>
+
+      <h3>¿Por qué hay tantos tipos de insulina distintos?</h3>
+      <p>Porque cada persona necesita una combinación distinta de insulina "de fondo" y de insulina "para las comidas", según su rutina, sus horarios y el tipo de diabetes que tenga. Tener varios tipos con distinta velocidad y duración permite ajustar el tratamiento a cada caso.</p>
+
+      <h3>¿Qué diferencia hay entre insulina humana y análogos de insulina?</h3>
+      <p>La insulina humana (como la regular o la NPH) tiene una estructura idéntica a la que produce el cuerpo humano. Los análogos (como lispro, aspart, glargina o degludec) son insulinas modificadas ligeramente en el laboratorio para que actúen más rápido o durante más tiempo, según el caso. Ambos tipos son insulinas reales y llevan décadas usándose con seguridad bajo prescripción médica.</p>
+
+      <h3>¿Se pueden mezclar distintos tipos de insulina en la misma jeringa o pluma?</h3>
+      <p>Depende del tipo concreto de insulina: algunas combinaciones están pensadas para mezclarse (como las insulinas premezcladas) y otras no deben mezclarse entre sí. Esto siempre debe indicarlo el equipo médico, ya que mezclar insulinas de forma incorrecta puede alterar cómo actúan.</p>
+
+      <h3>¿Todas las insulinas se administran de la misma forma?</h3>
+      <p>La forma más habitual es la inyección subcutánea (con pluma, jeringa o bomba de insulina), aunque el dispositivo y la zona de inyección pueden influir ligeramente en la rapidez con la que actúa. Puedes ver cómo funcionan las bombas de insulina, que usan insulina de acción rápida de forma continua, en nuestra <a href="bombas-de-insulina.html">comparativa de bombas de insulina</a>.</p>
+    </div>
+
+    <div class="disclaimer">
+      Recuerda: el objetivo de esta página es que entiendas mejor cómo funciona tu tratamiento o el de alguien cercano, no sustituir a tu equipo médico. Cualquier cambio de tipo, dosis u horario de insulina debe hacerse siempre con supervisión profesional. Más contexto en <a href="quienes-somos.html">quiénes somos</a>.
+    </div>
+  </main>
+
+${renderFooter("")}
+</body>
+</html>
+`;
+}
+
 function renderSitemap(articles) {
   const staticPages = [
     "quienes-somos.html",
     "faq.html",
     "contacto.html",
     "dietas-y-ejercicio.html",
-    "bombas-de-insulina.html"
+    "bombas-de-insulina.html",
+    "tipos-de-insulina.html"
   ];
 
   const urls = [
@@ -691,6 +861,7 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "index.html"), renderIndexPage(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "dietas-y-ejercicio.html"), renderGuidePage());
   fs.writeFileSync(path.join(ROOT, "bombas-de-insulina.html"), renderPumpsPage());
+  fs.writeFileSync(path.join(ROOT, "tipos-de-insulina.html"), renderInsulinTypesPage());
   fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
   fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
   fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());

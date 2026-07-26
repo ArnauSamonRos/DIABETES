@@ -279,6 +279,12 @@ nav.main-nav a.active {
   white-space: nowrap;
 }
 
+.table-note {
+  margin: -20px 0 32px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 20px;
