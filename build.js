@@ -95,7 +95,11 @@ function renderHeader(prefix, activeCat) {
     cat: slug
   }));
 
-  const links = [{ href: `${prefix}index.html`, label: "Portada", cat: "inicio" }, ...categoryLinks];
+  const links = [
+    { href: `${prefix}index.html`, label: "Portada", cat: "inicio" },
+    { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
+    ...categoryLinks
+  ];
 
   const navHtml = links
     .map(l => `<a href="${l.href}"${l.cat === activeCat ? ' class="active"' : ""}>${l.label}</a>`)
@@ -434,8 +438,82 @@ ${renderFooter("")}
 `;
 }
 
+function renderGuidePage() {
+  const title = `Dietas y ejercicio diario para la diabetes: guía práctica · ${SITE_NAME}`;
+  const description =
+    "Ejemplo de plato saludable e ideas de comidas, junto con una rutina semanal de ejercicio (caminar, fuerza y estiramientos) pensada para personas con diabetes.";
+  const url = `${SITE_URL}/dietas-y-ejercicio.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Dietas y ejercicio diario para la diabetes: guía práctica",
+    description,
+    inLanguage: "es",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+  };
+
+  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", "guia")}
+
+  <main class="article-wrap">
+    <h1>Dietas y ejercicio diario para la diabetes</h1>
+    <p class="lead">Un plato de ejemplo y una rutina semanal sencilla, basados en las pautas generales recogidas en nuestras noticias de <a href="index.html#dietas">Dietas</a> y <a href="index.html#ejercicio">Ejercicio</a>.</p>
+
+    <div class="disclaimer">
+      Esta guía es orientativa y general: no sustituye un plan de alimentación o de ejercicio personalizado. Antes de cambiar tu dieta o de empezar una rutina nueva, consulta con tu médico, endocrino o educador en diabetes, especialmente si usas insulina u otra medicación que pueda causar hipoglucemias.
+    </div>
+
+    <div class="article-body">
+      <h2>Un plato de ejemplo para las comidas principales</h2>
+      <img class="guide-image" src="img/plato-saludable.svg" width="400" height="300" loading="lazy" alt="Plato dividido en la mitad de verduras, un cuarto de cereales integrales y un cuarto de proteína" />
+      <p>Una forma sencilla de organizar comidas y cenas es dividir el plato en tres partes: la mitad con verduras y hortalizas, un cuarto con cereales integrales o carbohidratos de bajo índice glucémico (arroz integral, legumbres, patata con piel) y el último cuarto con una fuente de proteína magra (pescado, huevo, legumbres o carne magra). Más contexto en la noticia sobre la <a href="articulos/nice-2026-nutricion.html">guía NICE 2026</a> y sobre los <a href="articulos/dieta-base-vegetal.html">patrones alimentarios de base vegetal</a>.</p>
+
+      <h2>Ideas para el día a día</h2>
+      <img class="guide-image" src="img/fruta-verdura.svg" width="400" height="300" loading="lazy" alt="Cesta con frutas y verduras variadas" />
+      <ul>
+        <li>Prioriza fruta entera frente a zumos, ya que aporta más fibra y produce una subida de glucosa más lenta.</li>
+        <li>Cambia los cereales o el pan refinado por versiones integrales siempre que puedas.</li>
+        <li>Incluye legumbres varias veces por semana como fuente de proteína y fibra.</li>
+        <li>Modera los ultraprocesados y las bebidas azucaradas, presentes en muchas rutinas sin que nos demos cuenta.</li>
+      </ul>
+      <p>Estas ideas resumen los mensajes generales de nuestra noticia sobre <a href="articulos/perdida-peso-control-metabolico.html">pérdida de peso y control metabólico</a>.</p>
+
+      <h2>Rutina semanal: actividad aeróbica</h2>
+      <img class="guide-image" src="img/caminar-diario.svg" width="400" height="300" loading="lazy" alt="Persona caminando al aire libre" />
+      <p>Las guías generales recomiendan unos 150 minutos semanales de actividad aeróbica moderada: caminar a paso ligero, nadar, ir en bicicleta o bailar son buenas opciones que se pueden repartir en sesiones de 20-30 minutos la mayoría de los días. Más información en la noticia sobre <a href="articulos/ejercicio-prevencion-diabetes-58.html">ejercicio y prevención de la diabetes tipo 2</a>.</p>
+
+      <h2>Rutina semanal: fuerza</h2>
+      <img class="guide-image" src="img/entrenamiento-fuerza.svg" width="400" height="300" loading="lazy" alt="Persona levantando una mancuerna por encima de la cabeza" />
+      <p>Complementar el ejercicio aeróbico con 2 sesiones semanales de entrenamiento de fuerza (con el propio peso corporal, bandas elásticas o pesas) se asocia a mejoras adicionales en el control glucémico. Puedes empezar con series cortas y aumentar la intensidad de forma progresiva. Más detalles en la noticia sobre <a href="articulos/entrenamiento-fuerza-hba1c.html">entrenamiento de fuerza y HbA1c</a>.</p>
+
+      <h2>Pausas activas y estiramientos</h2>
+      <img class="guide-image" src="img/estiramientos.svg" width="400" height="300" loading="lazy" alt="Persona haciendo un estiramiento con el brazo hacia arriba" />
+      <p>Además del ejercicio programado, procura interrumpir los periodos largos sentado cada 30 minutos: levantarte a caminar un momento o hacer unos estiramientos suaves ayuda a mejorar la glucemia a lo largo del día. Lo explicamos con más detalle en la noticia sobre <a href="articulos/sedentarismo-cada-30-minutos.html">interrumpir el sedentarismo</a>.</p>
+    </div>
+
+    <div class="disclaimer">
+      Recuerda: esta guía es información general y divulgativa, no un plan médico o nutricional personalizado. Consulta siempre con un profesional sanitario antes de hacer cambios importantes en tu dieta o en tu actividad física. Más contexto en <a href="quienes-somos.html">quiénes somos</a>.
+    </div>
+  </main>
+
+${renderFooter("")}
+</body>
+</html>
+`;
+}
+
 function renderSitemap(articles) {
-  const staticPages = ["quienes-somos.html", "faq.html", "contacto.html"];
+  const staticPages = ["quienes-somos.html", "faq.html", "contacto.html", "dietas-y-ejercicio.html"];
 
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: articles.reduce((max, a) => (a.fecha > max ? a.fecha : max), articles[0].fecha) },
@@ -458,6 +536,7 @@ function main() {
   fs.mkdirSync(ARTICLES_DIR, { recursive: true });
 
   fs.writeFileSync(path.join(ROOT, "index.html"), renderIndexPage(ARTICLES));
+  fs.writeFileSync(path.join(ROOT, "dietas-y-ejercicio.html"), renderGuidePage());
   fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
   fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
   fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());
@@ -469,7 +548,7 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), renderSitemap(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "robots.txt"), renderRobotsTxt());
 
-  console.log(`Generadas ${ARTICLES.length} páginas de artículo + index.html + 3 páginas de apoyo + sitemap.xml + robots.txt`);
+  console.log(`Generadas ${ARTICLES.length} páginas de artículo + index.html + guía práctica + 3 páginas de apoyo + sitemap.xml + robots.txt`);
 }
 
 main();

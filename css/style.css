@@ -276,6 +276,25 @@ nav.main-nav a.active {
   margin: 0 0 18px;
 }
 
+.article-body ul {
+  margin: 0 0 18px;
+  padding-left: 22px;
+  font-size: 1.05rem;
+}
+
+.article-body li {
+  margin-bottom: 8px;
+}
+
+.guide-image {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 4px auto 18px;
+  border-radius: var(--radius);
+}
+
 .source-box {
   margin-top: 32px;
   padding: 16px 18px;

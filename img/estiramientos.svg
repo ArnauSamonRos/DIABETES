@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="estiramientoTitle">
+  <title id="estiramientoTitle">Persona haciendo un estiramiento con el brazo hacia arriba</title>
+  <rect width="400" height="300" rx="20" fill="#e4f5f1"/>
+  <rect x="0" y="245" width="400" height="55" fill="#bfe3d6"/>
+
+  <circle cx="200" cy="80" r="18" fill="#0d9488"/>
+  <rect x="183" y="98" width="34" height="70" rx="16" fill="#0d9488"/>
+  <rect x="168" y="112" width="12" height="48" rx="6" fill="#0f766e"/>
+  <rect x="186" y="168" width="12" height="62" rx="6" fill="#134e4a"/>
+  <rect x="202" y="168" width="12" height="62" rx="6" fill="#134e4a"/>
+
+  <rect x="220" y="38" width="12" height="70" rx="6" fill="#0f766e"/>
+</svg>

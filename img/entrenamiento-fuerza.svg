@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="fuerzaTitle">
+  <title id="fuerzaTitle">Persona levantando una mancuerna por encima de la cabeza</title>
+  <rect width="400" height="300" rx="20" fill="#e4f5f1"/>
+  <rect x="0" y="240" width="400" height="60" fill="#bfe3d6"/>
+
+  <circle cx="200" cy="90" r="18" fill="#0d9488"/>
+  <rect x="183" y="108" width="34" height="66" rx="16" fill="#0d9488"/>
+  <rect x="168" y="120" width="13" height="50" rx="6" fill="#0f766e"/>
+  <rect x="184" y="174" width="14" height="60" rx="7" fill="#134e4a"/>
+  <rect x="202" y="174" width="14" height="60" rx="7" fill="#134e4a"/>
+
+  <rect x="213" y="62" width="13" height="58" rx="6" fill="#0f766e"/>
+  <rect x="197.5" y="54" width="44" height="8" rx="4" fill="#134e4a"/>
+  <circle cx="197.5" cy="58" r="12" fill="#134e4a"/>
+  <circle cx="241.5" cy="58" r="12" fill="#134e4a"/>
+</svg>
