@@ -70,6 +70,64 @@ const FAQ_ITEMS = [
   }
 ];
 
+const PUMPS = [
+  {
+    modelo: "Omnipod 5",
+    fabricante: "Insulet",
+    tipo: "Sin tubo (parche), impermeable",
+    sensores: "Dexcom G6, G7 y FreeStyle Libre 2 Plus",
+    destacado: "Se controla desde el móvil o un controlador dedicado, sin tubo visible; cada Pod dura hasta 3 días.",
+    detalle:
+      "El Pod se lleva pegado directamente sobre la piel y no lleva tubo de conexión. El algoritmo SmartAdjust ajusta la insulina basal automáticamente cada 5 minutos según los datos del sensor. Cada Pod admite hasta 200 unidades de insulina de acción rápida y se cambia cada 3 días.",
+    fuenteNombre: "Comparativa de bombas de insulina, LMC Diabetes & Endocrinology (feb. 2026)",
+    fuenteUrl: "https://www.lmc.ca/wp-content/uploads/2026/02/EN-LMC-Pump-Comparison-Chart-Feb-2026-.pdf"
+  },
+  {
+    modelo: "MiniMed 780G",
+    fabricante: "Medtronic",
+    tipo: "Con tubo, pantalla integrada",
+    sensores: "Guardian 4 y Simplera Sync",
+    destacado: "Ajustes basales muy finos (desde 0,025 U/hora) y detección avanzada de comidas.",
+    detalle:
+      "Su algoritmo SmartGuard corrige automáticamente cada 5 minutos y permite ajustes de insulina basal especialmente precisos, lo que puede resultar útil para personas con necesidades de insulina bajas o muy variables. Incluye tecnología de detección avanzada de comidas para reforzar la respuesta a las subidas de glucosa tras comer.",
+    fuenteNombre: "Comparativa de bombas de insulina, LMC Diabetes & Endocrinology (feb. 2026)",
+    fuenteUrl: "https://www.lmc.ca/wp-content/uploads/2026/02/EN-LMC-Pump-Comparison-Chart-Feb-2026-.pdf"
+  },
+  {
+    modelo: "t:slim X2",
+    fabricante: "Tandem Diabetes Care",
+    tipo: "Con tubo, pantalla táctil a color",
+    sensores: "Compatible con el algoritmo Control-IQ+",
+    destacado: "Modos específicos de sueño y ejercicio, con bolos de autocorrección.",
+    detalle:
+      "Además de los modos de sueño y ejercicio, que adaptan los objetivos de glucosa según la actividad, incorpora bolos de autocorrección para reforzar el control entre comidas. Para 2026 se espera un set de infusión de mayor duración, de hasta 7 días.",
+    fuenteNombre: "Comparativa de bombas de insulina, LMC Diabetes & Endocrinology (feb. 2026)",
+    fuenteUrl: "https://www.lmc.ca/wp-content/uploads/2026/02/EN-LMC-Pump-Comparison-Chart-Feb-2026-.pdf"
+  },
+  {
+    modelo: "YpsoPump (mylife)",
+    fabricante: "Ypsomed",
+    tipo: "Con tubo, muy compacta y ligera",
+    sensores: "Según el algoritmo asociado (por ejemplo, CamAPS FX)",
+    destacado: "Pensada especialmente para el uso en niños, con monitorización a distancia para cuidadores.",
+    detalle:
+      "Es una de las bombas más pequeñas y ligeras del mercado, lo que la hace popular en población pediátrica. Puede combinarse con distintos algoritmos de asa cerrada según el país, e incluye funciones de monitorización remota para madres, padres o cuidadores.",
+    fuenteNombre: "Comparativa de bombas de insulina, LMC Diabetes & Endocrinology (feb. 2026)",
+    fuenteUrl: "https://www.lmc.ca/wp-content/uploads/2026/02/EN-LMC-Pump-Comparison-Chart-Feb-2026-.pdf"
+  },
+  {
+    modelo: "iLet Bionic Pancreas",
+    fabricante: "Beta Bionics",
+    tipo: "Con tubo",
+    sensores: "Dexcom y FreeStyle Libre 3 Plus",
+    destacado: "No requiere contar carbohidratos: solo pide una estimación aproximada de la comida.",
+    detalle:
+      "Su planteamiento es distinto al resto: no se introducen ratios ni factores de corrección, solo el peso de la persona al empezar. El propio sistema desarrolla y actualiza un perfil de dosis a lo largo de 288 segmentos basales al día, y en las comidas solo pide una estimación aproximada (\"como de costumbre\", \"más\" o \"menos\") en lugar de un conteo exacto de carbohidratos.",
+    fuenteNombre: "Beta Bionics (sitio oficial del fabricante)",
+    fuenteUrl: "https://www.betabionics.com/ilet-bionic-pancreas/ilet-adults/"
+  }
+];
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -101,6 +159,7 @@ function renderHeader(prefix, activeCat) {
   const links = [
     { href: `${prefix}index.html`, label: "Portada", cat: "inicio" },
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
+    { href: `${prefix}bombas-de-insulina.html`, label: "Bombas de insulina", cat: "bombas" },
     ...categoryLinks
   ];
 
@@ -517,8 +576,97 @@ ${renderFooter("")}
 `;
 }
 
+function renderPumpsPage() {
+  const title = `Comparativa de bombas de insulina · ${SITE_NAME}`;
+  const description =
+    "Comparativa de las principales bombas de insulina (Omnipod 5, MiniMed 780G, t:slim X2, YpsoPump e iLet Bionic Pancreas): tipo, sensores compatibles y qué las diferencia.";
+  const url = `${SITE_URL}/bombas-de-insulina.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Comparativa de bombas de insulina",
+    description,
+    inLanguage: "es",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+  };
+
+  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  const tableRows = PUMPS.map(
+    p => `        <tr>
+          <td>${escapeHtml(p.modelo)}</td>
+          <td>${escapeHtml(p.fabricante)}</td>
+          <td>${escapeHtml(p.tipo)}</td>
+          <td>${escapeHtml(p.sensores)}</td>
+          <td>${escapeHtml(p.destacado)}</td>
+        </tr>`
+  ).join("\n");
+
+  const detailBlocks = PUMPS.map(
+    p => `      <h3>${escapeHtml(p.modelo)} <span class="text-muted">— ${escapeHtml(p.fabricante)}</span></h3>
+      <p>${escapeHtml(p.detalle)} Fuente: <a href="${p.fuenteUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.fuenteNombre)}</a>.</p>`
+  ).join("\n\n");
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", "bombas")}
+
+  <main class="article-wrap article-wrap--wide">
+    <h1>Comparativa de bombas de insulina</h1>
+    <p class="lead">Un vistazo rápido a algunas de las bombas de insulina disponibles actualmente, con sus principales diferencias.</p>
+
+    <div class="disclaimer">
+      Esta comparativa es orientativa y no exhaustiva: la disponibilidad, las combinaciones con sensores y las condiciones de financiación varían según el país y el sistema de salud. La elección de una bomba de insulina debe hacerse siempre con tu equipo médico o educador en diabetes, que puede valorar cuál se ajusta mejor a tu caso.
+    </div>
+
+    <div class="table-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Bomba</th>
+            <th>Fabricante</th>
+            <th>Tipo</th>
+            <th>Sensores compatibles</th>
+            <th>Lo más destacado</th>
+          </tr>
+        </thead>
+        <tbody>
+${tableRows}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-body">
+      <h2>Cada bomba, con más detalle</h2>
+${detailBlocks}
+    </div>
+
+    <div class="disclaimer">
+      Recuerda: esta página no sustituye el consejo médico. Consulta con tu equipo de diabetes qué opción se adapta mejor a tu tratamiento, tu estilo de vida y tu cobertura sanitaria. Más contexto en <a href="quienes-somos.html">quiénes somos</a>.
+    </div>
+  </main>
+
+${renderFooter("")}
+</body>
+</html>
+`;
+}
+
 function renderSitemap(articles) {
-  const staticPages = ["quienes-somos.html", "faq.html", "contacto.html", "dietas-y-ejercicio.html"];
+  const staticPages = [
+    "quienes-somos.html",
+    "faq.html",
+    "contacto.html",
+    "dietas-y-ejercicio.html",
+    "bombas-de-insulina.html"
+  ];
 
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: articles.reduce((max, a) => (a.fecha > max ? a.fecha : max), articles[0].fecha) },
@@ -542,6 +690,7 @@ function main() {
 
   fs.writeFileSync(path.join(ROOT, "index.html"), renderIndexPage(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "dietas-y-ejercicio.html"), renderGuidePage());
+  fs.writeFileSync(path.join(ROOT, "bombas-de-insulina.html"), renderPumpsPage());
   fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
   fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
   fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());
