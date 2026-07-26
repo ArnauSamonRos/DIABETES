@@ -21,6 +21,9 @@ const SITE_DESCRIPTION =
 // Contacto). Actualízala a mano cuando cambies su contenido.
 const STATIC_PAGES_LASTMOD = "2026-07-26";
 
+// Cliente de Google AdSense para el script cargado en el <head> de cada página.
+const ADSENSE_CLIENT = "ca-pub-7265745270719064";
+
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, "articulos");
 
@@ -168,6 +171,8 @@ ${extraMeta}
 
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="${prefix}css/style.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
+     crossorigin="anonymous"></script>
 ${jsonLdHtml}`;
 }
 
