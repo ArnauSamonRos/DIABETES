@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Genera las páginas estáticas del sitio (index.html, articulos/*.html,
-// sitemap.xml) a partir de js/data.js, la única fuente de verdad.
-// No tiene dependencias externas: basta con `node build.js`.
+// páginas de apoyo y sitemap.xml) a partir de js/data.js, la única
+// fuente de verdad. No tiene dependencias externas: basta con `node build.js`.
 //
-// Ejecútalo cada vez que edites js/data.js.
+// Ejecútalo cada vez que edites js/data.js o el contenido de este archivo.
 
 const fs = require("fs");
 const path = require("path");
@@ -15,10 +15,57 @@ const { ARTICLES, CATEGORIAS } = require("./js/data.js");
 const SITE_URL = "https://www.diabeteshoy.example";
 const SITE_NAME = "DiabetesHoy";
 const SITE_DESCRIPTION =
-  "Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlace a la fuente original de cada noticia.";
+  "Novedades sobre diabetes: sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones, con enlace a la fuente original de cada noticia.";
+
+// Fecha de referencia para las páginas de apoyo (Quiénes somos, FAQ,
+// Contacto). Actualízala a mano cuando cambies su contenido.
+const STATIC_PAGES_LASTMOD = "2026-07-26";
 
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, "articulos");
+
+const FAQ_ITEMS = [
+  {
+    pregunta: "¿Qué es DiabetesHoy?",
+    respuesta:
+      "DiabetesHoy es un proyecto independiente que resume noticias públicas sobre diabetes (sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones) y enlaza siempre a la fuente original de cada una para que puedas verificarla."
+  },
+  {
+    pregunta: "¿El contenido de DiabetesHoy sustituye el consejo médico?",
+    respuesta:
+      "No. Todo el contenido tiene fines informativos y no sustituye el diagnóstico, el tratamiento ni el consejo de un profesional sanitario. Consulta siempre con tu equipo médico antes de tomar decisiones sobre tratamiento, medicación o dieta."
+  },
+  {
+    pregunta: "¿Con qué frecuencia se actualizan las noticias?",
+    respuesta:
+      "Se añaden nuevas noticias a medida que aparecen novedades relevantes en las fuentes que seguimos. No hay una periodicidad fija, pero puedes consultar la fecha de publicación de cada artículo en su propia página."
+  },
+  {
+    pregunta: "¿Cómo se seleccionan las fuentes?",
+    respuesta:
+      "Priorizamos fuentes públicas y especializadas: sociedades científicas, agencias reguladoras, medios especializados en diabetes y publicaciones médicas. Cada artículo de DiabetesHoy enlaza directamente a la fuente original usada para redactarlo."
+  },
+  {
+    pregunta: "¿Los artículos están escritos por profesionales médicos?",
+    respuesta:
+      "No. DiabetesHoy es un proyecto de curación y resumen de noticias, no un medio médico ni una institución sanitaria. Por eso cada artículo enlaza a su fuente original, para que puedas consultar la información completa y contrastarla con tu equipo médico."
+  },
+  {
+    pregunta: "¿Qué diferencia hay entre diabetes tipo 1 y tipo 2?",
+    respuesta:
+      "De forma general, la diabetes tipo 1 es una enfermedad autoinmune en la que el cuerpo deja de producir insulina, y suele diagnosticarse en la infancia o juventud. La diabetes tipo 2 se asocia a una resistencia progresiva a la insulina y suele aparecer en la edad adulta, aunque cada caso es distinto. Para un diagnóstico o información personalizada, consulta a un profesional sanitario."
+  },
+  {
+    pregunta: "¿Qué es un sensor de monitorización continua de glucosa (MCG)?",
+    respuesta:
+      "Es un pequeño dispositivo que se coloca sobre la piel y mide de forma continua el nivel de glucosa en el líquido intersticial, mostrando los datos en un móvil o lector, sin necesidad de pincharse el dedo cada vez. Puedes ver ejemplos de novedades sobre estos dispositivos en la categoría Sensores."
+  },
+  {
+    pregunta: "He encontrado un error o quiero sugerir una noticia, ¿qué hago?",
+    respuesta:
+      "Escríbenos desde la página de contacto. Revisamos cualquier corrección señalada y valoramos las sugerencias de temas para futuras noticias."
+  }
+];
 
 function escapeHtml(str) {
   return String(str)
@@ -42,13 +89,13 @@ function homeUrl(absolute) {
 }
 
 function renderHeader(prefix, activeCat) {
-  const links = [
-    { href: `${prefix}index.html`, label: "Portada", cat: "inicio" },
-    { href: `${prefix}index.html#sensores`, label: "Sensores", cat: "sensores" },
-    { href: `${prefix}index.html#medicacion`, label: "Medicación", cat: "medicacion" },
-    { href: `${prefix}index.html#estudios`, label: "Estudios", cat: "estudios" },
-    { href: `${prefix}index.html#dietas`, label: "Dietas", cat: "dietas" }
-  ];
+  const categoryLinks = Object.entries(CATEGORIAS).map(([slug, cat]) => ({
+    href: `${prefix}index.html#${slug}`,
+    label: cat.nombre,
+    cat: slug
+  }));
+
+  const links = [{ href: `${prefix}index.html`, label: "Portada", cat: "inicio" }, ...categoryLinks];
 
   const navHtml = links
     .map(l => `<a href="${l.href}"${l.cat === activeCat ? ' class="active"' : ""}>${l.label}</a>`)
@@ -64,11 +111,16 @@ function renderHeader(prefix, activeCat) {
   </header>`;
 }
 
-function renderFooter() {
+function renderFooter(prefix) {
   const year = new Date().getFullYear();
   return `  <footer class="site-footer">
     <div class="container">
       <span>&copy; ${year} ${SITE_NAME}. Solo novedades sobre diabetes.</span>
+      <nav class="footer-nav" aria-label="Sobre DiabetesHoy">
+        <a href="${prefix}quienes-somos.html">Quiénes somos</a>
+        <a href="${prefix}faq.html">Preguntas frecuentes</a>
+        <a href="${prefix}contacto.html">Contacto</a>
+      </nav>
       <span>Contenido informativo, no sustituye el consejo médico profesional.</span>
     </div>
   </footer>`;
@@ -87,21 +139,46 @@ function renderCard(article, prefix) {
       </a>`;
 }
 
+function renderHead({ title, description, url, type, prefix, extraMeta = "", jsonLdBlocks = [] }) {
+  const jsonLdHtml = jsonLdBlocks
+    .map(obj => `  <script type="application/ld+json">${JSON.stringify(obj)}</script>`)
+    .join("\n");
+
+  return `  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(title)}</title>
+  <meta name="description" content="${escapeHtml(description)}" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="${url}" />
+
+  <meta property="og:type" content="${type}" />
+  <meta property="og:site_name" content="${SITE_NAME}" />
+  <meta property="og:title" content="${escapeHtml(title)}" />
+  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:url" content="${url}" />
+  <meta property="og:locale" content="es_ES" />
+${extraMeta}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="${escapeHtml(title)}" />
+  <meta name="twitter:description" content="${escapeHtml(description)}" />
+
+  <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="${prefix}css/style.css" />
+${jsonLdHtml}`;
+}
+
 function renderIndexPage(articles) {
   const sorted = [...articles].sort((a, b) => b.fecha.localeCompare(a.fecha));
   const cardsHtml = sorted.map(a => renderCard(a, "")).join("\n");
   const url = homeUrl(true);
-  const title = `${SITE_NAME} · Novedades sobre diabetes: sensores, medicación, estudios y dietas`;
+  const title = `${SITE_NAME} · Novedades sobre diabetes`;
 
   const filterButtons = [
-    { key: "todas", label: "Todas" },
-    { key: "sensores", label: "Sensores" },
-    { key: "medicacion", label: "Medicación" },
-    { key: "estudios", label: "Estudios" },
-    { key: "dietas", label: "Dietas" }
-  ]
-    .map(f => `      <button class="filter-btn" data-filtro="${f.key}">${f.label}</button>`)
-    .join("\n");
+    `      <button class="filter-btn" data-filtro="todas">Todas</button>`,
+    ...Object.entries(CATEGORIAS).map(
+      ([slug, cat]) => `      <button class="filter-btn" data-filtro="${slug}">${cat.nombre}</button>`
+    )
+  ].join("\n");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -113,30 +190,12 @@ function renderIndexPage(articles) {
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
   };
 
+  const head = renderHead({ title, description: SITE_DESCRIPTION, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${escapeHtml(title)}</title>
-  <meta name="description" content="${escapeHtml(SITE_DESCRIPTION)}" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="${url}" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="${SITE_NAME}" />
-  <meta property="og:title" content="${escapeHtml(title)}" />
-  <meta property="og:description" content="${escapeHtml(SITE_DESCRIPTION)}" />
-  <meta property="og:url" content="${url}" />
-  <meta property="og:locale" content="es_ES" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="${escapeHtml(title)}" />
-  <meta name="twitter:description" content="${escapeHtml(SITE_DESCRIPTION)}" />
-
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+${head}
 </head>
 <body>
 ${renderHeader("", "inicio")}
@@ -144,7 +203,7 @@ ${renderHeader("", "inicio")}
   <main class="container">
     <section class="hero">
       <h1>Novedades sobre diabetes</h1>
-      <p>Sensores, medicación, estudios clínicos y dietas: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
+      <p>Sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
     </section>
 
     <div class="filters" role="group" aria-label="Filtrar por categoría">
@@ -157,11 +216,11 @@ ${cardsHtml}
     <p class="empty-state" id="empty-state" hidden>No hay artículos en esta categoría todavía.</p>
 
     <div class="disclaimer">
-      Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.
+      Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta. Más detalles en <a href="quienes-somos.html">quiénes somos</a> y en las <a href="faq.html">preguntas frecuentes</a>.
     </div>
   </main>
 
-${renderFooter()}
+${renderFooter("")}
 
   <script src="js/filter.js"></script>
 </body>
@@ -200,33 +259,24 @@ function renderArticlePage(article) {
     ]
   };
 
+  const extraMeta = `  <meta property="article:published_time" content="${article.fecha}" />
+  <meta property="article:section" content="${escapeHtml(cat.nombre)}" />
+`;
+
+  const head = renderHead({
+    title,
+    description: article.resumen,
+    url,
+    type: "article",
+    prefix: "../",
+    extraMeta,
+    jsonLdBlocks: [jsonLdArticle, jsonLdBreadcrumb]
+  });
+
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${escapeHtml(title)}</title>
-  <meta name="description" content="${escapeHtml(article.resumen)}" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="${url}" />
-
-  <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="${SITE_NAME}" />
-  <meta property="og:title" content="${escapeHtml(article.titulo)}" />
-  <meta property="og:description" content="${escapeHtml(article.resumen)}" />
-  <meta property="og:url" content="${url}" />
-  <meta property="og:locale" content="es_ES" />
-  <meta property="article:published_time" content="${article.fecha}" />
-  <meta property="article:section" content="${escapeHtml(cat.nombre)}" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="${escapeHtml(article.titulo)}" />
-  <meta name="twitter:description" content="${escapeHtml(article.resumen)}" />
-
-  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <script type="application/ld+json">${JSON.stringify(jsonLdArticle)}</script>
-  <script type="application/ld+json">${JSON.stringify(jsonLdBreadcrumb)}</script>
+${head}
 </head>
 <body>
 ${renderHeader("../", article.categoria)}
@@ -244,16 +294,153 @@ ${bodyHtml}
     </div>
   </main>
 
-${renderFooter()}
+${renderFooter("../")}
+</body>
+</html>
+`;
+}
+
+function renderAboutPage() {
+  const title = `Quiénes somos · ${SITE_NAME}`;
+  const description =
+    "Qué es DiabetesHoy, cómo seleccionamos las noticias sobre diabetes que publicamos y por qué no sustituyen el consejo médico profesional.";
+  const url = `${SITE_URL}/quienes-somos.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "Quiénes somos",
+    url,
+    description,
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL + "/" }
+  };
+
+  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", null)}
+
+  <main class="article-wrap">
+    <h1>Quiénes somos</h1>
+    <p class="lead">DiabetesHoy es un proyecto independiente que resume noticias públicas sobre diabetes y enlaza siempre a la fuente original de cada una.</p>
+
+    <div class="article-body">
+      <h2>Qué es DiabetesHoy</h2>
+      <p>DiabetesHoy no es un medio de comunicación ni una institución sanitaria. Es un proyecto de curación de contenidos que sigue novedades públicas sobre sensores de glucosa, medicación, estudios clínicos, dietas, ejercicio y complicaciones relacionadas con la diabetes, y las resume en un formato breve y claro.</p>
+
+      <h2>Cómo seleccionamos las noticias</h2>
+      <p>Priorizamos fuentes públicas y especializadas: sociedades científicas, agencias reguladoras, medios especializados en diabetes y publicaciones médicas. Cada artículo enlaza directamente a la fuente original usada para redactarlo, para que puedas consultar la información completa y verificarla.</p>
+
+      <h2>Nuestro compromiso con la información de salud</h2>
+      <p>Los temas relacionados con la salud requieren especial cuidado. Por eso todo el contenido de DiabetesHoy es informativo y divulgativo, no está escrito por profesionales médicos y en ningún caso sustituye el diagnóstico, el tratamiento o el consejo de un profesional sanitario. Ante cualquier duda sobre tu salud, consulta siempre con tu equipo médico.</p>
+
+      <h2>Correcciones y sugerencias</h2>
+      <p>Si detectas un error en algún artículo o quieres sugerir un tema, puedes escribirnos desde la página de <a href="contacto.html">contacto</a>.</p>
+    </div>
+  </main>
+
+${renderFooter("")}
+</body>
+</html>
+`;
+}
+
+function renderFaqPage() {
+  const title = `Preguntas frecuentes · ${SITE_NAME}`;
+  const description = "Resolvemos las dudas más habituales sobre DiabetesHoy: qué es, cómo seleccionamos las noticias y si sustituye el consejo médico.";
+  const url = `${SITE_URL}/faq.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_ITEMS.map(item => ({
+      "@type": "Question",
+      name: item.pregunta,
+      acceptedAnswer: { "@type": "Answer", text: item.respuesta }
+    }))
+  };
+
+  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  const faqHtml = FAQ_ITEMS.map(
+    item => `      <h2>${escapeHtml(item.pregunta)}</h2>
+      <p>${escapeHtml(item.respuesta)}</p>`
+  ).join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", null)}
+
+  <main class="article-wrap">
+    <h1>Preguntas frecuentes</h1>
+    <p class="lead">Dudas habituales sobre DiabetesHoy y su contenido.</p>
+
+    <div class="article-body">
+${faqHtml}
+    </div>
+  </main>
+
+${renderFooter("")}
+</body>
+</html>
+`;
+}
+
+function renderContactPage() {
+  const title = `Contacto · ${SITE_NAME}`;
+  const description = "Cómo ponerte en contacto con DiabetesHoy para corregir un error o sugerir un tema. No es un canal de consulta médica.";
+  const url = `${SITE_URL}/contacto.html`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contacto",
+    url,
+    description
+  };
+
+  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${head}
+</head>
+<body>
+${renderHeader("", null)}
+
+  <main class="article-wrap">
+    <h1>Contacto</h1>
+    <p class="lead">¿Has visto un error en una noticia o quieres sugerir un tema? Escríbenos.</p>
+
+    <div class="article-body">
+      <p>Puedes contactar con DiabetesHoy escribiendo a <a href="mailto:contacto@diabeteshoy.example">contacto@diabeteshoy.example</a>.</p>
+      <p>Este canal es para correcciones, dudas sobre el propio sitio o sugerencias de noticias. No es un canal de consulta médica: para cualquier duda sobre tu salud, contacta con tu equipo médico.</p>
+    </div>
+  </main>
+
+${renderFooter("")}
 </body>
 </html>
 `;
 }
 
 function renderSitemap(articles) {
+  const staticPages = ["quienes-somos.html", "faq.html", "contacto.html"];
+
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: articles.reduce((max, a) => (a.fecha > max ? a.fecha : max), articles[0].fecha) },
-    ...articles.map(a => ({ loc: `${SITE_URL}/${articleUrl(a)}`, lastmod: a.fecha }))
+    ...articles.map(a => ({ loc: `${SITE_URL}/${articleUrl(a)}`, lastmod: a.fecha })),
+    ...staticPages.map(p => ({ loc: `${SITE_URL}/${p}`, lastmod: STATIC_PAGES_LASTMOD }))
   ];
 
   const body = urls
@@ -271,6 +458,9 @@ function main() {
   fs.mkdirSync(ARTICLES_DIR, { recursive: true });
 
   fs.writeFileSync(path.join(ROOT, "index.html"), renderIndexPage(ARTICLES));
+  fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
+  fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
+  fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());
 
   for (const article of ARTICLES) {
     fs.writeFileSync(path.join(ARTICLES_DIR, `${article.id}.html`), renderArticlePage(article));
@@ -279,7 +469,7 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), renderSitemap(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "robots.txt"), renderRobotsTxt());
 
-  console.log(`Generadas ${ARTICLES.length} páginas de artículo + index.html + sitemap.xml + robots.txt`);
+  console.log(`Generadas ${ARTICLES.length} páginas de artículo + index.html + 3 páginas de apoyo + sitemap.xml + robots.txt`);
 }
 
 main();

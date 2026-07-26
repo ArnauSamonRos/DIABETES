@@ -6,11 +6,12 @@ Cada artículo es un resumen de una noticia real con enlace a su fuente original
 
 ## Estructura
 
-- `js/data.js` — **única fuente de verdad**: array `ARTICLES` con todas las noticias.
-- `build.js` — genera las páginas estáticas a partir de `js/data.js` (sin dependencias, solo Node).
-- `index.html` — portada (generada), con filtro por categorías (Sensores, Medicación, Estudios, Dietas).
-- `articulos/*.html` — una página estática por noticia (generadas), con su propio `<title>`, meta descripción, URL canónica, Open Graph, Twitter Card y datos estructurados (JSON-LD).
-- `sitemap.xml` y `robots.txt` — generados a partir de las mismas noticias.
+- `js/data.js` — **única fuente de verdad**: array `ARTICLES` con todas las noticias y objeto `CATEGORIAS` (Sensores, Medicación, Estudios, Dietas, Ejercicio, Complicaciones).
+- `build.js` — genera las páginas estáticas a partir de `js/data.js` (sin dependencias, solo Node). También contiene el contenido de las preguntas frecuentes (`FAQ_ITEMS`).
+- `index.html` — portada (generada), con filtro por categoría.
+- `articulos/*.html` — una página estática por noticia (generadas), con su propio `<title>`, meta descripción, URL canónica, Open Graph, Twitter Card y datos estructurados (JSON-LD: `NewsArticle` + `BreadcrumbList`).
+- `quienes-somos.html`, `faq.html`, `contacto.html` — páginas de apoyo (generadas) pensadas para SEO y confianza (E-E-A-T) en contenido de salud: qué es el sitio, cómo se seleccionan las fuentes, preguntas frecuentes (con JSON-LD `FAQPage`) y cómo contactar.
+- `sitemap.xml` y `robots.txt` — generados a partir de las mismas noticias y páginas de apoyo.
 - `js/filter.js` — filtrado de la portada por categoría (solo interactividad, el contenido ya está en el HTML).
 - `css/style.css` — estilos (con soporte de modo oscuro).
 - `favicon.svg` — icono del sitio.
@@ -47,4 +48,4 @@ Y abre `http://localhost:8000/index.html`.
 2. Ejecuta `node build.js` para regenerar `index.html`, la página del artículo, el `sitemap.xml` y el `robots.txt`.
 3. Revisa los cambios y haz commit.
 
-No edites `index.html` ni los archivos dentro de `articulos/` a mano: se sobrescriben en cada `node build.js`.
+No edites `index.html`, `quienes-somos.html`, `faq.html`, `contacto.html` ni los archivos dentro de `articulos/` a mano: se sobrescriben en cada `node build.js`. Para cambiar el contenido de las páginas de apoyo o de la FAQ, edita las funciones correspondientes (`renderAboutPage`, `renderFaqPage`, `renderContactPage`, `FAQ_ITEMS`) en `build.js`.

@@ -182,6 +182,90 @@ const ARTICLES = [
       "Este tipo de cambios en el estilo de vida se ha relacionado no solo con mejoras en los niveles de glucosa, sino también con una mejor presión arterial y un perfil lipídico más favorable, dos factores clave en la prevención de complicaciones cardiovasculares.",
       "Los especialistas recuerdan que estos objetivos son más sostenibles cuando se plantean de forma gradual y se acompañan de seguimiento profesional, en lugar de dietas restrictivas de corta duración."
     ]
+  },
+  {
+    id: "entrenamiento-fuerza-hba1c",
+    categoria: "ejercicio",
+    titulo: "El entrenamiento de fuerza mejora el control glucémico en diabetes tipo 2",
+    resumen: "Distintos estudios apuntan a una disminución significativa de la HbA1c en personas con diabetes tipo 2 que incorporan ejercicios de fuerza a su rutina.",
+    fecha: "2026-03-04",
+    fuenteNombre: "Canal Diabetes",
+    fuenteUrl: "https://canaldiabetes.com/fitness-ayuda-a-tu-diabetes-2026/",
+    cuerpo: [
+      "La actividad física continúa consolidándose como uno de los pilares del tratamiento de la diabetes tipo 2, junto a la alimentación y la medicación. Distintos estudios recientes han apuntado un efecto positivo significativo del entrenamiento de fuerza sobre el control glucémico a medio plazo.",
+      "En concreto, se ha observado una disminución relevante de los niveles de hemoglobina glucosilada (HbA1c) en personas que incorporan ejercicios de fuerza de forma regular, un indicador clave que refleja el control de la glucosa en los últimos meses.",
+      "Los especialistas recomiendan combinar este tipo de entrenamiento con actividad aeróbica moderada, como caminar, nadar o bailar, siempre adaptando la intensidad a la condición física de cada persona y con supervisión profesional al iniciar una nueva rutina."
+    ]
+  },
+  {
+    id: "sedentarismo-cada-30-minutos",
+    categoria: "ejercicio",
+    titulo: "Interrumpir el sedentarismo cada 30 minutos ayuda a controlar la glucemia",
+    resumen: "Pequeñas pausas activas a lo largo del día, como levantarse a caminar unos minutos, se asocian a mejoras en los niveles de glucosa en personas con diabetes.",
+    fecha: "2026-04-14",
+    fuenteNombre: "Sociedad Española de Diabetes (SED)",
+    fuenteUrl: "https://www.sediabetes.org/wp-content/uploads/3.SED_Ejercicio-fisico-en-la-diabetes.pdf",
+    cuerpo: [
+      "Además del ejercicio programado, cada vez hay más evidencia sobre el impacto de los pequeños movimientos repartidos a lo largo del día. Las recomendaciones actuales aconsejan interrumpir la sedestación prolongada cada 30 minutos para obtener beneficios adicionales sobre la glucemia.",
+      "Actividades sencillas como levantarse a caminar unos minutos, hacer tareas domésticas o subir escaleras pueden marcar una diferencia real quienes pasan gran parte del día sentados, ya sea por trabajo o por otras circunstancias.",
+      "Estas pausas activas se plantean como un complemento, no un sustituto, del ejercicio físico regular recomendado para las personas con diabetes tipo 1 y tipo 2."
+    ]
+  },
+  {
+    id: "ejercicio-prevencion-diabetes-58",
+    categoria: "ejercicio",
+    titulo: "150 minutos de ejercicio moderado a la semana redujeron un 58% el riesgo de diabetes tipo 2",
+    resumen: "Un programa de tres años que combinó dieta baja en grasa y actividad física moderada mostró una reducción notable del riesgo en personas con predisposición a desarrollar la enfermedad.",
+    fecha: "2026-05-08",
+    fuenteNombre: "SEMERGEN",
+    fuenteUrl: "https://semergen.es/files/docs/grupos/diabetes/preescripcionEjercicioFisicoDiabetes.pdf",
+    cuerpo: [
+      "Uno de los datos más citados sobre la prevención de la diabetes tipo 2 proviene de un seguimiento de tres años a personas con alto riesgo de desarrollar la enfermedad. El grupo que siguió una dieta baja en grasa combinada con 150 minutos semanales de ejercicio moderado redujo en un 58% su riesgo de desarrollar diabetes tipo 2.",
+      "Los investigadores señalan que la pérdida de peso fue el principal factor asociado a esa reducción de riesgo, aunque el ejercicio también aportó beneficios propios sobre la sensibilidad a la insulina, independientemente del peso perdido.",
+      "Este tipo de resultados refuerza los mensajes de salud pública que sitúan la actividad física regular, junto con la alimentación, como una de las herramientas más eficaces y accesibles para la prevención de la diabetes tipo 2."
+    ]
+  },
+  {
+    id: "educacion-paciente-cribado-retinopatia",
+    categoria: "complicaciones",
+    titulo: "La educación del paciente aumenta el cribado de retinopatía y neuropatía diabética",
+    resumen: "Programas de educación sanitaria se asocian a un incremento del 33% en las revisiones de retinopatía y del 38% en las de neuropatía diabética.",
+    fecha: "2026-02-27",
+    fuenteNombre: "redGDPS",
+    fuenteUrl: "https://www.redgdps.org/gestor/upload/file/GuiaRETINOLAB.pdf",
+    cuerpo: [
+      "La detección precoz sigue siendo la mejor herramienta frente a las complicaciones crónicas de la diabetes, especialmente las de tipo microvascular: retinopatía, nefropatía y neuropatía diabética. Distintos programas de educación sanitaria han mostrado un impacto claro en las tasas de cribado.",
+      "En concreto, se ha observado un aumento del 33% en las revisiones de retinopatía diabética y del 38% en las de neuropatía diabética entre pacientes que participaron en programas educativos sobre su enfermedad.",
+      "El mensaje de fondo es que informar bien a las personas con diabetes sobre por qué y cada cuánto deben revisarse la vista, los pies o la función renal tiene un efecto medible en la prevención de complicaciones graves a largo plazo."
+    ]
+  },
+  {
+    id: "control-glucemico-neuropatia",
+    categoria: "complicaciones",
+    titulo: "El control glucémico estricto sigue siendo la estrategia más eficaz frente a la neuropatía diabética",
+    resumen: "Las revisiones más recientes confirman que el manejo integral de los factores de riesgo cardiovascular es la base de la prevención, mientras avanzan nuevas técnicas de neuromodulación.",
+    fecha: "2026-04-03",
+    fuenteNombre: "Ocronos - Revista Médica",
+    fuenteUrl: "https://revistamedica.com/neuropatia-diabetica-actualizacion-conclusion-clinica/",
+    cuerpo: [
+      "La neuropatía diabética es una de las complicaciones crónicas más frecuentes, y su frecuencia varía según el contexto sociodemográfico, afectando especialmente a los adultos mayores. Las revisiones más recientes coinciden en que la prevención primaria sigue siendo la estrategia más eficaz.",
+      "Esa prevención se basa en un control glucémico estricto combinado con la modificación integral de otros factores de riesgo cardiovascular, como la hipertensión o el colesterol elevado, más que en tratamientos aplicados una vez que el daño nervioso ya se ha producido.",
+      "Al mismo tiempo, el desarrollo de nuevos tratamientos farmacológicos y de técnicas de neuromodulación abre un horizonte prometedor para mejorar el pronóstico de las personas que ya conviven con esta complicación."
+    ]
+  },
+  {
+    id: "prevencion-retinopatia-control-glucosa",
+    categoria: "complicaciones",
+    titulo: "Prevenir la retinopatía diabética pasa por el control de la glucosa y la tensión arterial",
+    resumen: "Los especialistas insisten en que la mejor estrategia frente a esta complicación ocular sigue siendo la prevención, más que su tratamiento una vez desarrollada.",
+    fecha: "2026-05-12",
+    fuenteNombre: "SciELO",
+    fuenteUrl: "https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1137-66272008000600003",
+    cuerpo: [
+      "La retinopatía diabética es una de las causas más comunes de pérdida de visión evitable en personas adultas. Los especialistas coinciden en que el mejor tratamiento sigue siendo la prevención, mediante un control adecuado de los niveles de glucosa en sangre.",
+      "Junto al control glucémico, el manejo de la hipertensión arterial, una dieta saludable y la práctica de ejercicio regular completan las principales medidas preventivas recomendadas para reducir el riesgo de desarrollar esta complicación.",
+      "La buena educación sanitaria del paciente también juega un papel central: entender por qué son importantes las revisiones oftalmológicas periódicas ayuda a detectar cambios en una fase temprana, cuando el tratamiento es más eficaz."
+    ]
   }
 ];
 
@@ -189,7 +273,9 @@ const CATEGORIAS = {
   sensores: { nombre: "Sensores", color: "#2563eb" },
   medicacion: { nombre: "Medicación", color: "#059669" },
   estudios: { nombre: "Estudios", color: "#7c3aed" },
-  dietas: { nombre: "Dietas", color: "#d97706" }
+  dietas: { nombre: "Dietas", color: "#d97706" },
+  ejercicio: { nombre: "Ejercicio", color: "#0d9488" },
+  complicaciones: { nombre: "Complicaciones", color: "#dc2626" }
 };
 
 // Permite reutilizar estos datos desde build.js (Node) sin duplicarlos.

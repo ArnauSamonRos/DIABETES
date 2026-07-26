@@ -19,7 +19,7 @@ function applyFilter(filtro) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const validCats = ["sensores", "medicacion", "estudios", "dietas"];
+  const validCats = ["sensores", "medicacion", "estudios", "dietas", "ejercicio", "complicaciones"];
   const hash = window.location.hash.replace("#", "");
   const filtroInicial = validCats.includes(hash) ? hash : "todas";
 
