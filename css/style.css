@@ -248,6 +248,7 @@ nav.main-nav a.active {
 }
 
 .article-meta {
+  display: block;
   color: var(--text-muted);
   font-size: 0.9rem;
   margin-bottom: 24px;

@@ -3,12 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DiabetesHoy · Novedades sobre diabetes</title>
-  <meta name="description" content="Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlaces a las fuentes originales." />
+  <title>DiabetesHoy · Novedades sobre diabetes: sensores, medicación, estudios y dietas</title>
+  <meta name="description" content="Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlace a la fuente original de cada noticia." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.diabeteshoy.example/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DiabetesHoy" />
+  <meta property="og:title" content="DiabetesHoy · Novedades sobre diabetes: sensores, medicación, estudios y dietas" />
+  <meta property="og:description" content="Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlace a la fuente original de cada noticia." />
+  <meta property="og:url" content="https://www.diabeteshoy.example/" />
+  <meta property="og:locale" content="es_ES" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="DiabetesHoy · Novedades sobre diabetes: sensores, medicación, estudios y dietas" />
+  <meta name="twitter:description" content="Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlace a la fuente original de cada noticia." />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DiabetesHoy","url":"https://www.diabeteshoy.example/","description":"Novedades sobre diabetes: sensores, medicación, estudios clínicos y dietas, con enlace a la fuente original de cada noticia.","inLanguage":"es","publisher":{"@type":"Organization","name":"DiabetesHoy","url":"https://www.diabeteshoy.example/"}}</script>
 </head>
 <body>
-  <header class="site-header" id="site-header"></header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span>Diabetes<span class="dot">Hoy</span></span></a>
+      <nav class="main-nav" aria-label="Categorías">
+        <a href="index.html" class="active">Portada</a>
+        <a href="index.html#sensores">Sensores</a>
+        <a href="index.html#medicacion">Medicación</a>
+        <a href="index.html#estudios">Estudios</a>
+        <a href="index.html#dietas">Dietas</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <section class="hero">
@@ -16,7 +43,7 @@
       <p>Sensores, medicación, estudios clínicos y dietas: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
     </section>
 
-    <div class="filters">
+    <div class="filters" role="group" aria-label="Filtrar por categoría">
       <button class="filter-btn" data-filtro="todas">Todas</button>
       <button class="filter-btn" data-filtro="sensores">Sensores</button>
       <button class="filter-btn" data-filtro="medicacion">Medicación</button>
@@ -24,17 +51,139 @@
       <button class="filter-btn" data-filtro="dietas">Dietas</button>
     </div>
 
-    <div class="grid" id="grid"></div>
+    <div class="grid" id="grid">
+      <a class="card" href="articulos/microbiota-diabetes.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-05-26">26 de mayo de 2026</time>
+          <h3 class="card-title">La microbiota intestinal, una nueva pista para entender la diabetes tipo 2</h3>
+          <p class="card-summary">Investigadores identifican una relación entre la composición de la microbiota y la regulación del metabolismo de la glucosa.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/terapia-genica-kriya.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-04-02">2 de abril de 2026</time>
+          <h3 class="card-title">Terapia génica: un ensayo clínico busca enseñar a los músculos a regular la glucosa</h3>
+          <p class="card-summary">La biotecnológica Kriya Therapeutics introduce genes de insulina y glucocinasa en el músculo esquelético mediante una única inyección intramuscular.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/sana-biotechnology-celulas-madre.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-03-18">18 de marzo de 2026</time>
+          <h3 class="card-title">Células madre sin inmunosupresión: Sana Biotechnology inicia un ensayo de fase 1</h3>
+          <p class="card-summary">La compañía biotecnológica avanza con una terapia celular derivada de células madre que busca evitar el uso de fármacos inmunosupresores.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/abbott-glucosa-cetonas.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">Sensores</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-03-10">10 de marzo de 2026</time>
+          <h3 class="card-title">Abbott presenta un sensor capaz de medir glucosa y cetonas a la vez</h3>
+          <p class="card-summary">La compañía mostró en un congreso internacional de tecnología en diabetes un sensor dual pensado para prevenir la cetoacidosis diabética de forma más temprana.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/semaglutida-riesgo-renal.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-20">20 de febrero de 2026</time>
+          <h3 class="card-title">Un gran estudio asocia la semaglutida con menor riesgo renal y cardiovascular</h3>
+          <p class="card-summary">En un ensayo con más de 3.500 participantes se observó una reducción del 24% en un compuesto de eventos renales graves y muerte cardiovascular.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/bexagliflozina-fda.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">Medicación</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-14">14 de febrero de 2026</time>
+          <h3 class="card-title">La FDA aprueba la bexagliflozina (Brenzavvy) para diabetes tipo 2</h3>
+          <p class="card-summary">Se trata de un nuevo inhibidor del cotransportador sodio-glucosa tipo 2 (SGLT2) desarrollado por TheracosBio para mejorar el control glucémico.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/dieta-base-vegetal.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">Dietas</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-05">5 de febrero de 2026</time>
+          <h3 class="card-title">Los patrones alimentarios de base vegetal ganan peso en las guías de diabetes</h3>
+          <p class="card-summary">La evidencia disponible relaciona las dietas ricas en fibra y bajas en grasas saturadas con una menor expresión de factores de riesgo cardiovascular.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/perdida-peso-control-metabolico.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">Dietas</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-05">5 de febrero de 2026</time>
+          <h3 class="card-title">Perder entre un 5% y un 10% del peso mejora el control metabólico</h3>
+          <p class="card-summary">Un plan de alimentación saludable combinado con ejercicio regular puede tener un impacto relevante en la glucosa, la tensión arterial y el perfil lipídico.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/sensor-2026-panorama.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">Sensores</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-03">3 de febrero de 2026</time>
+          <h3 class="card-title">Sensores de glucosa 2026: menos calibraciones y más precisión</h3>
+          <p class="card-summary">La nueva generación de monitores continuos de glucosa (MCG) reduce la necesidad de pinchazos para calibrar y avanza hacia sistemas más inteligentes y conectados.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/nice-2026-nutricion.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">Dietas</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-02-01">1 de febrero de 2026</time>
+          <h3 class="card-title">La guía NICE 2026 pide un asesoramiento nutricional individualizado</h3>
+          <p class="card-summary">La actualización británica sobre diabetes tipo 2 insiste en una atención centrada en la persona también en materia de alimentación.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/tirzepatida-chile.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">Medicación</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-01-27">27 de enero de 2026</time>
+          <h3 class="card-title">Chile aprueba la tirzepatida para diabetes tipo 2 y control del peso</h3>
+          <p class="card-summary">El Instituto de Salud Pública (ISP) autorizó este fármaco de Lilly, que actúa sobre dos mecanismos hormonales relacionados con la glucosa y el apetito.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/simplera-sync-desechable.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">Sensores</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-01-22">22 de enero de 2026</time>
+          <h3 class="card-title">MiniMed Simplera Sync: un sensor desechable todo en uno</h3>
+          <p class="card-summary">El nuevo sensor de Medtronic elimina la cinta adhesiva adicional y simplifica el proceso de inserción a solo dos pasos.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="articulos/cagrisema-orforglipron.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">Medicación</div>
+        <div class="card-body">
+          <time class="card-date" datetime="2026-01-15">15 de enero de 2026</time>
+          <h3 class="card-title">CagriSema y orforglipron, los tratamientos más esperados de 2026</h3>
+          <p class="card-summary">Novo Nordisk y Eli Lilly avanzan en nuevas combinaciones y en un agonista oral de GLP-1 para la obesidad y la diabetes tipo 2.</p>
+          <span class="card-link">Leer más &rarr;</span>
+        </div>
+      </a>
+    </div>
+    <p class="empty-state" id="empty-state" hidden>No hay artículos en esta categoría todavía.</p>
 
     <div class="disclaimer">
       Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.
     </div>
   </main>
 
-  <footer class="site-footer" id="site-footer"></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; 2026 DiabetesHoy. Solo novedades sobre diabetes.</span>
+      <span>Contenido informativo, no sustituye el consejo médico profesional.</span>
+    </div>
+  </footer>
 
-  <script src="js/data.js"></script>
-  <script src="js/partials.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 </html>

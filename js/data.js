@@ -191,3 +191,8 @@ const CATEGORIAS = {
   estudios: { nombre: "Estudios", color: "#7c3aed" },
   dietas: { nombre: "Dietas", color: "#d97706" }
 };
+
+// Permite reutilizar estos datos desde build.js (Node) sin duplicarlos.
+if (typeof module !== "undefined") {
+  module.exports = { ARTICLES, CATEGORIAS };
+}
