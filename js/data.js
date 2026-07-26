@@ -2,6 +2,20 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "diabetes-enfermedad-inflamatoria",
+    categoria: "estudios",
+    titulo: "Por qué cada vez se entiende también la diabetes tipo 2 como una enfermedad inflamatoria",
+    resumen: "Cada vez hay más consenso en que, además de un problema de regulación de la glucosa, la diabetes tipo 2 implica una inflamación crónica de bajo grado que retroalimenta la resistencia a la insulina.",
+    fecha: "2026-06-18",
+    fuenteNombre: "MedChannel Network",
+    fuenteUrl: "https://network.medchannel.org/blogs/143/nueva-cara-diabetes-enfermedad-inflamatoria",
+    cuerpo: [
+      "En los últimos años ha cobrado fuerza una visión renovada de la diabetes tipo 2: además de un problema de regulación de la glucosa, cada vez se entiende más como una enfermedad inflamatoria crónica de bajo grado, con una activación persistente de mecanismos inmunometabólicos que afectan al tejido adiposo, el hígado, el músculo esquelético, el páncreas y el sistema vascular.",
+      "El mecanismo señalado por los especialistas parte del exceso de grasa abdominal, que libera hormonas y ácidos grasos capaces de mantener activado el sistema inmunitario de forma prolongada. Esa activación constante dificulta la señalización celular de la insulina, alimentando un círculo que refuerza la resistencia a la insulina y la hiperinsulinemia.",
+      "La buena noticia es que este proceso puede ser reversible si se detecta a tiempo, especialmente en fases tempranas como la prediabetes: los cambios en la alimentación, el ejercicio y la reducción de la grasa abdominal pueden ayudar a revertir la resistencia a la insulina en cuestión de semanas o meses."
+    ]
+  },
+  {
     id: "sensor-2026-panorama",
     categoria: "sensores",
     titulo: "Sensores de glucosa 2026: menos calibraciones y más precisión",
