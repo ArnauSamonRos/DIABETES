@@ -343,15 +343,6 @@ nav.main-nav a.active {
   margin-bottom: 8px;
 }
 
-.guide-image {
-  display: block;
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  margin: 4px auto 18px;
-  border-radius: var(--radius);
-}
-
 .source-box {
   margin-top: 32px;
   padding: 16px 18px;
