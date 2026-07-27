@@ -213,12 +213,6 @@ function homeUrl(absolute) {
 }
 
 function renderHeader(prefix, activeCat) {
-  const categoryLinks = Object.entries(CATEGORIAS).map(([slug, cat]) => ({
-    href: `${prefix}index.html#${slug}`,
-    label: cat.nombre,
-    cat: slug
-  }));
-
   const guideLinks = [
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
     { href: `${prefix}bombas-de-insulina.html`, label: "Bombas de insulina", cat: "bombas" },
@@ -228,7 +222,6 @@ function renderHeader(prefix, activeCat) {
   const renderLink = (l, extraClass) =>
     `<a href="${l.href}" class="${[extraClass, l.cat === activeCat ? "active" : ""].filter(Boolean).join(" ")}">${l.label}</a>`;
 
-  const categoryHtml = categoryLinks.map(l => renderLink(l)).join("\n        ");
   const guideHtml = guideLinks.map(l => renderLink(l, "nav-link--guide")).join("\n        ");
 
   return `  <header class="site-header">
@@ -237,13 +230,7 @@ function renderHeader(prefix, activeCat) {
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="${prefix}index.html"${activeCat === "inicio" ? ' class="active"' : ""}>Portada</a>
 
-        <span class="nav-group-label">Secciones de noticias</span>
-        <span class="nav-group" role="group" aria-label="Categorías de noticias en la portada">
-          ${categoryHtml}
-        </span>
-
-        <span class="nav-group-label nav-group-label--guides">Guías de referencia</span>
-        <span class="nav-group nav-group--guides" role="group" aria-label="Guías y páginas de referencia, sin noticias">
+        <span class="nav-group nav-group--guides" role="group" aria-label="Guías y páginas de referencia">
           ${guideHtml}
         </span>
       </nav>
