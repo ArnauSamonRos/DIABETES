@@ -2,6 +2,90 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "css-panama-sensores-ninos",
+    categoria: "sensores",
+    titulo: "Panamá reparte sensores de glucosa gratuitos a niños con diabetes",
+    resumen: "La Caja de Seguro Social panameña ha comenzado a entregar sensores de monitorización continua de 14 días de duración a menores con diabetes, con alertas antes de una bajada peligrosa de glucosa.",
+    fecha: "2026-07-27",
+    fuenteNombre: "CSS Noticias (Panamá)",
+    fuenteUrl: "https://prensa.css.gob.pa/2026/01/19/css-coloca-70-sensores-de-monitoreo-continuo-de-glucosa-a-ninos-con-diabetes/",
+    cuerpo: [
+      "La Caja de Seguro Social (CSS) de Panamá ha comenzado a entregar y colocar sensores de monitorización continua de glucosa a niños y niñas con diagnóstico de diabetes, dentro de un programa público de acceso a esta tecnología.",
+      "Los sensores entregados tienen una vida útil de 14 días y una de sus funciones más valoradas por las familias es la capacidad de emitir alertas cuando los niveles de glucosa empiezan a bajar, antes de que el menor pierda el estado de conciencia o sufra convulsiones por una hipoglucemia grave.",
+      "Este tipo de iniciativas públicas buscan reducir la brecha de acceso a la monitorización continua, una tecnología que hasta hace poco quedaba fuera del alcance de muchas familias por su coste, especialmente en la población pediátrica, donde las alertas tempranas son especialmente valiosas."
+    ]
+  },
+  {
+    id: "cofepris-orforglipron-oral",
+    categoria: "medicacion",
+    titulo: "México autoriza la primera pastilla contra la diabetes tipo 2 con doble aprobación para la obesidad",
+    resumen: "COFEPRIS autorizó un nuevo tratamiento oral de Eli Lilly que en ensayos de fase 3 logró reducciones de hasta 2,2 puntos de HbA1c y una pérdida media del 12,4% del peso corporal.",
+    fecha: "2026-07-27",
+    fuenteNombre: "Saludiario",
+    fuenteUrl: "https://www.saludiario.com/cofepris-autoriza-un-tratamiento-oral-contra-la-obesidad-y-diabetes-es-el-primer-pais-del-mundo-con-una-doble-aprobacion/",
+    cuerpo: [
+      "La Comisión Federal para la Protección contra Riesgos Sanitarios (COFEPRIS) de México autorizó un nuevo tratamiento en pastilla desarrollado por el laboratorio Eli Lilly, indicado tanto para la obesidad como para la diabetes tipo 2.",
+      "La autorización se basó en dos programas de ensayos clínicos de fase 3: en el estudio centrado en obesidad, los participantes perdieron en promedio un 12,4% de su peso corporal, mientras que en el estudio centrado en diabetes tipo 2 se lograron reducciones de hasta 2,2 puntos en la hemoglobina glucosilada (HbA1c), un indicador clave del control glucémico a medio plazo.",
+      "Según lo informado, se trata de la primera autorización de este tipo a nivel mundial con una doble indicación (obesidad y diabetes tipo 2) para este tratamiento oral, lo que lo sitúa como una alternativa a considerar junto a los tratamientos inyectables ya existentes de la misma familia."
+    ]
+  },
+  {
+    id: "actualizacion-2026-cardiorrenal-diabetes",
+    categoria: "estudios",
+    titulo: "La actualización de 2026 para cardiólogos prioriza el beneficio cardiorrenal al elegir tratamiento en diabetes tipo 2",
+    resumen: "La revisión más reciente refuerza un cambio de enfoque: elegir los fármacos según su beneficio cardiovascular y renal, incluso cuando el control de la glucosa ya es aceptable.",
+    fecha: "2026-07-27",
+    fuenteNombre: "Cardioteca",
+    fuenteUrl: "https://www.cardioteca.com/blog-diabetes/7763-actualizacion-2026-en-diabetes-tipo-2-para-cardiologos-enfoque-cardiorrenal-y-terapias-prioritarias.html",
+    cuerpo: [
+      "Una actualización dirigida a cardiólogos sobre el manejo de la diabetes tipo 2 en 2026 refuerza un cambio de enfoque que lleva años consolidándose: elegir el tratamiento farmacológico también en función de su beneficio cardiovascular y renal, y no solo de su capacidad para bajar la glucosa.",
+      "Esto significa que, incluso en personas cuyo control glucémico ya es aceptable, puede recomendarse añadir o mantener determinados fármacos (como los inhibidores de SGLT2 o los agonistas del receptor de GLP-1) por su efecto protector sobre el corazón y los riñones, dos de los órganos más afectados a largo plazo por la diabetes.",
+      "La revisión también insiste en ajustar la estrategia de tratamiento según el fenotipo clínico de cada persona: no es lo mismo priorizar la protección cardiorrenal en alguien con antecedentes cardiovasculares que en alguien sin ellos, de ahí la importancia de una valoración individualizada por parte del equipo médico."
+    ]
+  },
+  {
+    id: "ada-2026-prediabetes-perdida-peso",
+    categoria: "dietas",
+    titulo: "Los estándares ADA 2026 refuerzan la pérdida de peso del 5-7% y la dieta mediterránea frente a la prediabetes",
+    resumen: "La actualización de la Asociación Americana de Diabetes reafirma el seguimiento estructurado de la prediabetes, con más peso para los programas de pérdida de peso, la dieta mediterránea y la telemedicina.",
+    fecha: "2026-07-27",
+    fuenteNombre: "Nutrinfo",
+    fuenteUrl: "https://nutrinfo.com/recursos/actualizacion-2026-de-los-estandares-de-atencion-en-diabetes-de-la-ada",
+    cuerpo: [
+      "La actualización 2026 de los Estándares de Atención en Diabetes de la Asociación Americana de Diabetes (ADA) refuerza el seguimiento estructurado de las personas con prediabetes, con el objetivo de frenar su progresión hacia una diabetes tipo 2 ya establecida.",
+      "Entre las herramientas que ganan peso en esta actualización están los programas de pérdida de peso de entre un 5% y un 7% del peso corporal, la dieta mediterránea como patrón de referencia, el apoyo por telemedicina para facilitar el seguimiento, y el uso selectivo de metformina en las personas con mayor riesgo.",
+      "El documento también refuerza la educación terapéutica en diabetes, la atención a la nutrición individualizada, el ejercicio, el sueño y el abandono del tabaco o el vapeo, además de recomendar un cribado sistemático de la angustia asociada a vivir con diabetes."
+    ]
+  },
+  {
+    id: "ejercicio-movilidad-diabetes-2026",
+    categoria: "ejercicio",
+    titulo: "Cómo el ejercicio ayuda a recuperar movilidad y mejorar el control de la diabetes",
+    resumen: "Un programa de ejercicio dirigido a personas con diabetes mostró mejoras en la fuerza muscular, el dolor, la rigidez, el equilibrio y el riesgo de caídas, además de reforzar la autonomía en el día a día.",
+    fecha: "2026-07-27",
+    fuenteNombre: "Diario Huemul",
+    fuenteUrl: "https://elhuemul.cl/2026/07/14/como-recuperar-la-movilidad-y-mejorar-el-control-de-la-diabetes-con-ejercicios/",
+    cuerpo: [
+      "Un reportaje reciente recoge cómo una intervención estructurada de ejercicio físico puede ayudar a las personas con diabetes a recuperar movilidad, además de mejorar el control de la enfermedad. Los participantes mostraron mejoras en la fuerza muscular y una reducción del dolor y la rigidez articular.",
+      "El programa también se asoció a una mejor movilidad y equilibrio, lo que en la práctica se traduce en un menor riesgo de caídas, un aspecto especialmente relevante en personas mayores con diabetes o con complicaciones que afectan a la sensibilidad de los pies.",
+      "Los autores destacan que este tipo de intervenciones no solo inciden en el control glucémico, sino que ayudan a prevenir complicaciones crónicas y a fortalecer la autonomía para las actividades del día a día, un objetivo tan importante como el propio control de la glucosa."
+    ]
+  },
+  {
+    id: "ada-2026-retinopatia-neuropatia-pie",
+    categoria: "complicaciones",
+    titulo: "Los estándares ADA 2026 refuerzan el control glucémico y de presión arterial para frenar la retinopatía",
+    resumen: "El capítulo dedicado a retinopatía, neuropatía y cuidado del pie en los Estándares de Atención en Diabetes 2026 insiste en alcanzar los objetivos de glucosa, presión arterial y lípidos para reducir estas complicaciones.",
+    fecha: "2026-07-27",
+    fuenteNombre: "American Diabetes Association (Standards of Care in Diabetes—2026)",
+    fuenteUrl: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12690177/",
+    cuerpo: [
+      "El capítulo dedicado a retinopatía, neuropatía y cuidado del pie de los Estándares de Atención en Diabetes 2026 de la Asociación Americana de Diabetes (ADA) recuerda que estas complicaciones microvasculares están estrechamente ligadas tanto a la duración de la diabetes como al grado de hiperglucemia crónica mantenida en el tiempo.",
+      "El documento recomienda implementar estrategias que ayuden a las personas con diabetes a alcanzar sus objetivos de glucosa, presión arterial y lípidos, ya que este control conjunto es lo que más contribuye a reducir el riesgo de aparición o a frenar la progresión de la retinopatía diabética.",
+      "También se insiste en el cuidado del pie como parte de esta misma familia de complicaciones: la neuropatía puede reducir la sensibilidad y hacer que heridas o irritaciones pasen desapercibidas, por lo que la revisión periódica de los pies sigue siendo una recomendación central para prevenir úlceras."
+    ]
+  },
+  {
     id: "diabetes-enfermedad-inflamatoria",
     categoria: "estudios",
     titulo: "Por qué cada vez se entiende también la diabetes tipo 2 como una enfermedad inflamatoria",
