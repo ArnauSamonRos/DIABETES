@@ -40,6 +40,12 @@ const GTM_NOSCRIPT = `  <!-- Google Tag Manager (noscript) -->
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->`;
 
+// Vercel Analytics. Este sitio es HTML estático (sin React/Next.js ni build
+// de npm), así que se usa el script vanilla que recomienda Vercel para sitios
+// sin framework en vez del paquete @vercel/analytics + <Analytics/>. Solo
+// registrará visitas si el sitio se despliega realmente en Vercel.
+const VERCEL_ANALYTICS_SCRIPT = `<script defer src="/_vercel/insights/script.js"></script>`;
+
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, "articulos");
 
@@ -315,6 +321,7 @@ ${extraMeta}
   <link rel="stylesheet" href="${prefix}css/style.css" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
      crossorigin="anonymous"></script>
+  ${VERCEL_ANALYTICS_SCRIPT}
 ${jsonLdHtml}`;
 }
 
