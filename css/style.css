@@ -385,6 +385,15 @@ nav.main-nav a.nav-link--guide.active {
   margin-bottom: 8px;
 }
 
+.guide-image {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 4px auto 18px;
+  border-radius: var(--radius);
+}
+
 .source-box {
   margin-top: 32px;
   padding: 16px 18px;

@@ -600,6 +600,7 @@ ${renderHeader("", "guia")}
 
     <div class="article-body">
       <h2>Un plato de ejemplo para las comidas principales</h2>
+      <img class="guide-image" src="img/plato-alimentacion.png" width="832" height="548" loading="lazy" alt="Plato dividido en 50% verduras y hortalizas, 25% proteína y 25% cereales o carbohidratos, con un tenedor y un cuchillo a los lados" />
       <p>Una forma sencilla de organizar comidas y cenas es dividir el plato en tres partes: la mitad con verduras y hortalizas, un cuarto con cereales integrales o carbohidratos de bajo índice glucémico (arroz integral, legumbres, patata con piel) y el último cuarto con una fuente de proteína magra (pescado, huevo, legumbres o carne magra). Más contexto en la noticia sobre la <a href="articulos/nice-2026-nutricion.html">guía NICE 2026</a> y sobre los <a href="articulos/dieta-base-vegetal.html">patrones alimentarios de base vegetal</a>.</p>
 
       <h2>Ideas para el día a día</h2>
