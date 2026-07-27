@@ -24,6 +24,22 @@ const STATIC_PAGES_LASTMOD = "2026-07-26";
 // Cliente de Google AdSense para el script cargado en el <head> de cada página.
 const ADSENSE_CLIENT = "ca-pub-7265745270719064";
 
+// Google Tag Manager, instalado en todas las páginas generadas.
+const GTM_ID = "GTM-568X9Q5B";
+
+const GTM_SCRIPT = `<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','${GTM_ID}');</script>
+  <!-- End Google Tag Manager -->`;
+
+const GTM_NOSCRIPT = `  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->`;
+
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, "articulos");
 
@@ -324,9 +340,11 @@ function renderIndexPage(articles) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", "inicio")}
 
   <main class="container">
@@ -405,9 +423,11 @@ function renderArticlePage(article) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("../", article.categoria)}
 
   <main class="article-wrap">
@@ -449,9 +469,11 @@ function renderAboutPage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
@@ -504,9 +526,11 @@ function renderFaqPage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
@@ -542,9 +566,11 @@ function renderContactPage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
@@ -585,9 +611,11 @@ function renderGuidePage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", "guia")}
 
   <main class="article-wrap">
@@ -670,9 +698,11 @@ function renderPumpsPage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", "bombas")}
 
   <main class="article-wrap article-wrap--wide">
@@ -753,9 +783,11 @@ function renderInsulinTypesPage() {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
+${GTM_SCRIPT}
 ${head}
 </head>
 <body>
+${GTM_NOSCRIPT}
 ${renderHeader("", "tipos-insulina")}
 
   <main class="article-wrap article-wrap--wide">
