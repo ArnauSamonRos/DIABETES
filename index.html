@@ -54,249 +54,343 @@
 
   <main class="container">
     <section class="hero">
+      <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
       <h1>Novedades sobre diabetes</h1>
       <p>Sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
+      <div class="stats-bar">
+        <div class="stat reveal">
+          <span class="stat-number" data-count-to="26">26</span>
+          <span class="stat-label">Noticias publicadas</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number" data-count-to="6">6</span>
+          <span class="stat-label">Categorías</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-number" data-count-to="20">20</span>
+          <span class="stat-label">Fuentes verificadas</span>
+        </div>
+      </div>
     </section>
 
     <div class="filters" role="group" aria-label="Filtrar por categoría">
-      <button class="filter-btn" data-filtro="todas">Todas</button>
-      <button class="filter-btn" data-filtro="sensores">Sensores</button>
-      <button class="filter-btn" data-filtro="medicacion">Medicación</button>
-      <button class="filter-btn" data-filtro="estudios">Estudios</button>
-      <button class="filter-btn" data-filtro="dietas">Dietas</button>
-      <button class="filter-btn" data-filtro="ejercicio">Ejercicio</button>
-      <button class="filter-btn" data-filtro="complicaciones">Complicaciones</button>
+      <button class="filter-btn" data-filtro="todas">🗞️ Todas</button>
+      <button class="filter-btn" data-filtro="sensores">📡 Sensores</button>
+      <button class="filter-btn" data-filtro="medicacion">💊 Medicación</button>
+      <button class="filter-btn" data-filtro="estudios">🔬 Estudios</button>
+      <button class="filter-btn" data-filtro="dietas">🥗 Dietas</button>
+      <button class="filter-btn" data-filtro="ejercicio">🏃 Ejercicio</button>
+      <button class="filter-btn" data-filtro="complicaciones">⚠️ Complicaciones</button>
     </div>
 
     <div class="grid" id="grid">
-      <a class="card" href="articulos/css-panama-sensores-ninos.html" data-cat="sensores">
-        <div class="card-banner" style="background:#2563eb">Sensores</div>
+      <a class="card reveal card--featured" href="articulos/css-panama-sensores-ninos.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">
+          <span class="card-icon" aria-hidden="true">📡</span>Sensores
+        </div>
         <div class="card-body">
+          <span class="card-eyebrow">Última noticia</span>
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">Panamá reparte sensores de glucosa gratuitos a niños con diabetes</h3>
           <p class="card-summary">La Caja de Seguro Social panameña ha comenzado a entregar sensores de monitorización continua de 14 días de duración a menores con diabetes, con alertas antes de una bajada peligrosa de glucosa.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/cofepris-orforglipron-oral.html" data-cat="medicacion">
-        <div class="card-banner" style="background:#059669">Medicación</div>
+      <a class="card reveal" href="articulos/cofepris-orforglipron-oral.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">
+          <span class="card-icon" aria-hidden="true">💊</span>Medicación
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">México autoriza la primera pastilla contra la diabetes tipo 2 con doble aprobación para la obesidad</h3>
           <p class="card-summary">COFEPRIS autorizó un nuevo tratamiento oral de Eli Lilly que en ensayos de fase 3 logró reducciones de hasta 2,2 puntos de HbA1c y una pérdida media del 12,4% del peso corporal.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/actualizacion-2026-cardiorrenal-diabetes.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/actualizacion-2026-cardiorrenal-diabetes.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">La actualización de 2026 para cardiólogos prioriza el beneficio cardiorrenal al elegir tratamiento en diabetes tipo 2</h3>
           <p class="card-summary">La revisión más reciente refuerza un cambio de enfoque: elegir los fármacos según su beneficio cardiovascular y renal, incluso cuando el control de la glucosa ya es aceptable.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/ada-2026-prediabetes-perdida-peso.html" data-cat="dietas">
-        <div class="card-banner" style="background:#d97706">Dietas</div>
+      <a class="card reveal" href="articulos/ada-2026-prediabetes-perdida-peso.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">
+          <span class="card-icon" aria-hidden="true">🥗</span>Dietas
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">Los estándares ADA 2026 refuerzan la pérdida de peso del 5-7% y la dieta mediterránea frente a la prediabetes</h3>
           <p class="card-summary">La actualización de la Asociación Americana de Diabetes reafirma el seguimiento estructurado de la prediabetes, con más peso para los programas de pérdida de peso, la dieta mediterránea y la telemedicina.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/ejercicio-movilidad-diabetes-2026.html" data-cat="ejercicio">
-        <div class="card-banner" style="background:#0d9488">Ejercicio</div>
+      <a class="card reveal" href="articulos/ejercicio-movilidad-diabetes-2026.html" data-cat="ejercicio">
+        <div class="card-banner" style="background:#0d9488">
+          <span class="card-icon" aria-hidden="true">🏃</span>Ejercicio
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">Cómo el ejercicio ayuda a recuperar movilidad y mejorar el control de la diabetes</h3>
           <p class="card-summary">Un programa de ejercicio dirigido a personas con diabetes mostró mejoras en la fuerza muscular, el dolor, la rigidez, el equilibrio y el riesgo de caídas, además de reforzar la autonomía en el día a día.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/ada-2026-retinopatia-neuropatia-pie.html" data-cat="complicaciones">
-        <div class="card-banner" style="background:#dc2626">Complicaciones</div>
+      <a class="card reveal" href="articulos/ada-2026-retinopatia-neuropatia-pie.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complicaciones
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-07-27">27 de julio de 2026</time>
           <h3 class="card-title">Los estándares ADA 2026 refuerzan el control glucémico y de presión arterial para frenar la retinopatía</h3>
           <p class="card-summary">El capítulo dedicado a retinopatía, neuropatía y cuidado del pie en los Estándares de Atención en Diabetes 2026 insiste en alcanzar los objetivos de glucosa, presión arterial y lípidos para reducir estas complicaciones.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/diabetes-enfermedad-inflamatoria.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/diabetes-enfermedad-inflamatoria.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-06-18">18 de junio de 2026</time>
           <h3 class="card-title">Por qué cada vez se entiende también la diabetes tipo 2 como una enfermedad inflamatoria</h3>
           <p class="card-summary">Cada vez hay más consenso en que, además de un problema de regulación de la glucosa, la diabetes tipo 2 implica una inflamación crónica de bajo grado que retroalimenta la resistencia a la insulina.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/microbiota-diabetes.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/microbiota-diabetes.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-05-26">26 de mayo de 2026</time>
           <h3 class="card-title">La microbiota intestinal, una nueva pista para entender la diabetes tipo 2</h3>
           <p class="card-summary">Investigadores identifican una relación entre la composición de la microbiota y la regulación del metabolismo de la glucosa.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/prevencion-retinopatia-control-glucosa.html" data-cat="complicaciones">
-        <div class="card-banner" style="background:#dc2626">Complicaciones</div>
+      <a class="card reveal" href="articulos/prevencion-retinopatia-control-glucosa.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complicaciones
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-05-12">12 de mayo de 2026</time>
           <h3 class="card-title">Prevenir la retinopatía diabética pasa por el control de la glucosa y la tensión arterial</h3>
           <p class="card-summary">Los especialistas insisten en que la mejor estrategia frente a esta complicación ocular sigue siendo la prevención, más que su tratamiento una vez desarrollada.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/ejercicio-prevencion-diabetes-58.html" data-cat="ejercicio">
-        <div class="card-banner" style="background:#0d9488">Ejercicio</div>
+      <a class="card reveal" href="articulos/ejercicio-prevencion-diabetes-58.html" data-cat="ejercicio">
+        <div class="card-banner" style="background:#0d9488">
+          <span class="card-icon" aria-hidden="true">🏃</span>Ejercicio
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-05-08">8 de mayo de 2026</time>
           <h3 class="card-title">150 minutos de ejercicio moderado a la semana redujeron un 58% el riesgo de diabetes tipo 2</h3>
           <p class="card-summary">Un programa de tres años que combinó dieta baja en grasa y actividad física moderada mostró una reducción notable del riesgo en personas con predisposición a desarrollar la enfermedad.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/sedentarismo-cada-30-minutos.html" data-cat="ejercicio">
-        <div class="card-banner" style="background:#0d9488">Ejercicio</div>
+      <a class="card reveal" href="articulos/sedentarismo-cada-30-minutos.html" data-cat="ejercicio">
+        <div class="card-banner" style="background:#0d9488">
+          <span class="card-icon" aria-hidden="true">🏃</span>Ejercicio
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-04-14">14 de abril de 2026</time>
           <h3 class="card-title">Interrumpir el sedentarismo cada 30 minutos ayuda a controlar la glucemia</h3>
           <p class="card-summary">Pequeñas pausas activas a lo largo del día, como levantarse a caminar unos minutos, se asocian a mejoras en los niveles de glucosa en personas con diabetes.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/control-glucemico-neuropatia.html" data-cat="complicaciones">
-        <div class="card-banner" style="background:#dc2626">Complicaciones</div>
+      <a class="card reveal" href="articulos/control-glucemico-neuropatia.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complicaciones
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-04-03">3 de abril de 2026</time>
           <h3 class="card-title">El control glucémico estricto sigue siendo la estrategia más eficaz frente a la neuropatía diabética</h3>
           <p class="card-summary">Las revisiones más recientes confirman que el manejo integral de los factores de riesgo cardiovascular es la base de la prevención, mientras avanzan nuevas técnicas de neuromodulación.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/terapia-genica-kriya.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/terapia-genica-kriya.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-04-02">2 de abril de 2026</time>
           <h3 class="card-title">Terapia génica: un ensayo clínico busca enseñar a los músculos a regular la glucosa</h3>
           <p class="card-summary">La biotecnológica Kriya Therapeutics introduce genes de insulina y glucocinasa en el músculo esquelético mediante una única inyección intramuscular.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/sana-biotechnology-celulas-madre.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/sana-biotechnology-celulas-madre.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-03-18">18 de marzo de 2026</time>
           <h3 class="card-title">Células madre sin inmunosupresión: Sana Biotechnology inicia un ensayo de fase 1</h3>
           <p class="card-summary">La compañía biotecnológica avanza con una terapia celular derivada de células madre que busca evitar el uso de fármacos inmunosupresores.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/abbott-glucosa-cetonas.html" data-cat="sensores">
-        <div class="card-banner" style="background:#2563eb">Sensores</div>
+      <a class="card reveal" href="articulos/abbott-glucosa-cetonas.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">
+          <span class="card-icon" aria-hidden="true">📡</span>Sensores
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-03-10">10 de marzo de 2026</time>
           <h3 class="card-title">Abbott presenta un sensor capaz de medir glucosa y cetonas a la vez</h3>
           <p class="card-summary">La compañía mostró en un congreso internacional de tecnología en diabetes un sensor dual pensado para prevenir la cetoacidosis diabética de forma más temprana.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/entrenamiento-fuerza-hba1c.html" data-cat="ejercicio">
-        <div class="card-banner" style="background:#0d9488">Ejercicio</div>
+      <a class="card reveal" href="articulos/entrenamiento-fuerza-hba1c.html" data-cat="ejercicio">
+        <div class="card-banner" style="background:#0d9488">
+          <span class="card-icon" aria-hidden="true">🏃</span>Ejercicio
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-03-04">4 de marzo de 2026</time>
           <h3 class="card-title">El entrenamiento de fuerza mejora el control glucémico en diabetes tipo 2</h3>
           <p class="card-summary">Distintos estudios apuntan a una disminución significativa de la HbA1c en personas con diabetes tipo 2 que incorporan ejercicios de fuerza a su rutina.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/educacion-paciente-cribado-retinopatia.html" data-cat="complicaciones">
-        <div class="card-banner" style="background:#dc2626">Complicaciones</div>
+      <a class="card reveal" href="articulos/educacion-paciente-cribado-retinopatia.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complicaciones
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-27">27 de febrero de 2026</time>
           <h3 class="card-title">La educación del paciente aumenta el cribado de retinopatía y neuropatía diabética</h3>
           <p class="card-summary">Programas de educación sanitaria se asocian a un incremento del 33% en las revisiones de retinopatía y del 38% en las de neuropatía diabética.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/semaglutida-riesgo-renal.html" data-cat="estudios">
-        <div class="card-banner" style="background:#7c3aed">Estudios</div>
+      <a class="card reveal" href="articulos/semaglutida-riesgo-renal.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Estudios
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-20">20 de febrero de 2026</time>
           <h3 class="card-title">Un gran estudio asocia la semaglutida con menor riesgo renal y cardiovascular</h3>
           <p class="card-summary">En un ensayo con más de 3.500 participantes se observó una reducción del 24% en un compuesto de eventos renales graves y muerte cardiovascular.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/bexagliflozina-fda.html" data-cat="medicacion">
-        <div class="card-banner" style="background:#059669">Medicación</div>
+      <a class="card reveal" href="articulos/bexagliflozina-fda.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">
+          <span class="card-icon" aria-hidden="true">💊</span>Medicación
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-14">14 de febrero de 2026</time>
           <h3 class="card-title">La FDA aprueba la bexagliflozina (Brenzavvy) para diabetes tipo 2</h3>
           <p class="card-summary">Se trata de un nuevo inhibidor del cotransportador sodio-glucosa tipo 2 (SGLT2) desarrollado por TheracosBio para mejorar el control glucémico.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/dieta-base-vegetal.html" data-cat="dietas">
-        <div class="card-banner" style="background:#d97706">Dietas</div>
+      <a class="card reveal" href="articulos/dieta-base-vegetal.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">
+          <span class="card-icon" aria-hidden="true">🥗</span>Dietas
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-05">5 de febrero de 2026</time>
           <h3 class="card-title">Los patrones alimentarios de base vegetal ganan peso en las guías de diabetes</h3>
           <p class="card-summary">La evidencia disponible relaciona las dietas ricas en fibra y bajas en grasas saturadas con una menor expresión de factores de riesgo cardiovascular.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/perdida-peso-control-metabolico.html" data-cat="dietas">
-        <div class="card-banner" style="background:#d97706">Dietas</div>
+      <a class="card reveal" href="articulos/perdida-peso-control-metabolico.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">
+          <span class="card-icon" aria-hidden="true">🥗</span>Dietas
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-05">5 de febrero de 2026</time>
           <h3 class="card-title">Perder entre un 5% y un 10% del peso mejora el control metabólico</h3>
           <p class="card-summary">Un plan de alimentación saludable combinado con ejercicio regular puede tener un impacto relevante en la glucosa, la tensión arterial y el perfil lipídico.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/sensor-2026-panorama.html" data-cat="sensores">
-        <div class="card-banner" style="background:#2563eb">Sensores</div>
+      <a class="card reveal" href="articulos/sensor-2026-panorama.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">
+          <span class="card-icon" aria-hidden="true">📡</span>Sensores
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-03">3 de febrero de 2026</time>
           <h3 class="card-title">Sensores de glucosa 2026: menos calibraciones y más precisión</h3>
           <p class="card-summary">La nueva generación de monitores continuos de glucosa (MCG) reduce la necesidad de pinchazos para calibrar y avanza hacia sistemas más inteligentes y conectados.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/nice-2026-nutricion.html" data-cat="dietas">
-        <div class="card-banner" style="background:#d97706">Dietas</div>
+      <a class="card reveal" href="articulos/nice-2026-nutricion.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">
+          <span class="card-icon" aria-hidden="true">🥗</span>Dietas
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-02-01">1 de febrero de 2026</time>
           <h3 class="card-title">La guía NICE 2026 pide un asesoramiento nutricional individualizado</h3>
           <p class="card-summary">La actualización británica sobre diabetes tipo 2 insiste en una atención centrada en la persona también en materia de alimentación.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/tirzepatida-chile.html" data-cat="medicacion">
-        <div class="card-banner" style="background:#059669">Medicación</div>
+      <a class="card reveal" href="articulos/tirzepatida-chile.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">
+          <span class="card-icon" aria-hidden="true">💊</span>Medicación
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-01-27">27 de enero de 2026</time>
           <h3 class="card-title">Chile aprueba la tirzepatida para diabetes tipo 2 y control del peso</h3>
           <p class="card-summary">El Instituto de Salud Pública (ISP) autorizó este fármaco de Lilly, que actúa sobre dos mecanismos hormonales relacionados con la glucosa y el apetito.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/simplera-sync-desechable.html" data-cat="sensores">
-        <div class="card-banner" style="background:#2563eb">Sensores</div>
+      <a class="card reveal" href="articulos/simplera-sync-desechable.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">
+          <span class="card-icon" aria-hidden="true">📡</span>Sensores
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-01-22">22 de enero de 2026</time>
           <h3 class="card-title">MiniMed Simplera Sync: un sensor desechable todo en uno</h3>
           <p class="card-summary">El nuevo sensor de Medtronic elimina la cinta adhesiva adicional y simplifica el proceso de inserción a solo dos pasos.</p>
           <span class="card-link">Leer más &rarr;</span>
         </div>
       </a>
-      <a class="card" href="articulos/cagrisema-orforglipron.html" data-cat="medicacion">
-        <div class="card-banner" style="background:#059669">Medicación</div>
+      <a class="card reveal" href="articulos/cagrisema-orforglipron.html" data-cat="medicacion">
+        <div class="card-banner" style="background:#059669">
+          <span class="card-icon" aria-hidden="true">💊</span>Medicación
+        </div>
         <div class="card-body">
+          
           <time class="card-date" datetime="2026-01-15">15 de enero de 2026</time>
           <h3 class="card-title">CagriSema y orforglipron, los tratamientos más esperados de 2026</h3>
           <p class="card-summary">Novo Nordisk y Eli Lilly avanzan en nuevas combinaciones y en un agonista oral de GLP-1 para la obesidad y la diabetes tipo 2.</p>
@@ -324,5 +418,6 @@
   </footer>
 
   <script src="js/filter.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>

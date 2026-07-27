@@ -368,12 +368,12 @@ const ARTICLES = [
 ];
 
 const CATEGORIAS = {
-  sensores: { nombre: "Sensores", color: "#2563eb" },
-  medicacion: { nombre: "Medicación", color: "#059669" },
-  estudios: { nombre: "Estudios", color: "#7c3aed" },
-  dietas: { nombre: "Dietas", color: "#d97706" },
-  ejercicio: { nombre: "Ejercicio", color: "#0d9488" },
-  complicaciones: { nombre: "Complicaciones", color: "#dc2626" }
+  sensores: { nombre: "Sensores", color: "#2563eb", icono: "📡" },
+  medicacion: { nombre: "Medicación", color: "#059669", icono: "💊" },
+  estudios: { nombre: "Estudios", color: "#7c3aed", icono: "🔬" },
+  dietas: { nombre: "Dietas", color: "#d97706", icono: "🥗" },
+  ejercicio: { nombre: "Ejercicio", color: "#0d9488", icono: "🏃" },
+  complicaciones: { nombre: "Complicaciones", color: "#dc2626", icono: "⚠️" }
 };
 
 // Permite reutilizar estos datos desde build.js (Node) sin duplicarlos.

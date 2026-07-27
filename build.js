@@ -269,11 +269,17 @@ function renderFooter(prefix) {
   </footer>`;
 }
 
-function renderCard(article, prefix) {
+function renderCard(article, prefix, options = {}) {
   const cat = CATEGORIAS[article.categoria];
-  return `      <a class="card" href="${prefix}${articleUrl(article)}" data-cat="${article.categoria}">
-        <div class="card-banner" style="background:${cat.color}">${cat.nombre}</div>
+  const cardClass = ["card reveal", options.featured ? "card--featured" : ""].filter(Boolean).join(" ");
+  const eyebrow = options.featured ? `<span class="card-eyebrow">Última noticia</span>` : "";
+
+  return `      <a class="${cardClass}" href="${prefix}${articleUrl(article)}" data-cat="${article.categoria}">
+        <div class="card-banner" style="background:${cat.color}">
+          <span class="card-icon" aria-hidden="true">${cat.icono}</span>${cat.nombre}
+        </div>
         <div class="card-body">
+          ${eyebrow}
           <time class="card-date" datetime="${article.fecha}">${formatFecha(article.fecha)}</time>
           <h3 class="card-title">${escapeHtml(article.titulo)}</h3>
           <p class="card-summary">${escapeHtml(article.resumen)}</p>
@@ -314,16 +320,33 @@ ${jsonLdHtml}`;
 
 function renderIndexPage(articles) {
   const sorted = [...articles].sort((a, b) => b.fecha.localeCompare(a.fecha));
-  const cardsHtml = sorted.map(a => renderCard(a, "")).join("\n");
+  const cardsHtml = sorted
+    .map((a, i) => renderCard(a, "", { featured: i === 0 }))
+    .join("\n");
   const url = homeUrl(true);
   const title = `${SITE_NAME} · Novedades sobre diabetes`;
 
   const filterButtons = [
-    `      <button class="filter-btn" data-filtro="todas">Todas</button>`,
+    `      <button class="filter-btn" data-filtro="todas">🗞️ Todas</button>`,
     ...Object.entries(CATEGORIAS).map(
-      ([slug, cat]) => `      <button class="filter-btn" data-filtro="${slug}">${cat.nombre}</button>`
+      ([slug, cat]) => `      <button class="filter-btn" data-filtro="${slug}">${cat.icono} ${cat.nombre}</button>`
     )
   ].join("\n");
+
+  const totalFuentes = new Set(articles.map(a => a.fuenteNombre)).size;
+  const stats = [
+    { valor: articles.length, etiqueta: "Noticias publicadas" },
+    { valor: Object.keys(CATEGORIAS).length, etiqueta: "Categorías" },
+    { valor: totalFuentes, etiqueta: "Fuentes verificadas" }
+  ];
+  const statsHtml = stats
+    .map(
+      s => `        <div class="stat reveal">
+          <span class="stat-number" data-count-to="${s.valor}">${s.valor}</span>
+          <span class="stat-label">${s.etiqueta}</span>
+        </div>`
+    )
+    .join("\n");
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -349,8 +372,13 @@ ${renderHeader("", "inicio")}
 
   <main class="container">
     <section class="hero">
+      <div class="hero-blob hero-blob--1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob--2" aria-hidden="true"></div>
       <h1>Novedades sobre diabetes</h1>
       <p>Sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones: un resumen claro de lo último, siempre con enlace a la fuente original.</p>
+      <div class="stats-bar">
+${statsHtml}
+      </div>
     </section>
 
     <div class="filters" role="group" aria-label="Filtrar por categoría">
@@ -370,6 +398,7 @@ ${cardsHtml}
 ${renderFooter("")}
 
   <script src="js/filter.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -432,7 +461,7 @@ ${renderHeader("../", article.categoria)}
 
   <main class="article-wrap">
     <a class="back-link" href="../index.html#${article.categoria}">&larr; Volver a ${cat.nombre}</a>
-    <span class="badge" style="background:${cat.color}">${cat.nombre}</span>
+    <span class="badge" style="background:${cat.color}">${cat.icono} ${cat.nombre}</span>
     <h1>${escapeHtml(article.titulo)}</h1>
     <time class="article-meta" datetime="${article.fecha}">${formatFecha(article.fecha)}</time>
     <div class="article-body">
@@ -444,6 +473,7 @@ ${bodyHtml}
   </main>
 
 ${renderFooter("../")}
+  <script src="../js/motion.js"></script>
 </body>
 </html>
 `;
@@ -496,6 +526,7 @@ ${renderHeader("", null)}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -543,6 +574,7 @@ ${faqHtml}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -584,6 +616,7 @@ ${renderHeader("", null)}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -628,7 +661,7 @@ ${renderHeader("", "guia")}
 
     <div class="article-body">
       <h2>Un plato de ejemplo para las comidas principales</h2>
-      <img class="guide-image" src="img/plato-alimentacion.png" width="832" height="548" loading="lazy" alt="Plato dividido en 50% verduras y hortalizas, 25% proteína y 25% cereales o carbohidratos, con un tenedor y un cuchillo a los lados" />
+      <img class="guide-image reveal" src="img/plato-alimentacion.png" width="832" height="548" loading="lazy" alt="Plato dividido en 50% verduras y hortalizas, 25% proteína y 25% cereales o carbohidratos, con un tenedor y un cuchillo a los lados" />
       <p>Una forma sencilla de organizar comidas y cenas es dividir el plato en tres partes: la mitad con verduras y hortalizas, un cuarto con cereales integrales o carbohidratos de bajo índice glucémico (arroz integral, legumbres, patata con piel) y el último cuarto con una fuente de proteína magra (pescado, huevo, legumbres o carne magra). Más contexto en la noticia sobre la <a href="articulos/nice-2026-nutricion.html">guía NICE 2026</a> y sobre los <a href="articulos/dieta-base-vegetal.html">patrones alimentarios de base vegetal</a>.</p>
 
       <h2>Ideas para el día a día</h2>
@@ -656,6 +689,7 @@ ${renderHeader("", "guia")}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -713,7 +747,7 @@ ${renderHeader("", "bombas")}
       Esta comparativa es orientativa y no exhaustiva: la disponibilidad, las combinaciones con sensores y las condiciones de financiación varían según el país y el sistema de salud. La elección de una bomba de insulina debe hacerse siempre con tu equipo médico o educador en diabetes, que puede valorar cuál se ajusta mejor a tu caso.
     </div>
 
-    <div class="table-scroll">
+    <div class="table-scroll reveal">
       <table class="compare-table">
         <thead>
           <tr>
@@ -741,6 +775,7 @@ ${detailBlocks}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
@@ -805,7 +840,7 @@ ${renderHeader("", "tipos-insulina")}
       <h2>Comparativa rápida de los tipos de insulina</h2>
     </div>
 
-    <div class="table-scroll">
+    <div class="table-scroll reveal">
       <table class="compare-table">
         <thead>
           <tr>
@@ -848,6 +883,7 @@ ${detailBlocks}
   </main>
 
 ${renderFooter("")}
+  <script src="js/motion.js"></script>
 </body>
 </html>
 `;
