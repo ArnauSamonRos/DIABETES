@@ -219,23 +219,33 @@ function renderHeader(prefix, activeCat) {
     cat: slug
   }));
 
-  const links = [
-    { href: `${prefix}index.html`, label: "Portada", cat: "inicio" },
+  const guideLinks = [
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
     { href: `${prefix}bombas-de-insulina.html`, label: "Bombas de insulina", cat: "bombas" },
-    { href: `${prefix}tipos-de-insulina.html`, label: "Tipos de insulina", cat: "tipos-insulina" },
-    ...categoryLinks
+    { href: `${prefix}tipos-de-insulina.html`, label: "Tipos de insulina", cat: "tipos-insulina" }
   ];
 
-  const navHtml = links
-    .map(l => `<a href="${l.href}"${l.cat === activeCat ? ' class="active"' : ""}>${l.label}</a>`)
-    .join("\n        ");
+  const renderLink = (l, extraClass) =>
+    `<a href="${l.href}" class="${[extraClass, l.cat === activeCat ? "active" : ""].filter(Boolean).join(" ")}">${l.label}</a>`;
+
+  const categoryHtml = categoryLinks.map(l => renderLink(l)).join("\n        ");
+  const guideHtml = guideLinks.map(l => renderLink(l, "nav-link--guide")).join("\n        ");
 
   return `  <header class="site-header">
     <div class="header-inner">
       <a href="${prefix}index.html" class="logo"><span>Diabetes<span class="dot">Hoy</span></span></a>
-      <nav class="main-nav" aria-label="Categorías">
-        ${navHtml}
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="${prefix}index.html"${activeCat === "inicio" ? ' class="active"' : ""}>Portada</a>
+
+        <span class="nav-group-label">Secciones de noticias</span>
+        <span class="nav-group" role="group" aria-label="Categorías de noticias en la portada">
+          ${categoryHtml}
+        </span>
+
+        <span class="nav-group-label nav-group-label--guides">Guías de referencia</span>
+        <span class="nav-group nav-group--guides" role="group" aria-label="Guías y páginas de referencia, sin noticias">
+          ${guideHtml}
+        </span>
       </nav>
     </div>
   </header>`;
