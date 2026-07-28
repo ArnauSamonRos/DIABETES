@@ -28,10 +28,10 @@ El sitio está pensado para que los buscadores puedan indexar el contenido sin e
 - `sitemap.xml` y `robots.txt` se generan con las URLs reales de todas las noticias y páginas (la página `404.html` lleva `noindex` y queda fuera del sitemap a propósito).
 - `<link rel="preconnect">` a los dominios de Google Tag Manager y AdSense para acelerar su carga.
 
-**Importante:** las URLs usan el dominio de ejemplo `https://www.diabeteshoy.example` (constante `SITE_URL` en `build.js`) porque aún no hay dominio definitivo. En cuanto lo tengas:
+El dominio real es `https://diabeteshoy.com` (constante `SITE_URL` en `build.js`). Si alguna vez cambia:
 
-1. Cambia `SITE_URL` en `build.js`.
-2. Ejecuta `node build.js` para regenerar todas las páginas.
+1. Actualiza `SITE_URL` en `build.js`.
+2. Ejecuta `node build.js` para regenerar todas las páginas (canonical, sitemap, `og:url`, JSON-LD y el email de contacto se actualizan solos).
 3. Vuelve a hacer commit y desplegar.
 
 Si el sitio no se sirve desde la raíz del dominio (por ejemplo, GitHub Pages en `usuario.github.io/DIABETES/`), añade también esa ruta a `SITE_URL`.

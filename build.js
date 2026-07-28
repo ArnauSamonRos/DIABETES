@@ -10,9 +10,9 @@ const path = require("path");
 
 const { ARTICLES, CATEGORIAS } = require("./js/data.js");
 
-// IMPORTANTE: actualiza esta URL en cuanto tengas dominio o lugar de
-// publicación definitivo y vuelve a ejecutar `node build.js`.
-const SITE_URL = "https://www.diabeteshoy.example";
+// Dominio real del sitio. Si algún día cambia, actualiza esta constante y
+// vuelve a ejecutar `node build.js` para regenerar todas las páginas.
+const SITE_URL = "https://diabeteshoy.com";
 const SITE_NAME = "DiabetesHoy";
 const SITE_DESCRIPTION =
   "Novedades sobre diabetes: sensores, medicación, estudios clínicos, dietas, ejercicio y complicaciones, con enlace a la fuente original de cada noticia.";
@@ -714,7 +714,7 @@ ${renderHeader("", null)}
     <p class="lead">¿Has visto un error en una noticia o quieres sugerir un tema? Escríbenos.</p>
 
     <div class="article-body">
-      <p>Puedes contactar con DiabetesHoy escribiendo a <a href="mailto:contacto@diabeteshoy.example">contacto@diabeteshoy.example</a>.</p>
+      <p>Puedes contactar con DiabetesHoy escribiendo a <a href="mailto:contacto@diabeteshoy.com">contacto@diabeteshoy.com</a>.</p>
       <p>Este canal es para correcciones, dudas sobre el propio sitio o sugerencias de noticias. No es un canal de consulta médica: para cualquier duda sobre tu salud, contacta con tu equipo médico.</p>
     </div>
   </main>

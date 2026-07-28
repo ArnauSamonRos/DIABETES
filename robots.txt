@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.diabeteshoy.example/sitemap.xml
+Sitemap: https://diabeteshoy.com/sitemap.xml
