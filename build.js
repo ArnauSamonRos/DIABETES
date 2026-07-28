@@ -46,8 +46,17 @@ const GTM_NOSCRIPT = `  <!-- Google Tag Manager (noscript) -->
 // registrará visitas si el sitio se despliega realmente en Vercel.
 const VERCEL_ANALYTICS_SCRIPT = `<script defer src="/_vercel/insights/script.js"></script>`;
 
-// Imagen de vista previa para redes sociales (Open Graph / Twitter Card).
+// Imagen de vista previa genérica para redes sociales (Open Graph / Twitter
+// Card) en las páginas que no son artículo.
 const OG_IMAGE_URL = `${SITE_URL}/img/og-cover.png`;
+
+// Cada artículo puede tener su propia imagen social en img/og/<id>.png; si no
+// existe (por ejemplo, un artículo nuevo sin imagen generada todavía), se usa
+// la genérica de arriba como respaldo.
+function ogImageForArticle(article) {
+  const file = path.join(ROOT, "img", "og", `${article.id}.png`);
+  return fs.existsSync(file) ? `${SITE_URL}/img/og/${article.id}.png` : OG_IMAGE_URL;
+}
 
 // Logo en PNG para los datos estructurados de Organization: Google exige que
 // no sea SVG, por eso no se reutiliza favicon.svg directamente.
@@ -235,6 +244,15 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
+// Recorta por palabra completa para que las meta descripciones no superen el
+// límite que Google suele mostrar en el snippet (~155-160 caracteres).
+function truncateForMeta(text, max = 155) {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 40 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+}
+
 function formatFecha(iso) {
   const d = new Date(iso + "T00:00:00");
   return d.toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
@@ -326,32 +344,46 @@ function renderCard(article, prefix, options = {}) {
       </a>`;
 }
 
-function renderHead({ title, description, url, type, prefix, extraMeta = "", jsonLdBlocks = [], robots = "index, follow" }) {
+function renderHead({
+  title,
+  description,
+  url,
+  type,
+  prefix,
+  extraMeta = "",
+  jsonLdBlocks = [],
+  robots = "index, follow",
+  ogImage = OG_IMAGE_URL
+}) {
   const jsonLdHtml = jsonLdBlocks
     .map(obj => `  <script type="application/ld+json">${JSON.stringify(obj)}</script>`)
     .join("\n");
 
+  // El JSON-LD conserva la descripción completa; solo se recorta la que ve
+  // el buscador en el <title>/meta description/redes sociales.
+  const metaDescription = truncateForMeta(description);
+
   return `  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${escapeHtml(title)}</title>
-  <meta name="description" content="${escapeHtml(description)}" />
+  <meta name="description" content="${escapeHtml(metaDescription)}" />
   <meta name="robots" content="${robots}" />
   <link rel="canonical" href="${url}" />
 
   <meta property="og:type" content="${type}" />
   <meta property="og:site_name" content="${SITE_NAME}" />
   <meta property="og:title" content="${escapeHtml(title)}" />
-  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:description" content="${escapeHtml(metaDescription)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:locale" content="es_ES" />
-  <meta property="og:image" content="${OG_IMAGE_URL}" />
+  <meta property="og:image" content="${ogImage}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 ${extraMeta}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
-  <meta name="twitter:description" content="${escapeHtml(description)}" />
-  <meta name="twitter:image" content="${OG_IMAGE_URL}" />
+  <meta name="twitter:description" content="${escapeHtml(metaDescription)}" />
+  <meta name="twitter:image" content="${ogImage}" />
 
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="${prefix}css/style.css" />
@@ -452,8 +484,9 @@ ${renderFooter("")}
 function renderArticlePage(article, allArticles) {
   const cat = CATEGORIAS[article.categoria];
   const url = `${SITE_URL}/${articleUrl(article)}`;
-  const title = `${article.titulo} · ${SITE_NAME}`;
+  const title = `${article.tituloSeo || article.titulo} · ${SITE_NAME}`;
   const bodyHtml = article.cuerpo.map(p => `      <p>${escapeHtml(p)}</p>`).join("\n");
+  const ogImage = ogImageForArticle(article);
 
   const jsonLdArticle = {
     "@context": "https://schema.org",
@@ -464,7 +497,7 @@ function renderArticlePage(article, allArticles) {
     dateModified: article.fecha,
     inLanguage: "es",
     articleSection: cat.nombre,
-    image: OG_IMAGE_URL,
+    image: ogImage,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     isBasedOn: article.fuenteUrl,
@@ -489,7 +522,8 @@ function renderArticlePage(article, allArticles) {
     type: "article",
     prefix: "../",
     extraMeta,
-    jsonLdBlocks: [jsonLdArticle, jsonLdBreadcrumb]
+    jsonLdBlocks: [jsonLdArticle, jsonLdBreadcrumb],
+    ogImage
   });
 
   const related = allArticles
@@ -727,7 +761,7 @@ ${renderFooter("")}
 }
 
 function renderGuidePage() {
-  const title = `Dietas y ejercicio diario para la diabetes: guía práctica · ${SITE_NAME}`;
+  const title = `Dietas y ejercicio diario para la diabetes · ${SITE_NAME}`;
   const description =
     "Ejemplo de plato saludable e ideas de comidas, junto con una rutina semanal de ejercicio (caminar, fuerza y estiramientos) pensada para personas con diabetes.";
   const url = `${SITE_URL}/dietas-y-ejercicio.html`;
@@ -914,7 +948,7 @@ ${renderFooter("")}
 }
 
 function renderInsulinTypesPage() {
-  const title = `Tipos de insulina: guía sencilla de cómo actúan · ${SITE_NAME}`;
+  const title = `Tipos de insulina: guía sencilla · ${SITE_NAME}`;
   const description =
     "Insulina rápida, corta, intermedia, prolongada, ultraprolongada y premezclada explicadas en palabras sencillas: cuándo empiezan a actuar, cuánto duran y para qué se usa cada una.";
   const url = `${SITE_URL}/tipos-de-insulina.html`;

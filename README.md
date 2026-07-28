@@ -27,6 +27,9 @@ El sitio está pensado para que los buscadores puedan indexar el contenido sin e
 - La portada incluye todas las tarjetas ya renderizadas en el HTML (el filtrado por categoría es solo una mejora de interactividad en el cliente).
 - `sitemap.xml` y `robots.txt` se generan con las URLs reales de todas las noticias y páginas (la página `404.html` lleva `noindex` y queda fuera del sitemap a propósito).
 - `<link rel="preconnect">` a los dominios de Google Tag Manager y AdSense para acelerar su carga.
+- Cada noticia tiene un campo opcional `tituloSeo` en `js/data.js`: un título corto para `<title>`/Open Graph/Twitter (máx. ~46 caracteres, para no superar los 60 con el sufijo " · DiabetesHoy" y que Google no lo corte en el resultado de búsqueda). El titular completo (`titulo`) se sigue usando tal cual en el `<h1>`, en las tarjetas y en el `headline` del JSON-LD. Si un artículo no tiene `tituloSeo`, se usa `titulo` igualmente.
+- Las meta descripciones (`<meta name="description">`, `og:description`, `twitter:description`) se recortan automáticamente a ~155 caracteres por palabra completa (función `truncateForMeta` en `build.js`); el `resumen` completo se sigue mostrando tal cual en la tarjeta, en el artículo y en el JSON-LD.
+- Cada artículo tiene su propia imagen para redes sociales en `img/og/<id>.png` (generada a partir de su `tituloSeo` y su categoría). Si un artículo nuevo no tiene imagen todavía en esa carpeta, `build.js` usa automáticamente la genérica `img/og-cover.png` como respaldo — no hace falta generarla a mano para publicar.
 
 El dominio real es `https://diabeteshoy.com` (constante `SITE_URL` en `build.js`). Si alguna vez cambia:
 
@@ -48,8 +51,9 @@ Y abre `http://localhost:8000/index.html`.
 
 ## Añadir una noticia nueva
 
-1. Agrega un objeto al array `ARTICLES` en `js/data.js` con `id`, `categoria`, `titulo`, `resumen`, `fecha`, `fuenteNombre`, `fuenteUrl` y `cuerpo`.
+1. Agrega un objeto al array `ARTICLES` en `js/data.js` con `id`, `categoria`, `titulo`, `resumen`, `fecha`, `fuenteNombre`, `fuenteUrl` y `cuerpo`. Si el `titulo` es largo, añade también un `tituloSeo` corto (ver sección SEO más arriba).
 2. Ejecuta `node build.js` para regenerar `index.html`, la página del artículo, el `sitemap.xml` y el `robots.txt`.
-3. Revisa los cambios y haz commit.
+3. (Opcional) Genera una imagen social propia en `img/og/<id>.png` (1200×630); si no la añades, se usará la genérica automáticamente.
+4. Revisa los cambios y haz commit.
 
 No edites `index.html`, `quienes-somos.html`, `faq.html`, `contacto.html` ni los archivos dentro de `articulos/` a mano: se sobrescriben en cada `node build.js`. Para cambiar el contenido de las páginas de apoyo o de la FAQ, edita las funciones correspondientes (`renderAboutPage`, `renderFaqPage`, `renderContactPage`, `FAQ_ITEMS`) en `build.js`.
