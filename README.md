@@ -20,9 +20,13 @@ Cada artículo es un resumen de una noticia real con enlace a su fuente original
 
 El sitio está pensado para que los buscadores puedan indexar el contenido sin ejecutar JavaScript:
 
-- Cada noticia tiene su propia URL (`/articulos/<id>.html`) con título, meta descripción, `<link rel="canonical">`, Open Graph/Twitter Card y JSON-LD (`NewsArticle` + `BreadcrumbList`) generados automáticamente.
+- Cada noticia tiene su propia URL (`/articulos/<id>.html`) con título, meta descripción, `<link rel="canonical">`, Open Graph/Twitter Card (`summary_large_image`) y JSON-LD (`NewsArticle` + `BreadcrumbList`) generados automáticamente.
+- Todas las páginas comparten una imagen de vista previa (`img/og-cover.png`, 1200×630) para redes sociales, y un logo en PNG (`img/logo.png`, requerido por Google en vez de SVG) referenciado en el `Organization` de los datos estructurados.
+- Migas de pan visibles (Portada › Categoría › Noticia) en todas las páginas, coherentes con su `BreadcrumbList` en JSON-LD.
+- Cada noticia enlaza al final a hasta 3 noticias más de la misma categoría ("Más noticias de…"), para reforzar el enlazado interno.
 - La portada incluye todas las tarjetas ya renderizadas en el HTML (el filtrado por categoría es solo una mejora de interactividad en el cliente).
-- `sitemap.xml` y `robots.txt` se generan con las URLs reales de todas las noticias.
+- `sitemap.xml` y `robots.txt` se generan con las URLs reales de todas las noticias y páginas (la página `404.html` lleva `noindex` y queda fuera del sitemap a propósito).
+- `<link rel="preconnect">` a los dominios de Google Tag Manager y AdSense para acelerar su carga.
 
 **Importante:** las URLs usan el dominio de ejemplo `https://www.diabeteshoy.example` (constante `SITE_URL` en `build.js`) porque aún no hay dominio definitivo. En cuanto lo tengas:
 

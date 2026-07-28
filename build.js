@@ -46,6 +46,20 @@ const GTM_NOSCRIPT = `  <!-- Google Tag Manager (noscript) -->
 // registrará visitas si el sitio se despliega realmente en Vercel.
 const VERCEL_ANALYTICS_SCRIPT = `<script defer src="/_vercel/insights/script.js"></script>`;
 
+// Imagen de vista previa para redes sociales (Open Graph / Twitter Card).
+const OG_IMAGE_URL = `${SITE_URL}/img/og-cover.png`;
+
+// Logo en PNG para los datos estructurados de Organization: Google exige que
+// no sea SVG, por eso no se reutiliza favicon.svg directamente.
+const LOGO_URL = `${SITE_URL}/img/logo.png`;
+
+const ORG_JSONLD = {
+  "@type": "Organization",
+  name: SITE_NAME,
+  url: SITE_URL + "/",
+  logo: { "@type": "ImageObject", url: LOGO_URL, width: 512, height: 512 }
+};
+
 const ROOT = __dirname;
 const ARTICLES_DIR = path.join(ROOT, "articulos");
 
@@ -234,6 +248,24 @@ function homeUrl(absolute) {
   return absolute ? `${SITE_URL}/` : "index.html";
 }
 
+function breadcrumbJsonLd(items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, item: it.url }))
+  };
+}
+
+// items: [{ name, href }]. El último elemento se pinta como página actual
+// (sin enlace), igual que en el BreadcrumbList de JSON-LD correspondiente.
+function renderBreadcrumbsNav(items) {
+  const parts = items.map((it, i) => {
+    if (i === items.length - 1) return `<span aria-current="page">${escapeHtml(it.name)}</span>`;
+    return `<a href="${it.href}">${escapeHtml(it.name)}</a>`;
+  });
+  return `<nav class="breadcrumbs" aria-label="Ruta de navegación">${parts.join('<span class="crumb-sep" aria-hidden="true">/</span>')}</nav>`;
+}
+
 function renderHeader(prefix, activeCat) {
   const guideLinks = [
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
@@ -294,7 +326,7 @@ function renderCard(article, prefix, options = {}) {
       </a>`;
 }
 
-function renderHead({ title, description, url, type, prefix, extraMeta = "", jsonLdBlocks = [] }) {
+function renderHead({ title, description, url, type, prefix, extraMeta = "", jsonLdBlocks = [], robots = "index, follow" }) {
   const jsonLdHtml = jsonLdBlocks
     .map(obj => `  <script type="application/ld+json">${JSON.stringify(obj)}</script>`)
     .join("\n");
@@ -303,7 +335,7 @@ function renderHead({ title, description, url, type, prefix, extraMeta = "", jso
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="${robots}" />
   <link rel="canonical" href="${url}" />
 
   <meta property="og:type" content="${type}" />
@@ -312,13 +344,19 @@ function renderHead({ title, description, url, type, prefix, extraMeta = "", jso
   <meta property="og:description" content="${escapeHtml(description)}" />
   <meta property="og:url" content="${url}" />
   <meta property="og:locale" content="es_ES" />
+  <meta property="og:image" content="${OG_IMAGE_URL}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 ${extraMeta}
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapeHtml(title)}" />
   <meta name="twitter:description" content="${escapeHtml(description)}" />
+  <meta name="twitter:image" content="${OG_IMAGE_URL}" />
 
   <link rel="icon" href="${prefix}favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="${prefix}css/style.css" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}"
      crossorigin="anonymous"></script>
   ${VERCEL_ANALYTICS_SCRIPT}
@@ -362,7 +400,7 @@ function renderIndexPage(articles) {
     url: SITE_URL + "/",
     description: SITE_DESCRIPTION,
     inLanguage: "es",
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+    publisher: ORG_JSONLD
   };
 
   const head = renderHead({ title, description: SITE_DESCRIPTION, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
@@ -411,7 +449,7 @@ ${renderFooter("")}
 `;
 }
 
-function renderArticlePage(article) {
+function renderArticlePage(article, allArticles) {
   const cat = CATEGORIAS[article.categoria];
   const url = `${SITE_URL}/${articleUrl(article)}`;
   const title = `${article.titulo} · ${SITE_NAME}`;
@@ -426,21 +464,19 @@ function renderArticlePage(article) {
     dateModified: article.fecha,
     inLanguage: "es",
     articleSection: cat.nombre,
+    image: OG_IMAGE_URL,
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     isBasedOn: article.fuenteUrl,
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+    publisher: ORG_JSONLD
   };
 
-  const jsonLdBreadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Portada", item: SITE_URL + "/" },
-      { "@type": "ListItem", position: 2, name: cat.nombre, item: `${SITE_URL}/index.html#${article.categoria}` },
-      { "@type": "ListItem", position: 3, name: article.titulo, item: url }
-    ]
-  };
+  const breadcrumbItems = [
+    { name: "Portada", href: "../index.html", url: SITE_URL + "/" },
+    { name: cat.nombre, href: `../index.html#${article.categoria}`, url: `${SITE_URL}/index.html#${article.categoria}` },
+    { name: article.titulo, url }
+  ];
+  const jsonLdBreadcrumb = breadcrumbJsonLd(breadcrumbItems);
 
   const extraMeta = `  <meta property="article:published_time" content="${article.fecha}" />
   <meta property="article:section" content="${escapeHtml(cat.nombre)}" />
@@ -456,6 +492,26 @@ function renderArticlePage(article) {
     jsonLdBlocks: [jsonLdArticle, jsonLdBreadcrumb]
   });
 
+  const related = allArticles
+    .filter(a => a.categoria === article.categoria && a.id !== article.id)
+    .sort((a, b) => b.fecha.localeCompare(a.fecha))
+    .slice(0, 3);
+
+  const relatedHtml = related.length
+    ? `  <section class="related-articles">
+    <div class="article-wrap">
+      <h2>Más noticias de ${escapeHtml(cat.nombre)}</h2>
+      <ul>
+${related
+        .map(
+          a => `        <li><a href="${a.id}.html">${escapeHtml(a.titulo)}</a> <time datetime="${a.fecha}">${formatFecha(a.fecha)}</time></li>`
+        )
+        .join("\n")}
+      </ul>
+    </div>
+  </section>`
+    : "";
+
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -467,7 +523,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("../", article.categoria)}
 
   <main class="article-wrap">
-    <a class="back-link" href="../index.html#${article.categoria}">&larr; Volver a ${cat.nombre}</a>
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <span class="badge" style="background:${cat.color}">${cat.icono} ${cat.nombre}</span>
     <h1>${escapeHtml(article.titulo)}</h1>
     <time class="article-meta" datetime="${article.fecha}">${formatFecha(article.fecha)}</time>
@@ -478,6 +534,8 @@ ${bodyHtml}
       Fuente original: <a href="${article.fuenteUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(article.fuenteNombre)}</a>
     </div>
   </main>
+
+${relatedHtml}
 
 ${renderFooter("../")}
   <script src="../js/motion.js"></script>
@@ -492,6 +550,11 @@ function renderAboutPage() {
     "Qué es DiabetesHoy, cómo seleccionamos las noticias sobre diabetes que publicamos y por qué no sustituyen el consejo médico profesional.";
   const url = `${SITE_URL}/quienes-somos.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Quiénes somos", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -501,7 +564,14 @@ function renderAboutPage() {
     isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL + "/" }
   };
 
-  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "website",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -514,6 +584,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Quiénes somos</h1>
     <p class="lead">DiabetesHoy es un proyecto independiente que resume noticias públicas sobre diabetes y enlaza siempre a la fuente original de cada una.</p>
 
@@ -544,6 +615,11 @@ function renderFaqPage() {
   const description = "Resolvemos las dudas más habituales sobre DiabetesHoy: qué es, cómo seleccionamos las noticias y si sustituye el consejo médico.";
   const url = `${SITE_URL}/faq.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Preguntas frecuentes", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -554,7 +630,14 @@ function renderFaqPage() {
     }))
   };
 
-  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "website",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   const faqHtml = FAQ_ITEMS.map(
     item => `      <h2>${escapeHtml(item.pregunta)}</h2>
@@ -572,6 +655,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Preguntas frecuentes</h1>
     <p class="lead">Dudas habituales sobre DiabetesHoy y su contenido.</p>
 
@@ -592,6 +676,11 @@ function renderContactPage() {
   const description = "Cómo ponerte en contacto con DiabetesHoy para corregir un error o sugerir un tema. No es un canal de consulta médica.";
   const url = `${SITE_URL}/contacto.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Contacto", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -600,7 +689,14 @@ function renderContactPage() {
     description
   };
 
-  const head = renderHead({ title, description, url, type: "website", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "website",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -613,6 +709,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", null)}
 
   <main class="article-wrap">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Contacto</h1>
     <p class="lead">¿Has visto un error en una noticia o quieres sugerir un tema? Escríbenos.</p>
 
@@ -635,6 +732,11 @@ function renderGuidePage() {
     "Ejemplo de plato saludable e ideas de comidas, junto con una rutina semanal de ejercicio (caminar, fuerza y estiramientos) pensada para personas con diabetes.";
   const url = `${SITE_URL}/dietas-y-ejercicio.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Guía práctica", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -642,11 +744,19 @@ function renderGuidePage() {
     description,
     inLanguage: "es",
     url,
+    image: OG_IMAGE_URL,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+    publisher: ORG_JSONLD
   };
 
-  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "article",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -659,6 +769,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", "guia")}
 
   <main class="article-wrap">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Dietas y ejercicio diario para la diabetes</h1>
     <p class="lead">Un plato de ejemplo y una rutina semanal sencilla, basados en las pautas generales recogidas en nuestras noticias de <a href="index.html#dietas">Dietas</a> y <a href="index.html#ejercicio">Ejercicio</a>.</p>
 
@@ -708,6 +819,11 @@ function renderPumpsPage() {
     "Comparativa de las principales bombas de insulina (Omnipod 5, MiniMed 780G, t:slim X2, YpsoPump e iLet Bionic Pancreas): tipo, sensores compatibles y qué las diferencia.";
   const url = `${SITE_URL}/bombas-de-insulina.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Bombas de insulina", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -715,11 +831,19 @@ function renderPumpsPage() {
     description,
     inLanguage: "es",
     url,
+    image: OG_IMAGE_URL,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+    publisher: ORG_JSONLD
   };
 
-  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "article",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   const tableRows = PUMPS.map(
     p => `        <tr>
@@ -747,6 +871,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", "bombas")}
 
   <main class="article-wrap article-wrap--wide">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Comparativa de bombas de insulina</h1>
     <p class="lead">Un vistazo rápido a algunas de las bombas de insulina disponibles actualmente, con sus principales diferencias.</p>
 
@@ -794,6 +919,11 @@ function renderInsulinTypesPage() {
     "Insulina rápida, corta, intermedia, prolongada, ultraprolongada y premezclada explicadas en palabras sencillas: cuándo empiezan a actuar, cuánto duran y para qué se usa cada una.";
   const url = `${SITE_URL}/tipos-de-insulina.html`;
 
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Tipos de insulina", url }
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -801,11 +931,19 @@ function renderInsulinTypesPage() {
     description,
     inLanguage: "es",
     url,
+    image: OG_IMAGE_URL,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL + "/" }
+    publisher: ORG_JSONLD
   };
 
-  const head = renderHead({ title, description, url, type: "article", prefix: "", jsonLdBlocks: [jsonLd] });
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "article",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
 
   const tableRows = INSULIN_TYPES.map(
     t => `        <tr>
@@ -833,6 +971,7 @@ ${GTM_NOSCRIPT}
 ${renderHeader("", "tipos-insulina")}
 
   <main class="article-wrap article-wrap--wide">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Tipos de insulina: guía sencilla de cómo actúan</h1>
     <p class="lead">Explicamos en palabras sencillas, sin tecnicismos, los principales tipos de insulina que existen y en qué se diferencian.</p>
 
@@ -923,6 +1062,40 @@ function renderRobotsTxt() {
   return `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}/sitemap.xml\n`;
 }
 
+function renderNotFoundPage() {
+  const title = `Página no encontrada · ${SITE_NAME}`;
+  const description = "La página que buscas no existe o se ha movido. Vuelve a la portada de DiabetesHoy para ver las últimas noticias.";
+  const url = `${SITE_URL}/404.html`;
+
+  // noindex: es una página de error, no debe aparecer en los resultados de búsqueda.
+  const head = renderHead({ title, description, url, type: "website", prefix: "", robots: "noindex, follow" });
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${GTM_SCRIPT}
+${head}
+</head>
+<body>
+${GTM_NOSCRIPT}
+${renderHeader("", null)}
+
+  <main class="article-wrap">
+    <h1>Página no encontrada</h1>
+    <p class="lead">Lo sentimos, la página que buscas no existe o se ha movido.</p>
+
+    <div class="article-body">
+      <p>Puedes volver a la <a href="index.html">portada</a>, consultar la <a href="dietas-y-ejercicio.html">guía práctica</a>, la <a href="bombas-de-insulina.html">comparativa de bombas de insulina</a> o los <a href="tipos-de-insulina.html">tipos de insulina</a>, o revisar las <a href="faq.html">preguntas frecuentes</a>.</p>
+    </div>
+  </main>
+
+${renderFooter("")}
+  <script src="js/motion.js"></script>
+</body>
+</html>
+`;
+}
+
 function main() {
   fs.mkdirSync(ARTICLES_DIR, { recursive: true });
 
@@ -933,9 +1106,10 @@ function main() {
   fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
   fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
   fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());
+  fs.writeFileSync(path.join(ROOT, "404.html"), renderNotFoundPage());
 
   for (const article of ARTICLES) {
-    fs.writeFileSync(path.join(ARTICLES_DIR, `${article.id}.html`), renderArticlePage(article));
+    fs.writeFileSync(path.join(ARTICLES_DIR, `${article.id}.html`), renderArticlePage(article, ARTICLES));
   }
 
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), renderSitemap(ARTICLES));

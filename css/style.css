@@ -492,12 +492,68 @@ nav.main-nav a.nav-link--guide.active {
   color: var(--text-muted);
 }
 
-.back-link {
-  display: inline-block;
+.breadcrumbs {
+  display: block;
   margin-bottom: 20px;
+  font-size: 0.85rem;
   font-weight: 600;
+  color: var(--text-muted);
+}
+
+.breadcrumbs a {
   color: var(--accent);
-  font-size: 0.92rem;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.crumb-sep {
+  margin: 0 8px;
+  color: var(--border);
+}
+
+.related-articles {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
+  padding: 32px 0;
+  margin-bottom: 40px;
+}
+
+.related-articles h2 {
+  font-size: 1.1rem;
+  margin: 0 0 14px;
+}
+
+.related-articles ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.related-articles li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+}
+
+.related-articles a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.related-articles a:hover {
+  text-decoration: underline;
+}
+
+.related-articles time {
+  font-size: 0.82rem;
+  color: var(--text-muted);
 }
 
 .article-wrap h1 {
