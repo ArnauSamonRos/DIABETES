@@ -2,6 +2,66 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "rinon-sensor-precoz-riesgo-cardiovascular",
+    categoria: "complicaciones",
+    titulo: "El riñón, un \"sensor precoz\" del riesgo cardiovascular en la diabetes, según Vithas",
+    tituloSeo: "El riñón, aviso precoz de riesgo cardiaco",
+    resumen: "Especialistas de Vithas alertan de que la enfermedad renal en la diabetes no es solo una complicación aislada, sino un amplificador del riesgo cardiovascular, con el calor y la deshidratación del verano como factor añadido.",
+    fecha: "2026-07-27",
+    fuenteNombre: "Hoy Lunes",
+    fuenteUrl: "https://www.hoylunes.com/2026/07/27/enfermedad-renal-riesgo-cardiovascular-vithas/",
+    cuerpo: [
+      "Especialistas de Vithas han alertado de que la enfermedad renal crónica asociada a la diabetes no debería entenderse solo como una complicación aislada del riñón, sino como un auténtico amplificador del riesgo cardiovascular: cuando el riñón empieza a fallar, aumenta también la probabilidad de sufrir infartos, ictus u otras patologías vasculares.",
+      "Según esta alerta, el riñón puede actuar como una especie de \"sensor precoz\" del estado de las arterias, de modo que un deterioro de la función renal puede ser una señal temprana de un mayor riesgo cardiovascular general, incluso antes de que aparezcan síntomas cardíacos evidentes.",
+      "En estas fechas de verano, los especialistas añaden un factor de riesgo adicional: el calor y la deshidratación pueden sobrecargar todavía más un riñón ya afectado por la diabetes, por lo que recomiendan prestar especial atención a la hidratación y al control médico habitual durante los meses más calurosos."
+    ]
+  },
+  {
+    id: "orforglipron-foundayz-achieve3",
+    categoria: "medicacion",
+    titulo: "Orforglipron ya tiene nombre comercial: Foundayz, la pastilla de Lilly para la diabetes tipo 2",
+    tituloSeo: "Foundayz: la pastilla de Lilly ya tiene nombre",
+    resumen: "El fármaco oral de Eli Lilly, ya autorizado en México, mostró en el ensayo ACHIEVE-3 una reducción de hasta 2,2 puntos de HbA1c y una pérdida media del 9,2% del peso corporal en 52 semanas.",
+    fecha: "2026-07-20",
+    fuenteNombre: "Publimetro México",
+    fuenteUrl: "https://www.publimetro.com.mx/noticias/2026/07/20/nuevo-medicamento-para-diabetes-tipo-2-busca-mejorar-control-glucemico-en-mexico/",
+    cuerpo: [
+      "El tratamiento oral de Eli Lilly conocido hasta ahora por su nombre químico, orforglipron, ya cuenta con nombre comercial: Foundayz. Se trata de un medicamento que activa el receptor del péptido similar al glucagón tipo 1 (GLP-1) y que, a diferencia de otros tratamientos de la misma familia, se toma por vía oral y sin condiciones específicas relacionadas con el horario de las comidas.",
+      "En el ensayo clínico ACHIEVE-3, centrado en personas con diabetes tipo 2, los participantes lograron reducciones de hasta 2,2 puntos en su hemoglobina glucosilada (HbA1c) y perdieron en promedio un 9,2% de su peso corporal (unos 8,9 kg) a lo largo de 52 semanas de tratamiento.",
+      "Eli Lilly ha indicado que el medicamento estará disponible en puntos de venta autorizados en México durante los próximos meses. De forma paralela, el laboratorio Teva México ha anunciado que incorporará próximamente un tratamiento de combinación a dosis fija de liberación prolongada para el control glucémico en diabetes tipo 2."
+    ]
+  },
+  {
+    id: "isaac-sensor-aliento-preevnt",
+    categoria: "sensores",
+    titulo: "Isaac, el sensor que promete medir la glucosa a través del aliento y sin pinchazos",
+    tituloSeo: "Isaac: medir la glucosa a través del aliento",
+    resumen: "Presentado en el CES 2026, este dispositivo del tamaño de una moneda desarrollado por PreEvnt busca medir el azúcar en sangre de forma no invasiva, analizando el aliento del usuario.",
+    fecha: "2026-01-08",
+    fuenteNombre: "NotiPress",
+    fuenteUrl: "https://notipress.mx/vida/presentan-en-ces-2026-sensor-que-mide-glucosa-por-aliento-34680",
+    cuerpo: [
+      "En el CES 2026 de Las Vegas, la empresa PreEvnt presentó Isaac, un dispositivo portátil que promete medir los niveles de azúcar en sangre sin necesidad de pinchazos, analizando en su lugar el aliento de la persona que lo usa.",
+      "El sensor, del tamaño aproximado de una moneda, está pensado para llevarse colgado del cuello o guardado en un bolso, apostando por una tecnología no invasiva que se aleja tanto de la punción digital tradicional como de los sensores que se colocan sobre la piel.",
+      "Se trata todavía de una tecnología emergente presentada en un evento de tecnología de consumo, por lo que habrá que esperar a estudios clínicos y a una posible aprobación regulatoria para saber si cumple con la precisión necesaria para un uso médico habitual."
+    ]
+  },
+  {
+    id: "rutina-ejercicio-62-por-ciento-riesgo",
+    categoria: "ejercicio",
+    titulo: "La rutina de ejercicio que se asocia con un menor riesgo de diabetes tipo 2, según un estudio",
+    tituloSeo: "Ejercicio: 62% menos riesgo de diabetes",
+    resumen: "Un análisis con datos del Nurses' Health Study y el Health Professionals Follow-up Study encontró una asociación entre una rutina de ejercicio regular y un riesgo hasta un 62% menor de desarrollar diabetes tipo 2.",
+    fecha: "2026-06-22",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/ciencia/2026/06/22/la-rutina-de-ejercicio-que-se-asocia-con-menor-riesgo-de-diabetes-tipo-2-segun-un-estudio/",
+    cuerpo: [
+      "Un estudio que utilizó datos a largo plazo del Nurses' Health Study, el Nurses' Health Study II y el Health Professionals Follow-up Study encontró una asociación entre mantener una rutina de ejercicio regular a lo largo de los años y un riesgo hasta un 62% menor de desarrollar diabetes tipo 2.",
+      "Los autores señalan que la combinación de actividad aeróbica regular con sesiones de entrenamiento de fuerza parece aportar un beneficio adicional frente a practicar un único tipo de ejercicio, en línea con las recomendaciones generales de las guías de actividad física.",
+      "Este tipo de estudios de cohortes, con seguimientos de varios años, refuerza la idea de que no se trata de una rutina puntual, sino de mantener el hábito de forma sostenida en el tiempo para notar una reducción real del riesgo de desarrollar la enfermedad."
+    ]
+  },
+  {
     id: "css-panama-sensores-ninos",
     categoria: "sensores",
     titulo: "Panamá reparte sensores de glucosa gratuitos a niños con diabetes",
