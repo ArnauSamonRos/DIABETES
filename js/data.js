@@ -2,6 +2,66 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "perdida-peso-no-siempre-previene-diabetes",
+    categoria: "estudios",
+    titulo: "La pérdida de peso no siempre previene la diabetes tipo 2, según un nuevo estudio",
+    tituloSeo: "Perder peso no siempre evita la diabetes",
+    resumen: "Un estudio alemán encontró que, incluso tras mantener un 8% de pérdida de peso durante 9 años, un grupo de personas de alto riesgo metabólico siguió viendo subir su glucosa y cayó su secreción de insulina.",
+    fecha: "2026-07-28",
+    fuenteNombre: "Cadena 3 Argentina",
+    fuenteUrl: "https://www.cadena3.com/noticia/ciencia/la-perdida-de-peso-no-siempre-previene-la-diabetes-tipo-2-segun-nuevo-estudio_577938",
+    cuerpo: [
+      "Un nuevo estudio de investigadores del Centro Alemán de Investigación en Diabetes (DZD), el Hospital Universitario de Tubinga y Helmholtz Múnich matiza uno de los mensajes más repetidos en la prevención de la diabetes tipo 2: que perder peso y mantenerlo es suficiente para evitarla en cualquier caso.",
+      "Los investigadores siguieron durante 9 años a personas que habían logrado una pérdida de peso sustancial y la habían mantenido en el tiempo, con una reducción media del 8% del peso corporal. Sin embargo, dentro de un subgrupo de mayor riesgo metabólico (identificado como \"cluster 5\" en el estudio), la glucosa en sangre siguió aumentando y la secreción de insulina se redujo, manteniéndose un riesgo persistentemente alto de desarrollar diabetes tipo 2.",
+      "Los propios autores insisten en que esto no resta valor a la pérdida de peso como herramienta de prevención, que sigue funcionando bien para la mayoría de las personas, tal y como recogíamos en nuestra noticia sobre pérdida de peso y control metabólico. El hallazgo apunta más bien a que, en un grupo concreto especialmente vulnerable, hacen falta además otras estrategias de seguimiento y tratamiento, y no basta con vigilar solo la báscula."
+    ]
+  },
+  {
+    id: "urv-huella-bioquimica-mortalidad-diabetes",
+    categoria: "estudios",
+    titulo: "Una huella bioquímica en sangre identifica a las personas con mayor riesgo de mortalidad por diabetes",
+    tituloSeo: "Huella en sangre y riesgo de mortalidad",
+    resumen: "Investigadores de la URV, el IRB-CatSud y el CIBEROBN han identificado 9 metabolitos en sangre, comunes a la diabetes tipo 2 y a la resistencia a la insulina, asociados a un mayor riesgo de mortalidad.",
+    fecha: "2026-07-22",
+    fuenteNombre: "Diari Digital de la URV",
+    fuenteUrl: "https://diaridigital.urv.cat/es/huella-bioquimica-diabetes-resistencia-insulina-mortalidad/",
+    cuerpo: [
+      "Un estudio internacional con participación de la Universitat Rovira i Virgili (URV), el Institut de Recerca Biomèdica Catalunya Sud (IRB-CatSud) y el CIBEROBN ha identificado patrones moleculares en sangre capaces de anticipar el riesgo de mortalidad en personas con alteraciones metabólicas relacionadas con la diabetes.",
+      "La investigación analizó muestras de plasma de casi 700 personas mayores con alto riesgo metabólico. Mediante técnicas analíticas avanzadas, el equipo identificó 31 metabolitos vinculados a la diabetes tipo 2 y otros 105 asociados a la resistencia a la insulina, con los que construyeron dos firmas biológicas distintas.",
+      "Al cruzar ambas firmas, los investigadores encontraron 9 metabolitos comunes estrechamente relacionados con el riesgo de mortalidad: las personas en las que estas señales biológicas eran más marcadas presentaron un riesgo significativamente mayor de fallecer durante el periodo de seguimiento del estudio."
+    ]
+  },
+  {
+    id: "fda-aprueba-awiqli-insulina-semanal",
+    categoria: "medicacion",
+    titulo: "La FDA aprueba Awiqli, la primera insulina semanal para la diabetes tipo 2",
+    tituloSeo: "FDA aprueba la primera insulina semanal",
+    resumen: "La insulina icodec, comercializada como Awiqli, se convierte en la primera insulina basal de una sola inyección semanal para adultos con diabetes tipo 2, con resultados comparables a las insulinas diarias.",
+    fecha: "2026-03-26",
+    fuenteNombre: "Canal Diabetes",
+    fuenteUrl: "https://canaldiabetes.com/insulina-semanal-diabetes-tipo-2-aprobada-por-la-fda/",
+    cuerpo: [
+      "La agencia estadounidense FDA ha aprobado Awiqli (insulina icodec), la primera insulina basal de administración semanal para adultos con diabetes tipo 2, un cambio relevante frente a las insulinas basales que hasta ahora requerían una inyección diaria.",
+      "La aprobación se basó en el programa de ensayos clínicos de fase 3a ONWARDS, formado por cuatro estudios aleatorizados y controlados frente a insulinas basales de administración diaria. Los resultados mostraron reducciones de la hemoglobina glucosilada (HbA1c) comparables o superiores a las de las insulinas diarias, con un perfil de seguridad similar.",
+      "Al pasar de una inyección diaria a una semanal, este tipo de insulina busca simplificar el tratamiento y reducir la carga de pinchazos para las personas con diabetes tipo 2. Novo Nordisk, la farmacéutica responsable del fármaco, prevé comenzar su comercialización en Estados Unidos durante la segunda mitad de 2026."
+    ]
+  },
+  {
+    id: "celulas-piel-insulina-diabetes-tipo1",
+    categoria: "estudios",
+    titulo: "Un proyecto genera células productoras de insulina a partir de piel humana para la diabetes tipo 1",
+    tituloSeo: "Células de la piel para producir insulina",
+    resumen: "Una investigación cofinanciada por la Fundación DiabetesCERO ha logrado generar, a partir de piel humana, células cada vez más parecidas a las células beta del páncreas, capaces de producir insulina.",
+    fecha: "2026-01-15",
+    fuenteNombre: "La Jornada",
+    fuenteUrl: "https://www.jornada.com.mx/noticia/2026/01/15/ciencias/un-proyecto-avanza-en-la-cura-para-la-diabetes-tipo-1-genera-celulas-productoras-de-insulina-a-partir-de-piel-humana",
+    cuerpo: [
+      "Un proyecto de investigación cofinanciado por la Fundación DiabetesCERO ha conseguido generar, a partir de piel humana, células con una funcionalidad cada vez más parecida a la de las células beta del páncreas, las encargadas de producir insulina en el organismo.",
+      "Según lo publicado, las células obtenidas muestran características cada vez más cercanas a las de las células beta originales, incluyendo la capacidad de producir insulina y una mayor expresión de los genes asociados a su secreción, un paso relevante en la búsqueda de células de repuesto para la diabetes tipo 1.",
+      "Esta línea de trabajo se suma a otras vías de investigación que ya hemos recogido en DiabetesHoy, como la terapia con células madre de Sana Biotechnology, dentro del mismo objetivo a largo plazo: sustituir las células beta que el organismo ha perdido en la diabetes tipo 1 de larga evolución."
+    ]
+  },
+  {
     id: "rinon-sensor-precoz-riesgo-cardiovascular",
     categoria: "complicaciones",
     titulo: "El riñón, un \"sensor precoz\" del riesgo cardiovascular en la diabetes, según Vithas",
