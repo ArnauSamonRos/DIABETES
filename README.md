@@ -11,8 +11,10 @@ Cada artículo es un resumen de una noticia real con enlace a su fuente original
 - `index.html` — portada (generada), con filtro por categoría.
 - `articulos/*.html` — una página estática por noticia (generadas), con su propio `<title>`, meta descripción, URL canónica, Open Graph, Twitter Card y datos estructurados (JSON-LD: `NewsArticle` + `BreadcrumbList`).
 - `quienes-somos.html`, `faq.html`, `contacto.html` — páginas de apoyo (generadas) pensadas para SEO y confianza (E-E-A-T) en contenido de salud: qué es el sitio, cómo se seleccionan las fuentes, preguntas frecuentes (con JSON-LD `FAQPage`) y cómo contactar.
+- `categoria/<slug>.html` — una página propia por categoría (generada), con su título, meta descripción y JSON-LD (`CollectionPage` + `ItemList`) propios, listando solo las noticias de esa categoría. Antes esas categorías solo existían como ancla (`index.html#categoria`) dentro de la portada, invisible para el buscador como página independiente.
+- `glosario.html` — glosario de ~20 términos habituales sobre diabetes (generado desde `GLOSSARY_ITEMS` en `build.js`), con JSON-LD `DefinedTermSet` y enlaces internos a las guías relacionadas. Contenido pensado para búsquedas de cola larga ("qué es la HbA1c", etc.).
 - `sitemap.xml` y `robots.txt` — generados a partir de las mismas noticias y páginas de apoyo.
-- `js/filter.js` — filtrado de la portada por categoría (solo interactividad, el contenido ya está en el HTML).
+- `js/filter.js` — filtrado de la portada por categoría y paginación ("Cargar más noticias", 9 tarjetas por página); solo interactividad, el contenido ya está en el HTML.
 - `css/style.css` — estilos (con soporte de modo oscuro).
 - `favicon.svg` — icono del sitio.
 
@@ -30,6 +32,8 @@ El sitio está pensado para que los buscadores puedan indexar el contenido sin e
 - Cada noticia tiene un campo opcional `tituloSeo` en `js/data.js`: un título corto para `<title>`/Open Graph/Twitter (máx. ~46 caracteres, para no superar los 60 con el sufijo " · DiabetesHoy" y que Google no lo corte en el resultado de búsqueda). El titular completo (`titulo`) se sigue usando tal cual en el `<h1>`, en las tarjetas y en el `headline` del JSON-LD. Si un artículo no tiene `tituloSeo`, se usa `titulo` igualmente.
 - Las meta descripciones (`<meta name="description">`, `og:description`, `twitter:description`) se recortan automáticamente a ~155 caracteres por palabra completa (función `truncateForMeta` en `build.js`); el `resumen` completo se sigue mostrando tal cual en la tarjeta, en el artículo y en el JSON-LD.
 - Cada artículo tiene su propia imagen para redes sociales en `img/og/<id>.png` (generada a partir de su `tituloSeo` y su categoría). Si un artículo nuevo no tiene imagen todavía en esa carpeta, `build.js` usa automáticamente la genérica `img/og-cover.png` como respaldo — no hace falta generarla a mano para publicar.
+- Cada categoría (`categoria/<slug>.html`) tiene ahora su propia página indexable, con título, meta descripción y JSON-LD (`CollectionPage` + `ItemList`) propios. Antes solo existían como ancla dentro de la portada (`index.html#categoria`), invisibles para el buscador como contenido independiente; esto amplía el número de páginas relevantes que pueden posicionar cuando alguien busca, por ejemplo, "sensores de glucosa" o "dietas para diabetes".
+- `glosario.html` añade contenido de cola larga (~20 términos con su definición y JSON-LD `DefinedTermSet`) para búsquedas del tipo "qué es la HbA1c" o "qué es la resistencia a la insulina", con enlaces internos hacia las noticias y guías relacionadas.
 
 El dominio real es `https://diabeteshoy.com` (constante `SITE_URL` en `build.js`). Si alguna vez cambia:
 

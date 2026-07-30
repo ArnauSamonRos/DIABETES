@@ -236,6 +236,120 @@ const INSULIN_TYPES = [
   }
 ];
 
+// Cada término admite HTML simple (por ejemplo enlaces <a>) en `definicion`,
+// ya que build.js no lo escapa; usa comillas dobles con cuidado.
+const GLOSSARY_ITEMS = [
+  {
+    slug: "bomba-de-insulina",
+    termino: "Bomba de insulina",
+    definicion: 'Dispositivo que administra insulina de acción rápida de forma continua a través de un catéter o un parche, sustituyendo las inyecciones múltiples diarias. Puedes comparar varios modelos en nuestra <a href="bombas-de-insulina.html">comparativa de bombas de insulina</a>.'
+  },
+  {
+    slug: "cetoacidosis-diabetica",
+    termino: "Cetoacidosis diabética (CAD)",
+    definicion: "Complicación grave y de aparición rápida, más frecuente en diabetes tipo 1, en la que el cuerpo, al no poder usar la glucosa como energía, empieza a producir cetonas en exceso. Requiere atención médica urgente."
+  },
+  {
+    slug: "diabetes-gestacional",
+    termino: "Diabetes gestacional",
+    definicion: "Diabetes que se diagnostica por primera vez durante el embarazo, debido a que las hormonas del embarazo dificultan la acción de la insulina. Suele controlarse con dieta, ejercicio y, en algunos casos, medicación, y normalmente desaparece tras el parto."
+  },
+  {
+    slug: "diabetes-tipo-1",
+    termino: "Diabetes tipo 1",
+    definicion: "Enfermedad autoinmune en la que el sistema inmunitario destruye las células beta del páncreas, encargadas de producir insulina. Requiere tratamiento con insulina desde el diagnóstico, que suele darse en la infancia o la juventud, aunque puede aparecer a cualquier edad."
+  },
+  {
+    slug: "diabetes-tipo-2",
+    termino: "Diabetes tipo 2",
+    definicion: "Forma de diabetes asociada a una resistencia progresiva a la insulina, en la que el cuerpo produce insulina pero no la utiliza con eficacia. Suele aparecer en la edad adulta y se relaciona con factores genéticos y de estilo de vida."
+  },
+  {
+    slug: "glucemia",
+    termino: "Glucemia",
+    definicion: "Nivel de glucosa (azúcar) presente en la sangre en un momento dado, habitualmente medido en mg/dL. Es el valor que miden tanto los glucómetros de punción digital como los sensores de monitorización continua."
+  },
+  {
+    slug: "glp-1",
+    termino: "GLP-1 (agonista del receptor de GLP-1)",
+    definicion: "Familia de fármacos que imitan una hormona intestinal natural, estimulando la liberación de insulina, ralentizando la digestión y reduciendo el apetito. Se usan tanto para la diabetes tipo 2 como para el control del peso."
+  },
+  {
+    slug: "hba1c",
+    termino: "HbA1c (hemoglobina glucosilada)",
+    definicion: "Análisis de sangre que refleja el promedio de los niveles de glucosa de los últimos 2-3 meses, y que se usa habitualmente para valorar el control a medio plazo de la diabetes, a diferencia de una medición puntual de glucosa."
+  },
+  {
+    slug: "hiperglucemia",
+    termino: "Hiperglucemia",
+    definicion: "Nivel de glucosa en sangre más alto de lo habitual. Si es mantenida en el tiempo, es la responsable de buena parte de las complicaciones a largo plazo de la diabetes."
+  },
+  {
+    slug: "hipoglucemia",
+    termino: "Hipoglucemia",
+    definicion: "Bajada de los niveles de glucosa en sangre por debajo del rango normal, que puede causar síntomas como temblor, sudoración o confusión, y que en casos graves requiere actuar con rapidez."
+  },
+  {
+    slug: "indice-glucemico",
+    termino: "Índice glucémico",
+    definicion: "Medida que indica con qué rapidez un alimento con carbohidratos eleva la glucosa en sangre en comparación con un alimento de referencia. Los alimentos de índice glucémico bajo elevan la glucosa de forma más lenta y sostenida."
+  },
+  {
+    slug: "insulina-basal",
+    termino: "Insulina basal",
+    definicion: 'Insulina de acción lenta o prolongada que mantiene un nivel de fondo estable a lo largo del día, sin relación directa con las comidas. Lo explicamos con más detalle en nuestra <a href="tipos-de-insulina.html">guía de tipos de insulina</a>.'
+  },
+  {
+    slug: "insulina-en-bolo",
+    termino: "Insulina en bolo",
+    definicion: 'Insulina de acción rápida que se administra para cubrir la subida de glucosa producida por una comida, a diferencia de la insulina basal. Más contexto en la <a href="tipos-de-insulina.html">guía de tipos de insulina</a>.'
+  },
+  {
+    slug: "mcg",
+    termino: "MCG (monitorización continua de glucosa)",
+    definicion: 'Sensor que se coloca sobre la piel y mide la glucosa en el líquido intersticial de forma continua, mostrando los datos en un móvil o lector, sin necesidad de pincharse el dedo cada vez. Puedes ver las últimas novedades en nuestra categoría de <a href="categoria/sensores.html">Sensores</a>.'
+  },
+  {
+    slug: "nefropatia-diabetica",
+    termino: "Nefropatía diabética",
+    definicion: "Daño progresivo en los riñones causado por niveles de glucosa elevados mantenidos en el tiempo, una de las principales complicaciones microvasculares de la diabetes."
+  },
+  {
+    slug: "neuropatia-diabetica",
+    termino: "Neuropatía diabética",
+    definicion: "Daño en los nervios asociado a la diabetes, que puede reducir la sensibilidad (sobre todo en los pies) y hacer que heridas o irritaciones pasen desapercibidas."
+  },
+  {
+    slug: "prediabetes",
+    termino: "Prediabetes",
+    definicion: "Situación en la que los niveles de glucosa están por encima de lo normal, pero todavía no lo suficiente como para diagnosticar diabetes tipo 2. Con cambios en la alimentación y el ejercicio, es posible frenar o revertir su progresión."
+  },
+  {
+    slug: "resistencia-a-la-insulina",
+    termino: "Resistencia a la insulina",
+    definicion: "Situación en la que las células del cuerpo responden peor de lo habitual a la insulina, por lo que el páncreas necesita producir más cantidad para mantener la glucosa en niveles normales. Es una base común de la diabetes tipo 2 y la prediabetes."
+  },
+  {
+    slug: "retinopatia-diabetica",
+    termino: "Retinopatía diabética",
+    definicion: "Complicación ocular causada por el daño que la glucosa elevada mantenida en el tiempo produce en los vasos sanguíneos de la retina, y una de las principales causas de pérdida de visión evitable."
+  },
+  {
+    slug: "sglt2",
+    termino: "SGLT2 (inhibidor del cotransportador sodio-glucosa tipo 2)",
+    definicion: "Familia de fármacos que actúan a nivel renal, favoreciendo la eliminación de glucosa a través de la orina, usados en el tratamiento de la diabetes tipo 2 y con beneficios adicionales a nivel cardiovascular y renal."
+  },
+  {
+    slug: "sindrome-cardio-renal-metabolico",
+    termino: "Síndrome cardio-renal-metabólico (CKM)",
+    definicion: "Concepto que describe cómo el tejido adiposo, la diabetes tipo 2, la enfermedad renal crónica y las enfermedades cardiovasculares están conectados entre sí, y que refuerza la idea de tratar estos problemas de forma conjunta en lugar de por separado."
+  }
+];
+
+function stripTags(html) {
+  return String(html).replace(/<[^>]+>/g, "");
+}
+
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g, "&amp;")
@@ -288,7 +402,8 @@ function renderHeader(prefix, activeCat) {
   const guideLinks = [
     { href: `${prefix}dietas-y-ejercicio.html`, label: "Guía práctica", cat: "guia" },
     { href: `${prefix}bombas-de-insulina.html`, label: "Bombas de insulina", cat: "bombas" },
-    { href: `${prefix}tipos-de-insulina.html`, label: "Tipos de insulina", cat: "tipos-insulina" }
+    { href: `${prefix}tipos-de-insulina.html`, label: "Tipos de insulina", cat: "tipos-insulina" },
+    { href: `${prefix}glosario.html`, label: "Glosario", cat: "glosario" }
   ];
 
   const renderLink = (l, extraClass) =>
@@ -506,7 +621,7 @@ function renderArticlePage(article, allArticles) {
 
   const breadcrumbItems = [
     { name: "Portada", href: "../index.html", url: SITE_URL + "/" },
-    { name: cat.nombre, href: `../index.html#${article.categoria}`, url: `${SITE_URL}/index.html#${article.categoria}` },
+    { name: cat.nombre, href: `../categoria/${article.categoria}.html`, url: `${SITE_URL}/categoria/${article.categoria}.html` },
     { name: article.titulo, url }
   ];
   const jsonLdBreadcrumb = breadcrumbJsonLd(breadcrumbItems);
@@ -805,7 +920,7 @@ ${renderHeader("", "guia")}
   <main class="article-wrap">
     ${renderBreadcrumbsNav(breadcrumbItems)}
     <h1>Dietas y ejercicio diario para la diabetes</h1>
-    <p class="lead">Un plato de ejemplo y una rutina semanal sencilla, basados en las pautas generales recogidas en nuestras noticias de <a href="index.html#dietas">Dietas</a> y <a href="index.html#ejercicio">Ejercicio</a>.</p>
+    <p class="lead">Un plato de ejemplo y una rutina semanal sencilla, basados en las pautas generales recogidas en nuestras noticias de <a href="categoria/dietas.html">Dietas</a> y <a href="categoria/ejercicio.html">Ejercicio</a>.</p>
 
     <div class="disclaimer">
       Esta guía es orientativa y general: no sustituye un plan de alimentación o de ejercicio personalizado. Antes de cambiar tu dieta o de empezar una rutina nueva, consulta con tu médico, endocrino o educador en diabetes, especialmente si usas insulina u otra medicación que pueda causar hipoglucemias.
@@ -1069,6 +1184,170 @@ ${renderFooter("")}
 `;
 }
 
+function renderCategoryPage(slug, articles) {
+  const cat = CATEGORIAS[slug];
+  const articulosCategoria = articles
+    .filter(a => a.categoria === slug)
+    .sort((a, b) => b.fecha.localeCompare(a.fecha));
+
+  const title = `${cat.nombre}: novedades sobre diabetes · ${SITE_NAME}`;
+  const description = cat.descripcion;
+  const url = `${SITE_URL}/categoria/${slug}.html`;
+
+  const breadcrumbItems = [
+    { name: "Portada", href: "../index.html", url: SITE_URL + "/" },
+    { name: cat.nombre, url }
+  ];
+
+  const jsonLdCollection = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: `${cat.nombre}: novedades sobre diabetes`,
+    description,
+    url,
+    inLanguage: "es",
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL + "/" },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: articulosCategoria.map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: articleUrl(a, true),
+        name: a.titulo
+      }))
+    }
+  };
+
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "website",
+    prefix: "../",
+    jsonLdBlocks: [jsonLdCollection, breadcrumbJsonLd(breadcrumbItems)]
+  });
+
+  const cardsHtml = articulosCategoria.map(a => renderCard(a, "../")).join("\n");
+
+  const relatedGuidesHtml = cat.guiasRelacionadas.length
+    ? `    <div class="callout">
+      <strong>También te puede interesar:</strong>
+      ${cat.guiasRelacionadas.map(g => `<a href="../${g.href}">${escapeHtml(g.label)}</a>`).join(" · ")}
+    </div>`
+    : "";
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${GTM_SCRIPT}
+${head}
+</head>
+<body>
+${GTM_NOSCRIPT}
+${renderHeader("../", null)}
+
+  <main class="container">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
+    <section class="hero hero--compact">
+      <span class="badge" style="background:${cat.color}">${cat.icono} ${cat.nombre}</span>
+      <h1>${cat.nombre}: novedades sobre diabetes</h1>
+      <p>${escapeHtml(cat.descripcion)}</p>
+    </section>
+
+${relatedGuidesHtml}
+
+    <div class="grid">
+${cardsHtml}
+    </div>
+
+    <div class="disclaimer">
+      Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.
+    </div>
+  </main>
+
+${renderFooter("../")}
+  <script src="../js/motion.js"></script>
+</body>
+</html>
+`;
+}
+
+function renderGlossaryPage() {
+  const title = `Glosario de términos sobre diabetes · ${SITE_NAME}`;
+  const description = "Diccionario sencillo de términos habituales sobre diabetes: HbA1c, insulina basal y en bolo, hipoglucemia, resistencia a la insulina, MCG y más, explicados en palabras claras.";
+  const url = `${SITE_URL}/glosario.html`;
+
+  const breadcrumbItems = [
+    { name: "Portada", href: "index.html", url: SITE_URL + "/" },
+    { name: "Glosario", url }
+  ];
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name: "Glosario de términos sobre diabetes",
+    description,
+    url,
+    inLanguage: "es",
+    hasDefinedTerm: GLOSSARY_ITEMS.map(item => ({
+      "@type": "DefinedTerm",
+      name: item.termino,
+      description: stripTags(item.definicion),
+      url: `${url}#${item.slug}`
+    }))
+  };
+
+  const head = renderHead({
+    title,
+    description,
+    url,
+    type: "website",
+    prefix: "",
+    jsonLdBlocks: [jsonLd, breadcrumbJsonLd(breadcrumbItems)]
+  });
+
+  const tocHtml = GLOSSARY_ITEMS.map(item => `<a href="#${item.slug}">${escapeHtml(item.termino)}</a>`).join("\n        ");
+
+  const termsHtml = GLOSSARY_ITEMS.map(
+    item => `      <h2 id="${item.slug}">${escapeHtml(item.termino)}</h2>
+      <p>${item.definicion}</p>`
+  ).join("\n\n");
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+${GTM_SCRIPT}
+${head}
+</head>
+<body>
+${GTM_NOSCRIPT}
+${renderHeader("", "glosario")}
+
+  <main class="article-wrap">
+    ${renderBreadcrumbsNav(breadcrumbItems)}
+    <h1>Glosario de términos sobre diabetes</h1>
+    <p class="lead">Un diccionario breve, en palabras sencillas, de los términos que más se repiten al hablar de diabetes.</p>
+
+    <div class="disclaimer">
+      Estas definiciones son generales y divulgativas: no sustituyen la información que te dé tu equipo médico sobre tu caso concreto.
+    </div>
+
+    <nav class="glossary-toc" aria-label="Índice de términos">
+        ${tocHtml}
+    </nav>
+
+    <div class="article-body">
+${termsHtml}
+    </div>
+  </main>
+
+${renderFooter("")}
+  <script src="js/motion.js"></script>
+</body>
+</html>
+`;
+}
+
 function renderSitemap(articles) {
   const staticPages = [
     "quienes-somos.html",
@@ -1076,13 +1355,21 @@ function renderSitemap(articles) {
     "contacto.html",
     "dietas-y-ejercicio.html",
     "bombas-de-insulina.html",
-    "tipos-de-insulina.html"
+    "tipos-de-insulina.html",
+    "glosario.html"
   ];
+
+  const categoryUrls = Object.keys(CATEGORIAS).map(slug => {
+    const articulosCategoria = articles.filter(a => a.categoria === slug);
+    const lastmod = articulosCategoria.reduce((max, a) => (a.fecha > max ? a.fecha : max), articulosCategoria[0].fecha);
+    return { loc: `${SITE_URL}/categoria/${slug}.html`, lastmod };
+  });
 
   const urls = [
     { loc: `${SITE_URL}/`, lastmod: articles.reduce((max, a) => (a.fecha > max ? a.fecha : max), articles[0].fecha) },
     ...articles.map(a => ({ loc: `${SITE_URL}/${articleUrl(a)}`, lastmod: a.fecha })),
-    ...staticPages.map(p => ({ loc: `${SITE_URL}/${p}`, lastmod: STATIC_PAGES_LASTMOD }))
+    ...staticPages.map(p => ({ loc: `${SITE_URL}/${p}`, lastmod: STATIC_PAGES_LASTMOD })),
+    ...categoryUrls
   ];
 
   const body = urls
@@ -1131,12 +1418,15 @@ ${renderFooter("")}
 }
 
 function main() {
+  const CATEGORY_DIR = path.join(ROOT, "categoria");
   fs.mkdirSync(ARTICLES_DIR, { recursive: true });
+  fs.mkdirSync(CATEGORY_DIR, { recursive: true });
 
   fs.writeFileSync(path.join(ROOT, "index.html"), renderIndexPage(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "dietas-y-ejercicio.html"), renderGuidePage());
   fs.writeFileSync(path.join(ROOT, "bombas-de-insulina.html"), renderPumpsPage());
   fs.writeFileSync(path.join(ROOT, "tipos-de-insulina.html"), renderInsulinTypesPage());
+  fs.writeFileSync(path.join(ROOT, "glosario.html"), renderGlossaryPage());
   fs.writeFileSync(path.join(ROOT, "quienes-somos.html"), renderAboutPage());
   fs.writeFileSync(path.join(ROOT, "faq.html"), renderFaqPage());
   fs.writeFileSync(path.join(ROOT, "contacto.html"), renderContactPage());
@@ -1146,10 +1436,16 @@ function main() {
     fs.writeFileSync(path.join(ARTICLES_DIR, `${article.id}.html`), renderArticlePage(article, ARTICLES));
   }
 
+  for (const slug of Object.keys(CATEGORIAS)) {
+    fs.writeFileSync(path.join(CATEGORY_DIR, `${slug}.html`), renderCategoryPage(slug, ARTICLES));
+  }
+
   fs.writeFileSync(path.join(ROOT, "sitemap.xml"), renderSitemap(ARTICLES));
   fs.writeFileSync(path.join(ROOT, "robots.txt"), renderRobotsTxt());
 
-  console.log(`Generadas ${ARTICLES.length} páginas de artículo + index.html + guía práctica + 3 páginas de apoyo + sitemap.xml + robots.txt`);
+  console.log(
+    `Generadas ${ARTICLES.length} páginas de artículo + index.html + ${Object.keys(CATEGORIAS).length} páginas de categoría + guía práctica + glosario + 3 páginas de apoyo + sitemap.xml + robots.txt`
+  );
 }
 
 main();

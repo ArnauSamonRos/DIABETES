@@ -514,12 +514,51 @@ const ARTICLES = [
 ];
 
 const CATEGORIAS = {
-  sensores: { nombre: "Sensores", color: "#2563eb", icono: "📡" },
-  medicacion: { nombre: "Medicación", color: "#059669", icono: "💊" },
-  estudios: { nombre: "Estudios", color: "#7c3aed", icono: "🔬" },
-  dietas: { nombre: "Dietas", color: "#d97706", icono: "🥗" },
-  ejercicio: { nombre: "Ejercicio", color: "#0d9488", icono: "🏃" },
-  complicaciones: { nombre: "Complicaciones", color: "#dc2626", icono: "⚠️" }
+  sensores: {
+    nombre: "Sensores",
+    color: "#2563eb",
+    icono: "📡",
+    descripcion: "Novedades sobre sensores de monitorización continua de glucosa (MCG), parches, lectores y otros dispositivos para medir la glucosa sin pincharse el dedo cada vez.",
+    guiasRelacionadas: [{ label: "Tipos de insulina", href: "tipos-de-insulina.html" }]
+  },
+  medicacion: {
+    nombre: "Medicación",
+    color: "#059669",
+    icono: "💊",
+    descripcion: "Aprobaciones, nuevos fármacos y actualizaciones sobre tratamientos para la diabetes tipo 1 y tipo 2, desde insulinas hasta agonistas de GLP-1 e inhibidores de SGLT2.",
+    guiasRelacionadas: [
+      { label: "Tipos de insulina", href: "tipos-de-insulina.html" },
+      { label: "Comparativa de bombas de insulina", href: "bombas-de-insulina.html" }
+    ]
+  },
+  estudios: {
+    nombre: "Estudios",
+    color: "#7c3aed",
+    icono: "🔬",
+    descripcion: "Investigación y estudios clínicos que ayudan a entender mejor la diabetes: desde la genética y la microbiota hasta nuevas terapias en fase de ensayo.",
+    guiasRelacionadas: []
+  },
+  dietas: {
+    nombre: "Dietas",
+    color: "#d97706",
+    icono: "🥗",
+    descripcion: "Noticias sobre alimentación y diabetes: guías nutricionales, patrones de dieta y su relación con el control de la glucosa y el peso corporal.",
+    guiasRelacionadas: [{ label: "Guía práctica de dietas y ejercicio", href: "dietas-y-ejercicio.html" }]
+  },
+  ejercicio: {
+    nombre: "Ejercicio",
+    color: "#0d9488",
+    icono: "🏃",
+    descripcion: "Cómo la actividad física ayuda a prevenir y controlar la diabetes: estudios sobre rutinas de ejercicio, movilidad y su efecto sobre la glucemia.",
+    guiasRelacionadas: [{ label: "Guía práctica de dietas y ejercicio", href: "dietas-y-ejercicio.html" }]
+  },
+  complicaciones: {
+    nombre: "Complicaciones",
+    color: "#dc2626",
+    icono: "⚠️",
+    descripcion: "Prevención y manejo de las complicaciones asociadas a la diabetes: retinopatía, neuropatía, nefropatía y riesgo cardiovascular.",
+    guiasRelacionadas: []
+  }
 };
 
 // Permite reutilizar estos datos desde build.js (Node) sin duplicarlos.
