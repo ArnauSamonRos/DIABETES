@@ -17,6 +17,18 @@ Cada artículo es un resumen de una noticia real con enlace a su fuente original
 - `js/filter.js` — filtrado de la portada por categoría y paginación ("Cargar más noticias", 9 tarjetas por página); solo interactividad, el contenido ya está en el HTML.
 - `css/style.css` — estilos (con soporte de modo oscuro).
 - `favicon.svg` — icono del sitio.
+- `en/` — versión en inglés de todo el sitio (ver sección "Versión en inglés" más abajo). Misma estructura de carpetas que la raíz (`en/articulos/`, `en/categoria/`, etc.), generada por las mismas funciones de `build.js` con `lang: "en"`.
+
+## Versión en inglés
+
+Todo el sitio existe también en inglés bajo `/en/` (`en/index.html`, `en/articulos/<id>.html`, `en/categoria/<slug>.html`, guías, glosario, FAQ, etc.), como páginas HTML reales generadas en el build — no es una traducción por JavaScript en el cliente, para no romper el principio de que todo el contenido esté ya en el HTML servido.
+
+- El contenido en inglés vive junto al español en las mismas fuentes de datos: cada artículo en `js/data.js` tiene un campo `en: { titulo, tituloSeo, resumen, cuerpo }`; cada categoría en `CATEGORIAS` tiene `nombreEn`/`descripcionEn`; y `FAQ_ITEMS`, `PUMPS`, `INSULIN_TYPES` y `GLOSSARY_ITEMS` en `build.js` tienen sus propios campos `*En`. Los textos de interfaz (menú, pie, botones) están en el objeto `STRINGS` de `build.js`.
+- Todas las funciones `render*Page` de `build.js` aceptan un parámetro `lang` (`"es"` por defecto o `"en"`) y usan ese campo para elegir el idioma; `main()` genera cada página dos veces, una en la raíz y otra bajo `en/`, con la misma estructura de subcarpetas.
+- Cada página lleva `<link rel="alternate" hreflang="es|en">` (más `x-default` apuntando a la versión en español) hacia su página equivalente en el otro idioma, y `sitemap.xml` incluye las URLs de ambos idiomas con sus anotaciones `xhtml:link` — así los buscadores entienden que son la misma página en dos idiomas, no contenido duplicado.
+- La cabecera incluye un selector de idioma (enlace "🌐 English" / "🌐 Español") que enlaza directamente con la página equivalente en el otro idioma — no es un botón de JavaScript, así que funciona sin JS y cada versión es indexable por separado.
+- Los recursos estáticos (`css/`, `js/`, `img/`, `favicon.svg`) no se duplican bajo `en/`: las páginas en inglés enlazan a los mismos archivos de la raíz con una ruta relativa adicional (`../`).
+- `js/filter.js` y `js/motion.js` son scripts compartidos entre los dos idiomas; detectan el idioma de la página con `document.documentElement.lang` para mostrar sus pocos textos generados por JS (el botón "Cargar más noticias"/"Load more news" y el `aria-label` de "Volver arriba"/"Back to top") en el idioma correcto.
 
 ## SEO
 
@@ -56,8 +68,9 @@ Y abre `http://localhost:8000/index.html`.
 ## Añadir una noticia nueva
 
 1. Agrega un objeto al array `ARTICLES` en `js/data.js` con `id`, `categoria`, `titulo`, `resumen`, `fecha`, `fuenteNombre`, `fuenteUrl` y `cuerpo`. Si el `titulo` es largo, añade también un `tituloSeo` corto (ver sección SEO más arriba).
-2. Ejecuta `node build.js` para regenerar `index.html`, la página del artículo, el `sitemap.xml` y el `robots.txt`.
-3. (Opcional) Genera una imagen social propia en `img/og/<id>.png` (1200×630); si no la añades, se usará la genérica automáticamente.
-4. Revisa los cambios y haz commit.
+2. Añade también su traducción al inglés en el campo `en: { titulo, tituloSeo, resumen, cuerpo }` del mismo objeto (ver sección "Versión en inglés" más arriba); si se omite, el build fallará al generar `en/articulos/<id>.html`.
+3. Ejecuta `node build.js` para regenerar `index.html`/`en/index.html`, las páginas del artículo en ambos idiomas, el `sitemap.xml` y el `robots.txt`.
+4. (Opcional) Genera una imagen social propia en `img/og/<id>.png` (1200×630); si no la añades, se usará la genérica automáticamente.
+5. Revisa los cambios y haz commit.
 
-No edites `index.html`, `quienes-somos.html`, `faq.html`, `contacto.html` ni los archivos dentro de `articulos/` a mano: se sobrescriben en cada `node build.js`. Para cambiar el contenido de las páginas de apoyo o de la FAQ, edita las funciones correspondientes (`renderAboutPage`, `renderFaqPage`, `renderContactPage`, `FAQ_ITEMS`) en `build.js`.
+No edites `index.html`, `quienes-somos.html`, `faq.html`, `contacto.html`, nada dentro de `articulos/` o `categoria/`, ni nada dentro de `en/` a mano: todo eso se sobrescribe en cada `node build.js`. Para cambiar el contenido de las páginas de apoyo o de la FAQ, edita las funciones correspondientes (`renderAboutPage`, `renderFaqPage`, `renderContactPage`, `FAQ_ITEMS`) en `build.js`, incluyendo su rama en inglés (`lang === "en"`).

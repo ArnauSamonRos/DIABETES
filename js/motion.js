@@ -10,10 +10,11 @@ function initHeaderScroll() {
 }
 
 function initBackToTop() {
+  const lang = document.documentElement.lang === "en" ? "en" : "es";
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "back-to-top";
-  btn.setAttribute("aria-label", "Volver arriba");
+  btn.setAttribute("aria-label", lang === "en" ? "Back to top" : "Volver arriba");
   btn.innerHTML = "&uarr;";
   document.body.appendChild(btn);
 

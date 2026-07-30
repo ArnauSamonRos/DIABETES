@@ -1,6 +1,12 @@
 const PAGE_SIZE = 9;
 let visibleCountTodas = PAGE_SIZE;
 
+const FILTER_LANG = document.documentElement.lang === "en" ? "en" : "es";
+const FILTER_STRINGS = {
+  es: { loadMore: "Cargar más noticias" },
+  en: { loadMore: "Load more news" }
+};
+
 function setActiveFilterButton(filtro) {
   document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.filtro === filtro);
@@ -30,7 +36,7 @@ function ensureLoadMoreButton() {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "load-more-btn";
-  btn.textContent = "Cargar más noticias";
+  btn.textContent = FILTER_STRINGS[FILTER_LANG].loadMore;
   btn.addEventListener("click", () => {
     visibleCountTodas += PAGE_SIZE;
     applyFilter("todas", true);

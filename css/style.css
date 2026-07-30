@@ -168,6 +168,26 @@ nav.main-nav a.nav-link--guide.active {
   color: #101425;
 }
 
+/* Selector de idioma: enlaza con la misma página en el otro idioma (no es
+   un toggle de JS, es una página estática real bajo /en/). */
+nav.main-nav a.lang-switch {
+  margin-left: auto;
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  color: #cfd3e2;
+  font-size: 0.82rem;
+}
+
+nav.main-nav a.lang-switch::before {
+  content: "🌐 ";
+}
+
+nav.main-nav a.lang-switch:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-style: solid;
+  color: #fff;
+}
+
 /* Hero */
 .hero {
   position: relative;
