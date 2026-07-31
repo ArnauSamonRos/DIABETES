@@ -2,6 +2,106 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "nc-medicaid-medicamentos-obesidad",
+    categoria: "medicacion",
+    titulo: "Carolina del Norte mantiene la cobertura de Medicaid para los medicamentos contra la obesidad",
+    tituloSeo: "Carolina del Norte mantiene cobertura Medicaid",
+    resumen: "La Asociación Americana de Diabetes celebró la decisión de Carolina del Norte de mantener la cobertura de Medicaid para medicamentos contra la obesidad aprobados por la FDA, que también se usan en el tratamiento de la diabetes tipo 2.",
+    fecha: "2026-07-27",
+    fuenteNombre: "American Diabetes Association",
+    fuenteUrl: "https://diabetes.org/newsroom/press-releases/american-diabetes-association-applauds-preservation-medicaid-coverage-fda",
+    cuerpo: [
+      "La Asociación Americana de Diabetes (ADA) celebró la decisión de Carolina del Norte de mantener la cobertura de Medicaid para medicamentos contra la obesidad aprobados por la FDA, después de que este beneficio estuviera en riesgo de eliminarse por recortes presupuestarios.",
+      "Según la propia ADA, casi el 35% de la población adulta del estado vive con obesidad, una cifra que sube al 32% entre los mayores de 60 años, y se proyecta que el porcentaje siga creciendo en las próximas décadas. Muchos de estos medicamentos, además de tratar la obesidad, se usan también para el control de la diabetes tipo 2.",
+      "Monica Billger, directora de asuntos gubernamentales estatales de la ADA, señaló que mantener esta cobertura protege el acceso a una atención basada en la evidencia para las personas que viven con diabetes, obesidad o ambas condiciones a la vez."
+    ],
+    en: {
+      titulo: "North Carolina preserves Medicaid coverage for obesity medications",
+      tituloSeo: "NC preserves Medicaid obesity med coverage",
+      resumen: "The American Diabetes Association praised North Carolina's decision to preserve Medicaid coverage for FDA-approved obesity medications, which are also used to treat type 2 diabetes.",
+      cuerpo: [
+        "The American Diabetes Association (ADA) praised North Carolina's decision to preserve Medicaid coverage for FDA-approved obesity medications, after this benefit had been at risk of being cut due to budget pressures.",
+        "According to the ADA, nearly 35% of the state's adult population lives with obesity, a figure that rises to 32% among adults over 60, and the share is projected to keep growing in the coming decades. Many of these medications, beyond treating obesity, are also used to help manage type 2 diabetes.",
+        "Monica Billger, the ADA's director of state government affairs, said preserving this coverage protects access to evidence-based care for people living with diabetes, obesity, or both."
+      ]
+    }
+  },
+  {
+    id: "ia-predice-hipoglucemia-hospitalaria",
+    categoria: "estudios",
+    titulo: "Un modelo de inteligencia artificial predice la hipoglucemia hospitalaria con 24 horas de antelación",
+    tituloSeo: "IA predice hipoglucemia hospitalaria",
+    resumen: "Investigadores de Cedars-Sinai desarrollaron un modelo de IA (LSTM) que, con datos de casi 143.000 ingresos hospitalarios, predice qué pacientes tienen riesgo de sufrir una hipoglucemia hasta 24 horas antes de que ocurra.",
+    fecha: "2026-06-29",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/ciencia/2026/06/29/como-un-modelo-de-ia-permite-anticipar-la-caida-de-la-glucosa-hasta-24-horas/",
+    cuerpo: [
+      "Un equipo de investigadores de Cedars-Sinai Medical Center, en Los Ángeles, ha desarrollado un modelo de inteligencia artificial capaz de identificar a pacientes hospitalizados con riesgo de sufrir una hipoglucemia hasta 24 horas antes de que se produzca, según un estudio publicado en la revista npj Digital Medicine.",
+      "El modelo, basado en una red neuronal de memoria a corto y largo plazo (LSTM), se entrenó y validó con datos de casi 143.000 ingresos hospitalarios de personas adultas, utilizando como variables la medicación, los valores analíticos, las órdenes de dieta y el porcentaje de comida consumida en ventanas de cuatro horas a lo largo de cinco días.",
+      "La hipoglucemia hospitalaria es el evento adverso más frecuente en el tratamiento de la diabetes durante un ingreso, y se asocia a mayor duración de la estancia, más costes y peores resultados, incluyendo en los casos más graves convulsiones, coma o arritmias. Anticiparla con un día de margen podría ayudar al personal sanitario a intervenir antes de que aparezcan los síntomas."
+    ],
+    en: {
+      titulo: "An AI model predicts hospital hypoglycemia 24 hours in advance",
+      tituloSeo: "AI predicts hospital hypoglycemia",
+      resumen: "Cedars-Sinai researchers developed an LSTM AI model that, using data from nearly 143,000 hospital admissions, predicts which patients are at risk of hypoglycemia up to 24 hours before it happens.",
+      cuerpo: [
+        "A team of researchers at Cedars-Sinai Medical Center in Los Angeles has developed an artificial intelligence model able to identify hospitalized patients at risk of hypoglycemia up to 24 hours before it occurs, according to a study published in the journal npj Digital Medicine.",
+        "The model, based on a long short-term memory (LSTM) neural network, was trained and validated using data from nearly 143,000 adult hospital admissions, using medications, lab values, diet orders and the percentage of meals consumed across four-hour windows over five days as variables.",
+        "In-hospital hypoglycemia is the most common adverse event during diabetes treatment while admitted, and is linked to longer stays, higher costs and worse outcomes, including seizures, coma or arrhythmias in the most serious cases. Anticipating it a day in advance could help clinical staff intervene before symptoms appear."
+      ]
+    }
+  },
+  {
+    id: "unam-gotas-retinopatia-diabetica",
+    categoria: "complicaciones",
+    titulo: "Científicos de la UNAM crean unas gotas oftálmicas para tratar la retinopatía diabética sin inyecciones",
+    tituloSeo: "UNAM crea gotas contra la retinopatía",
+    resumen: "Investigadores del Instituto de Neurobiología de la UNAM han desarrollado unas gotas oftálmicas basadas en vasoinhibina que buscan sustituir a las inyecciones intraoculares usadas actualmente contra la retinopatía diabética.",
+    fecha: "2026-04-15",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/mexico/2026/04/15/gotas-contra-la-ceguera-avanza-investigacion-de-la-unam-ofrece-esperanza-a-pacientes-con-diabetes/",
+    cuerpo: [
+      "Un equipo del Instituto de Neurobiología (INB) de la UNAM, en Juriquilla, Querétaro, trabaja en unas gotas oftálmicas que buscan sustituir a las inyecciones intraoculares, dolorosas, costosas y no siempre eficaces, que se usan actualmente contra la retinopatía diabética.",
+      "El desarrollo se basa en la vasoinhibina, una molécula natural capaz de frenar el crecimiento anómalo de los vasos sanguíneos en la retina, responsable de buena parte de la pérdida de visión en personas con diabetes. Es el resultado de 30 años de investigación del Laboratorio de Endocrinología Molecular del INB.",
+      "Los investigadores lograron identificar que la actividad biológica de la vasoinhibina se concentra en solo 3 de sus 123 aminoácidos, lo que permitió diseñar una molécula más pequeña y funcional, fácil de formular en gotas. Además de evitar el trauma de los pinchazos en el ojo, esto podría facilitar que más pacientes sigan el tratamiento hasta el final."
+    ],
+    en: {
+      titulo: "UNAM scientists develop eye drops to treat diabetic retinopathy without injections",
+      tituloSeo: "UNAM develops drops for retinopathy",
+      resumen: "Researchers at UNAM's Institute of Neurobiology have developed vasoinhibin-based eye drops that aim to replace the intraocular injections currently used against diabetic retinopathy.",
+      cuerpo: [
+        "A team at UNAM's Institute of Neurobiology (INB) in Juriquilla, Querétaro, is working on eye drops that aim to replace the painful, costly and not always effective intraocular injections currently used against diabetic retinopathy.",
+        "The development is based on vasoinhibin, a natural molecule able to stop the abnormal growth of blood vessels in the retina, responsible for much of the vision loss in people with diabetes. It's the result of 30 years of research at the INB's Molecular Endocrinology Laboratory.",
+        "The researchers found that vasoinhibin's biological activity is concentrated in just 3 of its 123 amino acids, which allowed them to design a smaller, more functional molecule that's easy to formulate as eye drops. Beyond avoiding the trauma of eye injections, this could make it easier for more patients to stick with treatment to the end."
+      ]
+    }
+  },
+  {
+    id: "sedentarismo-sueno-actividad-adolescentes",
+    categoria: "ejercicio",
+    titulo: "Cambiar sedentarismo por sueño o actividad física reduce la resistencia a la insulina en adolescentes",
+    tituloSeo: "Menos sedentarismo reduce la resistencia",
+    resumen: "Un estudio presentado en las sesiones científicas EPI|Lifestyle 2026 de la American Heart Association encontró que sustituir 30 minutos diarios de sedentarismo por sueño o actividad física moderada-vigorosa redujo casi un 15% la resistencia a la insulina en adolescentes.",
+    fecha: "2026-03-18",
+    fuenteNombre: "American Heart Association",
+    fuenteUrl: "https://newsroom.heart.org/news/dormir-mas-y-realizar-actividad-fisica-pueden-prevenir-la-diabetes-tipo-2-en-adolescentes",
+    cuerpo: [
+      "Una investigación presentada en las sesiones científicas EPI|Lifestyle 2026 de la American Heart Association, celebradas en Boston, encontró que los adolescentes que sustituyen solo 30 minutos diarios de sedentarismo por sueño o por actividad física moderada-vigorosa pueden reducir su resistencia a la insulina, un factor clave en la prevención de la diabetes tipo 2.",
+      "Según los autores, ese cambio de 30 minutos diarios redujo en casi un 15% una estimación de la resistencia a la insulina. El análisis se basó en datos del Proyecto Viva, un estudio de salud a largo plazo con mujeres y menores del este de Massachusetts (Estados Unidos).",
+      "Los investigadores subrayan que este tipo de resultados, todavía preliminares y pendientes de revisión por pares en una publicación científica, respaldan las iniciativas de salud pública que promueven sustituir el tiempo sentado por sueño o actividad física para proteger la salud cardiometabólica de los adolescentes."
+    ],
+    en: {
+      titulo: "Swapping sedentary time for sleep or exercise lowers insulin resistance in teens",
+      tituloSeo: "Less sitting lowers insulin resistance",
+      resumen: "Research presented at the American Heart Association's EPI|Lifestyle 2026 sessions found that replacing 30 daily minutes of sedentary time with sleep or moderate-to-vigorous activity cut insulin resistance by nearly 15% in adolescents.",
+      cuerpo: [
+        "Research presented at the American Heart Association's EPI|Lifestyle 2026 scientific sessions in Boston found that adolescents who replace just 30 daily minutes of sedentary time with sleep or moderate-to-vigorous physical activity can reduce their insulin resistance, a key factor in preventing type 2 diabetes.",
+        "According to the authors, that 30-minute daily swap cut an estimate of insulin resistance by nearly 15%. The analysis was based on data from Project Viva, a long-term health study of women and children in eastern Massachusetts.",
+        "The researchers note that these results, still preliminary and pending peer review in a scientific publication, support public health initiatives that promote replacing sitting time with sleep or physical activity to protect adolescents' cardiometabolic health."
+      ]
+    }
+  },
+  {
     id: "life-one-glucosa-tiempo-real",
     categoria: "sensores",
     titulo: "Los endocrinos destacan el impacto de medir la glucosa en tiempo real en la diabetes tipo 2",
