@@ -2,6 +2,156 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "calidad-dieta-mas-importante-ultraprocesados",
+    categoria: "dietas",
+    titulo: "La calidad de la dieta importa más que el nivel de procesamiento para el riesgo de diabetes, según un estudio",
+    tituloSeo: "Calidad de la dieta, más que procesamiento",
+    resumen: "Un análisis presentado en el congreso NUTRITION 2026, con datos de miles de adultos seguidos desde los años 80 hasta 2020, encontró que el riesgo de diabetes tipo 2, enfermedad cardíaca o muerte prematura dependía más de la calidad general de la dieta que de cuánto procesamiento industrial tuviera cada alimento.",
+    fecha: "2026-07-30",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/07/30/la-comida-saludable-podria-importar-mas-que-el-nivel-de-procesamiento-sugiere-un-estudio/",
+    cuerpo: [
+      "Un análisis presentado en el congreso NUTRITION 2026, que revisó los hábitos alimentarios de miles de adultos seguidos desde los años 80 hasta 2020, encontró que el riesgo de sufrir enfermedad cardíaca, diabetes tipo 2 o morir de forma prematura variaba mucho según lo saludable que fuera el conjunto de la dieta, pero no tanto según el nivel de procesamiento industrial de cada alimento.",
+      "Según la investigadora Xiaowen Wang, autora del análisis, aconsejar de forma universal evitar los alimentos ultraprocesados puede llevar, paradójicamente, a una peor calidad de la dieta: hay ultraprocesados relativamente saludables, y alimentos poco procesados que no lo son tanto.",
+      "El estudio sí identificó un patrón claro de riesgo: las bebidas azucaradas, tanto con azúcar como con edulcorantes artificiales, se asociaron de forma consistente con un mayor riesgo de diabetes tipo 2 y de enfermedades cardiometabólicas, con independencia de su nivel de procesamiento."
+    ],
+    en: {
+      titulo: "Diet quality matters more than processing level for diabetes risk, study suggests",
+      tituloSeo: "Diet quality beats processing level",
+      resumen: "An analysis presented at the NUTRITION 2026 conference, using data from thousands of adults followed from the 1980s to 2020, found that type 2 diabetes, heart disease and premature death risk depended more on overall diet quality than on how industrially processed each food was.",
+      cuerpo: [
+        "An analysis presented at the NUTRITION 2026 conference, which reviewed the eating habits of thousands of adults followed from the 1980s through 2020, found that the risk of heart disease, type 2 diabetes or premature death varied widely depending on how healthy the overall diet was, but not so much based on how industrially processed each food was.",
+        "According to researcher Xiaowen Wang, the analysis's author, universally advising people to avoid ultra-processed foods can, paradoxically, lead to lower diet quality: some ultra-processed foods are relatively healthy, and some minimally processed foods aren't.",
+        "The study did identify one clear risk pattern: sugary drinks, whether sweetened with sugar or artificial sweeteners, were consistently linked to a higher risk of type 2 diabetes and cardiometabolic disease, regardless of their processing level."
+      ]
+    }
+  },
+  {
+    id: "entrenamiento-fuerza-mediana-edad-riesgo-diabetes",
+    categoria: "ejercicio",
+    titulo: "El entrenamiento de fuerza en la mediana edad se vincula a un menor riesgo de diabetes tipo 2",
+    tituloSeo: "Fuerza en la mediana edad y menos diabetes",
+    resumen: "Un estudio publicado en JAMA Network Open encontró que el riesgo de diabetes tipo 2 fue menor entre las personas de mediana edad que combinaban entrenamiento de fuerza regular con el ejercicio aeróbico recomendado y poco tiempo sentado, como ver la televisión.",
+    fecha: "2026-06-24",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/06/24/entrenamiento-de-fuerza-en-la-mediana-edad-vinculado-a-un-menor-riesgo-de-diabetes/",
+    cuerpo: [
+      "Un estudio publicado el 22 de junio en la revista JAMA Network Open, dirigido por el Dr. Tianyue Zhang, de la Facultad de Medicina de la Universidad de Zhejiang (China), encontró que el riesgo de diabetes tipo 2 era menor entre las personas de mediana edad que combinaban entrenamiento de fuerza regular con los niveles recomendados de ejercicio aeróbico y poco tiempo dedicado a comportamientos sedentarios, como ver la televisión.",
+      "Según los autores, una hora o más de entrenamiento de fuerza a la semana ya cumple con las directrices generales de salud pública, aunque los resultados sugieren que mantener el hábito de forma constante en el tiempo puede importar más que la cantidad total de ejercicio realizado en un momento dado.",
+      "El equipo recomienda incluir de forma explícita el entrenamiento de fuerza, y no solo el ejercicio aeróbico, en las futuras directrices de prevención de la diabetes tipo 2, especialmente en la mediana edad, un periodo clave en el desarrollo de la resistencia a la insulina."
+    ],
+    en: {
+      titulo: "Strength training in midlife is linked to a lower risk of type 2 diabetes",
+      tituloSeo: "Midlife strength training, less diabetes",
+      resumen: "A study published in JAMA Network Open found that type 2 diabetes risk was lower among middle-aged people who combined regular strength training with recommended aerobic exercise and little sedentary time, like watching TV.",
+      cuerpo: [
+        "A study published on June 22 in JAMA Network Open, led by Dr. Tianyue Zhang of Zhejiang University School of Medicine (China), found that type 2 diabetes risk was lower among middle-aged people who combined regular strength training with recommended levels of aerobic exercise and little time spent on sedentary behaviors, such as watching TV.",
+        "According to the authors, one hour or more of strength training a week already meets general public health guidelines, though the results suggest that keeping up the habit consistently over time may matter more than the total amount of exercise done at any one point.",
+        "The team recommends explicitly including strength training, not just aerobic exercise, in future type 2 diabetes prevention guidelines, especially in midlife, a key period in the development of insulin resistance."
+      ]
+    }
+  },
+  {
+    id: "abbott-libre-duo-glucosa-cetonas-ce",
+    categoria: "sensores",
+    titulo: "Abbott obtiene el marcado CE en Europa para Libre Duo, el primer sensor dual de glucosa y cetonas",
+    tituloSeo: "Libre Duo: sensor dual de glucosa y cetonas",
+    resumen: "Abbott ha recibido el marcado CE para Libre Duo y Libre Duo 10 Day, los primeros sensores capaces de medir glucosa y cetonas cada minuto en un mismo dispositivo, pensados para anticipar el riesgo de cetoacidosis diabética.",
+    fecha: "2026-05-27",
+    fuenteNombre: "Abbott",
+    fuenteUrl: "https://abbott.mediaroom.com/2026-05-27-Abbott-secures-CE-Mark-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes",
+    cuerpo: [
+      "Abbott anunció que ha obtenido el marcado CE en Europa para Libre Duo y Libre Duo 10 Day, presentados como los primeros sensores del mundo capaces de medir a la vez la glucosa y las cetonas, con lecturas cada minuto y sin necesidad de análisis de sangre u orina tradicionales.",
+      "Hasta ahora, controlar las cetonas —cuya subida puede derivar en una cetoacidosis diabética, una complicación grave y de aparición rápida— requería pruebas independientes, aparte de la monitorización de glucosa. Al integrar ambos valores en un solo sensor, la compañía busca facilitar una respuesta más temprana ante señales de alarma.",
+      "Abbott prevé lanzar Libre Duo en varios países europeos a finales de 2026, mientras continúa el proceso para su aprobación en Estados Unidos, donde la compañía espera contar con luz verde de la FDA en la segunda mitad del año."
+    ],
+    en: {
+      titulo: "Abbott secures CE mark for Libre Duo, the first dual glucose-ketone sensor",
+      tituloSeo: "Libre Duo: dual glucose-ketone sensor",
+      resumen: "Abbott has received CE marking for Libre Duo and Libre Duo 10 Day, the first sensors able to measure both glucose and ketones every minute in a single device, designed to help anticipate the risk of diabetic ketoacidosis.",
+      cuerpo: [
+        "Abbott announced it has obtained CE marking in Europe for Libre Duo and Libre Duo 10 Day, presented as the world's first sensors able to measure both glucose and ketones at once, with readings every minute and no need for traditional blood or urine tests.",
+        "Until now, tracking ketones — whose rise can lead to diabetic ketoacidosis, a serious, fast-developing complication — required separate tests apart from glucose monitoring. By combining both values in a single sensor, the company aims to enable an earlier response to warning signs.",
+        "Abbott plans to launch Libre Duo in several European countries by the end of 2026, while continuing the approval process in the United States, where the company expects FDA clearance in the second half of the year."
+      ]
+    }
+  },
+  {
+    id: "eversense-365-estudio-real-world-ada2026",
+    categoria: "estudios",
+    titulo: "Un estudio con más de 12.000 sensores respalda el uso real del Eversense 365, el MCG implantable de un año",
+    tituloSeo: "Eversense 365: datos reales de un año",
+    resumen: "Un análisis con datos reales de más de 12.000 sensores Eversense 365, presentado en las Sesiones Científicas 2026 de la ADA, mostró un tiempo de uso del 93% y un buen control glucémico tanto en uso independiente como junto a un sistema automatizado de insulina.",
+    fecha: "2026-06-06",
+    fuenteNombre: "GlobeNewswire (Senseonics)",
+    fuenteUrl: "https://www.globenewswire.com/news-release/2026/06/06/3307702/0/en/Real-World-Evidence-of-Eversense-365-Presented-at-ADA-Demonstrating-Strong-Performance-and-Patient-Impact-in-Both-Open-and-Closed-Loop-Systems.html",
+    cuerpo: [
+      "Un análisis con datos del mundo real de más de 12.360 sensores Eversense 365 —el monitor continuo de glucosa implantable de un año de duración— fue presentado en las Sesiones Científicas 2026 de la Asociación Americana de Diabetes (ADA), celebradas en Nueva Orleans.",
+      "Entre los usuarios que llevaban el sensor de forma independiente, el tiempo medio de uso del transmisor fue del 93,19%, con un indicador de gestión de la glucosa (GMI) medio del 7,16% y un tiempo en rango del 66,16%. Un subgrupo de 153 personas que combinó el sensor con el sistema automatizado de administración de insulina twiist mostró un tiempo en rango todavía mayor, cercano al 76%, en sus primeros 30 días de uso conjunto.",
+      "Los autores destacan que los resultados se mantuvieron estables al comparar los primeros y los segundos seis meses de uso del sensor, lo que refuerza la idea de que el buen control se sostiene a lo largo de todo el año de vida del dispositivo, y no solo en los primeros meses."
+    ],
+    en: {
+      titulo: "A study of more than 12,000 sensors backs real-world use of the year-long Eversense 365 CGM",
+      tituloSeo: "Eversense 365: real-world data",
+      resumen: "A real-world analysis of more than 12,000 Eversense 365 sensors, presented at the ADA's 2026 Scientific Sessions, showed 93% wear time and good glycemic control both on its own and paired with an automated insulin delivery system.",
+      cuerpo: [
+        "A real-world data analysis of more than 12,360 Eversense 365 sensors — the year-long implantable continuous glucose monitor — was presented at the American Diabetes Association's (ADA) 2026 Scientific Sessions in New Orleans.",
+        "Among users wearing the sensor on its own, average transmitter wear time was 93.19%, with a mean Glucose Management Indicator (GMI) of 7.16% and time in range of 66.16%. A subgroup of 153 people who paired the sensor with the twiist automated insulin delivery system showed an even higher time in range, close to 76%, in their first 30 days of combined use.",
+        "The authors highlight that results stayed stable when comparing the first and second six months of sensor wear, reinforcing the idea that good control holds up across the device's full year of life, not just in the first few months."
+      ]
+    }
+  },
+  {
+    id: "fda-aprueba-foundayo-orforglipron-peso",
+    categoria: "medicacion",
+    titulo: "La FDA aprueba Foundayo, la pastilla de Lilly para perder peso sin restricciones de comida ni agua",
+    tituloSeo: "FDA aprueba Foundayo para perder peso",
+    resumen: "Foundayo (orforglipron), de Eli Lilly, es la primera pastilla GLP-1 para adultos con obesidad o sobrepeso que puede tomarse a cualquier hora del día, sin restricciones de comida o agua, y con una pérdida media del 12,4% del peso corporal en los ensayos del programa ATTAIN.",
+    fecha: "2026-04-02",
+    fuenteNombre: "Eli Lilly and Company",
+    fuenteUrl: "https://investor.lilly.com/news-releases/news-release-details/la-fda-aprueba-foundayotm-orforglipron-de-lilly-la-unica",
+    cuerpo: [
+      "La FDA aprobó Foundayo™ (orforglipron), de Eli Lilly, para adultos con obesidad o con sobrepeso y algún problema de salud relacionado. Se trata de la única pastilla de la familia GLP-1 para pérdida de peso que puede tomarse a cualquier hora del día, sin restricciones de comida ni agua, a diferencia de otros tratamientos orales de esta familia.",
+      "En los ensayos clínicos del programa ATTAIN, las personas que recibieron la dosis más alta perdieron en promedio un 12,4% de su peso corporal (unas 12,4 kg / 27,3 libras), combinando el fármaco con una dieta baja en calorías y más actividad física.",
+      "Eli Lilly ya ha presentado además la solicitud para que orforglipron se apruebe también para el tratamiento de la diabetes tipo 2 en Estados Unidos, con una decisión de la FDA que podría llegar a finales de 2026, después de que la versión para diabetes ya esté autorizada en México bajo el nombre de Foundayz."
+    ],
+    en: {
+      titulo: "FDA approves Foundayo, Lilly's weight-loss pill with no food or water restrictions",
+      tituloSeo: "FDA approves Foundayo for weight loss",
+      resumen: "Foundayo (orforglipron), from Eli Lilly, is the first GLP-1 pill for adults with obesity or overweight that can be taken at any time of day with no food or water restrictions, with an average 12.4% body weight loss in the ATTAIN trials.",
+      cuerpo: [
+        "The FDA approved Foundayo™ (orforglipron), from Eli Lilly, for adults with obesity or overweight who also have a weight-related health condition. It's the only GLP-1 weight-loss pill that can be taken at any time of day, with no food or water restrictions, unlike other oral treatments in the same family.",
+        "In the ATTAIN program's clinical trials, people on the highest dose lost an average of 12.4% of their body weight (about 12.4 kg / 27.3 pounds), combining the drug with a low-calorie diet and more physical activity.",
+        "Eli Lilly has also filed for orforglipron to be approved for type 2 diabetes treatment in the United States, with an FDA decision possibly arriving by the end of 2026, after the diabetes version was already authorized in Mexico under the name Foundayz."
+      ]
+    }
+  },
+  {
+    id: "pie-diabetico-40-60-millones-mundo",
+    categoria: "complicaciones",
+    titulo: "El pie diabético afecta ya a entre 40 y 60 millones de personas en todo el mundo",
+    tituloSeo: "Pie diabético: hasta 60 millones afectados",
+    resumen: "Una revisión sobre el pie diabético recuerda que alrededor del 15% de las personas con diabetes desarrollará una úlcera en las extremidades inferiores a lo largo de la enfermedad, y que la Federación Internacional de Diabetes estima ya entre 40 y 60 millones de afectados en todo el mundo.",
+    fecha: "2026-02-01",
+    fuenteNombre: "Dialnet",
+    fuenteUrl: "https://dialnet.unirioja.es/servlet/articulo?codigo=10617021&orden=0&info=link",
+    cuerpo: [
+      "Una revisión reciente sobre el pie diabético —definido como la infección, ulceración o destrucción de tejidos profundos asociada a alteraciones neurológicas y a distintos grados de enfermedad vascular periférica en las piernas— recuerda que se trata de una de las complicaciones más discapacitantes de la diabetes.",
+      "Según los datos recogidos, alrededor del 15% de las personas con diabetes desarrollará una úlcera en las extremidades inferiores en algún momento de la enfermedad. De ellas, aproximadamente la mitad tendrá otra úlcera más adelante, y en torno a un tercio de estas heridas acabará derivando en algún tipo de amputación.",
+      "La Federación Internacional de Diabetes estima que entre 40 y 60 millones de personas en todo el mundo conviven ya con úlceras de pie diabético, frente a una horquilla de entre 9 y 26 millones que se manejaba en 2015, lo que subraya la importancia de la revisión periódica de los pies como medida de prevención."
+    ],
+    en: {
+      titulo: "Diabetic foot now affects between 40 and 60 million people worldwide",
+      tituloSeo: "Diabetic foot: up to 60 million affected",
+      resumen: "A review on diabetic foot notes that around 15% of people with diabetes will develop a lower-limb ulcer over the course of the disease, and that the International Diabetes Federation now estimates 40 to 60 million people affected worldwide.",
+      cuerpo: [
+        "A recent review on diabetic foot — defined as infection, ulceration or deep tissue destruction associated with neurological abnormalities and varying degrees of peripheral vascular disease in the legs — notes that it's one of diabetes's most disabling complications.",
+        "According to the data gathered, around 15% of people with diabetes will develop a lower-limb ulcer at some point during the disease. Of those, roughly half will develop another ulcer later on, and about a third of these wounds will end up leading to some form of amputation.",
+        "The International Diabetes Federation estimates that between 40 and 60 million people worldwide are now living with diabetic foot ulcers, compared with a range of 9 to 26 million estimated in 2015, underscoring the importance of regular foot checks as a preventive measure."
+      ]
+    }
+  },
+  {
     id: "nc-medicaid-medicamentos-obesidad",
     categoria: "medicacion",
     titulo: "Carolina del Norte mantiene la cobertura de Medicaid para los medicamentos contra la obesidad",
