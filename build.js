@@ -532,6 +532,7 @@ const STRINGS = {
     moreFrom: "Más noticias de",
     originalSource: "Fuente original:",
     alsoLike: "También te puede interesar:",
+    minRead: "min de lectura",
     disclaimerGeneric:
       "Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.",
     langSwitchLabel: "English"
@@ -556,11 +557,23 @@ const STRINGS = {
     moreFrom: "More news from",
     originalSource: "Original source:",
     alsoLike: "You might also like:",
+    minRead: "min read",
     disclaimerGeneric:
       "This site collects and summarizes information published by other media outlets and specialized sources for informational purposes. It is not medical advice: always consult your healthcare team before making decisions about treatment, medication or diet.",
     langSwitchLabel: "Español"
   }
 };
+
+// Cálculo aproximado del tiempo de lectura (~200 palabras/minuto), usado en
+// las tarjetas y en la página de cada artículo, y como wordCount en el
+// JSON-LD de NewsArticle.
+function wordCount(paragraphs) {
+  return paragraphs.reduce((sum, p) => sum + p.trim().split(/\s+/).filter(Boolean).length, 0);
+}
+
+function readingTimeMinutes(paragraphs) {
+  return Math.max(1, Math.round(wordCount(paragraphs) / 200));
+}
 
 function formatFecha(iso, lang = "es") {
   const d = new Date(iso + "T00:00:00");
@@ -663,6 +676,8 @@ function renderCard(article, prefix, options = {}, lang = "es") {
   const catName = lang === "en" ? cat.nombreEn : cat.nombre;
   const titulo = lang === "en" ? article.en.titulo : article.titulo;
   const resumen = lang === "en" ? article.en.resumen : article.resumen;
+  const cuerpo = lang === "en" ? article.en.cuerpo : article.cuerpo;
+  const readingTime = readingTimeMinutes(cuerpo);
   const cardClass = ["card reveal", options.featured ? "card--featured" : ""].filter(Boolean).join(" ");
   const eyebrow = options.featured ? `<span class="card-eyebrow">${t.latestNews}</span>` : "";
 
@@ -672,7 +687,10 @@ function renderCard(article, prefix, options = {}, lang = "es") {
         </div>
         <div class="card-body">
           ${eyebrow}
-          <time class="card-date" datetime="${article.fecha}">${formatFecha(article.fecha, lang)}</time>
+          <div class="card-meta">
+            <time class="card-date" datetime="${article.fecha}">${formatFecha(article.fecha, lang)}</time>
+            <span class="reading-time">${readingTime} ${t.minRead}</span>
+          </div>
           <h3 class="card-title">${escapeHtml(titulo)}</h3>
           <p class="card-summary">${escapeHtml(resumen)}</p>
           <span class="card-link">${t.readMore}</span>
@@ -878,6 +896,7 @@ function renderArticlePage(article, allArticles, lang = "es") {
   const title = `${tituloSeo} · ${SITE_NAME}`;
   const bodyHtml = cuerpo.map(p => `      <p>${escapeHtml(p)}</p>`).join("\n");
   const ogImage = ogImageForArticle(article);
+  const readingTime = readingTimeMinutes(cuerpo);
 
   const jsonLdArticle = {
     "@context": "https://schema.org",
@@ -892,6 +911,8 @@ function renderArticlePage(article, allArticles, lang = "es") {
     url,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     isBasedOn: article.fuenteUrl,
+    author: ORG_JSONLD,
+    wordCount: wordCount(cuerpo),
     publisher: ORG_JSONLD
   };
 
@@ -955,7 +976,10 @@ ${renderHeader("../", article.categoria, lang, pagePath)}
     ${renderBreadcrumbsNav(breadcrumbItems, lang)}
     <span class="badge" style="background:${cat.color}">${cat.icono} ${catName}</span>
     <h1>${escapeHtml(titulo)}</h1>
-    <time class="article-meta" datetime="${article.fecha}">${formatFecha(article.fecha, lang)}</time>
+    <p class="article-meta">
+      <time datetime="${article.fecha}">${formatFecha(article.fecha, lang)}</time>
+      <span class="reading-time">${readingTime} ${t.minRead}</span>
+    </p>
     <div class="article-body">
 ${bodyHtml}
     </div>

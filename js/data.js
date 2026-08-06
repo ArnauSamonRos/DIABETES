@@ -2,6 +2,156 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "harvard-legumbres-corazon-azucar-sangre",
+    categoria: "dietas",
+    titulo: "Harvard recomienda incorporar legumbres a la dieta para cuidar el corazón y controlar el azúcar en sangre",
+    tituloSeo: "Harvard: legumbres para el azúcar en sangre",
+    resumen: "La Facultad de Medicina de Harvard recomienda incorporar legumbres —alubias, lentejas y guisantes— a la dieta habitual por su fibra y su bajo índice glucémico, dos características que ayudan a cuidar el corazón y a controlar el azúcar en sangre.",
+    fecha: "2026-08-04",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/08/04/por-que-las-legumbres-son-buenas-para-el-corazon-segun-harvard/",
+    cuerpo: [
+      "La Facultad de Medicina de Harvard recomienda sumar legumbres —alubias, lentejas y guisantes— a la dieta habitual, por su aporte de fibra y su bajo índice glucémico, dos características que pueden ayudar tanto a cuidar el corazón como a controlar el azúcar en sangre.",
+      "Según Harvard, incorporar legumbres a la dieta puede reducir el riesgo de diabetes tipo 2, ya que su bajo índice glucémico ayuda a evitar subidas bruscas de glucosa tras las comidas. La propia diabetes tipo 2, a su vez, es uno de los factores que más incrementa el riesgo de enfermedad cardíaca, por lo que ambos beneficios están relacionados.",
+      "Uno de los motivos por los que muchas personas dejan de incluir legumbres en sus menús son las molestias digestivas, como gases o distensión abdominal, típicas de los alimentos ricos en fibra. Los expertos señalan que, con un consumo regular, la microbiota intestinal suele adaptarse a esa fibra adicional y esas molestias tienden a reducirse con el tiempo."
+    ],
+    en: {
+      titulo: "Harvard recommends adding legumes to your diet for heart health and blood sugar control",
+      tituloSeo: "Harvard: legumes for blood sugar",
+      resumen: "Harvard Medical School recommends adding legumes — beans, lentils and peas — to your regular diet for their fiber and low glycemic index, two traits that help protect the heart and control blood sugar.",
+      cuerpo: [
+        "Harvard Medical School recommends adding legumes — beans, lentils and peas — to your regular diet, for their fiber content and low glycemic index, two traits that can help both protect the heart and control blood sugar.",
+        "According to Harvard, adding legumes to your diet can lower the risk of type 2 diabetes, since their low glycemic index helps avoid sharp glucose spikes after meals. Type 2 diabetes itself is, in turn, one of the factors that most increases the risk of heart disease, so both benefits are related.",
+        "One reason many people stop including legumes in their meals is digestive discomfort, like gas or bloating, typical of high-fiber foods. Experts note that with regular consumption, gut microbiota usually adapts to that added fiber, and the discomfort tends to fade over time."
+      ]
+    }
+  },
+  {
+    id: "sistema-ia-cribado-retinopatia-diabetica-europa",
+    categoria: "complicaciones",
+    titulo: "Europa valida un sistema de cribado de la retinopatía diabética que combina IA y óptica avanzada",
+    tituloSeo: "IA valida cribado de retinopatía en Europa",
+    resumen: "Autoridades sanitarias europeas han validado un sistema portátil que combina cámaras de fondo de ojo e inteligencia artificial para el cribado de la retinopatía diabética, con una sensibilidad del 94,8% en un estudio publicado en Diabetes Technology & Therapeutics.",
+    fecha: "2026-02-12",
+    fuenteNombre: "RochePlus",
+    fuenteUrl: "https://www.rocheplus.es/actualidad/oftalmologia/europa-aprueba-un-sistema-de-cribado-de-la-retinopatia-diabetica-que-combina-ia-y-sistemas-opticos-avanzados.html",
+    cuerpo: [
+      "Autoridades sanitarias europeas han validado una nueva solución de cribado de la retinopatía diabética que combina cámaras de fondo de ojo con algoritmos de inteligencia artificial en un dispositivo portátil y fácil de usar, pensado para acercar esta prueba a la atención primaria, las consultas de oftalmología y los programas de detección en la calle.",
+      "Un estudio publicado en la revista Diabetes Technology & Therapeutics evaluó el rendimiento del algoritmo con 624 imágenes de retina de 156 personas, y obtuvo una sensibilidad del 94,8%, una especificidad del 91,4% y una precisión diagnóstica del 92,7% para detectar signos de retinopatía diabética.",
+      "Al tratarse de un sistema portátil, sin necesidad de un oftalmólogo presente en el momento de la prueba, este tipo de tecnología busca ampliar el acceso al cribado en zonas con pocos especialistas, para detectar la retinopatía diabética en fases tempranas, cuando el tratamiento es más eficaz."
+    ],
+    en: {
+      titulo: "Europe validates an AI and advanced-optics screening system for diabetic retinopathy",
+      tituloSeo: "AI validates retinopathy screening",
+      resumen: "European health authorities have validated a portable system combining retinal cameras and artificial intelligence for diabetic retinopathy screening, with 94.8% sensitivity in a study published in Diabetes Technology & Therapeutics.",
+      cuerpo: [
+        "European health authorities have validated a new diabetic retinopathy screening solution that combines retinal fundus cameras with artificial intelligence algorithms in a portable, easy-to-use device, designed to bring this test closer to primary care, ophthalmology clinics and community screening programs.",
+        "A study published in the journal Diabetes Technology & Therapeutics evaluated the algorithm's performance using 624 retinal images from 156 people, achieving 94.8% sensitivity, 91.4% specificity and 92.7% diagnostic accuracy for detecting signs of diabetic retinopathy.",
+        "As a portable system that doesn't require an ophthalmologist present at the time of testing, this kind of technology aims to widen access to screening in areas with few specialists, catching diabetic retinopathy at early stages, when treatment is most effective."
+      ]
+    }
+  },
+  {
+    id: "medtronic-minimed-go-instinct-sensor",
+    categoria: "sensores",
+    titulo: "La FDA autoriza el sistema MiniMed Go de Medtronic con el sensor Instinct, fabricado por Abbott",
+    tituloSeo: "MiniMed Go: sensor Instinct de Abbott",
+    resumen: "La FDA autorizó el sistema MiniMed Go de Medtronic, que combina la pluma inteligente InPen con Instinct, un nuevo sensor de glucosa de hasta 15 días fabricado por Abbott, pensado para personas que no usan bomba de insulina.",
+    fecha: "2026-01-12",
+    fuenteNombre: "Medtronic",
+    fuenteUrl: "https://news.medtronic.com/2026-01-12-Medtronic-Diabetes-announces-FDA-clearance-for-MiniMed-Go-TM-Smart-MDI-system-featuring-Instinct-sensor-made-by-Abbott",
+    cuerpo: [
+      "La agencia estadounidense FDA autorizó el sistema MiniMed Go, de Medtronic, que combina la pluma de insulina inteligente InPen con Instinct, un nuevo sensor de monitorización continua de glucosa de hasta 15 días de duración fabricado por Abbott.",
+      "Instinct es el resultado de una asociación entre Medtronic y Abbott anunciada en 2024, y se presenta como uno de los sensores más pequeños y discretos del mercado. A diferencia de otros sistemas, MiniMed Go está pensado específicamente para personas con diabetes que se inyectan insulina con pluma en lugar de usar una bomba.",
+      "La aplicación MiniMed Go combina los datos del sensor con el registro de dosis de la pluma InPen para mostrar de forma conjunta la glucosa y la insulina administrada, con el objetivo de facilitar decisiones de tratamiento sin necesidad de llevar una bomba de insulina."
+    ],
+    en: {
+      titulo: "FDA clears Medtronic's MiniMed Go system with the Instinct sensor, made by Abbott",
+      tituloSeo: "MiniMed Go: Abbott's Instinct sensor",
+      resumen: "The FDA cleared Medtronic's MiniMed Go system, which pairs the InPen smart insulin pen with Instinct, a new up-to-15-day glucose sensor made by Abbott, designed for people who don't use an insulin pump.",
+      cuerpo: [
+        "The US FDA cleared Medtronic's MiniMed Go system, which pairs the InPen smart insulin pen with Instinct, a new continuous glucose monitoring sensor lasting up to 15 days and made by Abbott.",
+        "Instinct is the result of a partnership between Medtronic and Abbott announced in 2024, and is presented as one of the smallest, most discreet sensors on the market. Unlike other systems, MiniMed Go is designed specifically for people with diabetes who inject insulin with a pen rather than use a pump.",
+        "The MiniMed Go app combines sensor data with dose logs from the InPen to show glucose and insulin delivery together, aiming to make treatment decisions easier without needing to wear an insulin pump."
+      ]
+    }
+  },
+  {
+    id: "teizeild-teplizumab-aprobado-europa",
+    categoria: "medicacion",
+    titulo: "La Comisión Europea aprueba Teizeild, el primer fármaco que retrasa la diabetes tipo 1",
+    tituloSeo: "Teizeild: primer fármaco que retrasa la DT1",
+    resumen: "La Comisión Europea aprobó Teizeild (teplizumab), de Sanofi, el primer medicamento autorizado en la Unión Europea capaz de retrasar el inicio clínico de la diabetes tipo 1 en personas en estadio 2 de la enfermedad.",
+    fecha: "2026-01-08",
+    fuenteNombre: "Fundación DiabetesCERO",
+    fuenteUrl: "https://diabetescero.org/teplizumab-aprobado-en-europa/",
+    cuerpo: [
+      "La Comisión Europea aprobó el uso de Teizeild (teplizumab), de Sanofi, convirtiéndolo en el primer medicamento autorizado en la Unión Europea capaz de retrasar el inicio clínico de la diabetes tipo 1, en concreto la aparición del estadio 3 de la enfermedad en personas de 8 años o más que se encuentran en estadio 2.",
+      "El estadio 2 de la diabetes tipo 1 se caracteriza por la presencia de varios anticuerpos relacionados con la enfermedad y alteraciones ya detectables en la glucosa, pero todavía sin los síntomas clínicos que marcan el inicio del estadio 3, el momento en que hasta ahora se consideraba que \"empezaba\" la diabetes tipo 1.",
+      "La aprobación se basó en los resultados del ensayo de fase 2 TN-10, que mostró que el tratamiento retrasa la aparición del estadio 3 una mediana de dos años frente a placebo. Teplizumab es un anticuerpo monoclonal que actúa sobre las células T, frenando el ataque autoinmune que destruye las células beta del páncreas."
+    ],
+    en: {
+      titulo: "European Commission approves Teizeild, the first drug that delays type 1 diabetes",
+      tituloSeo: "Teizeild: first drug delaying T1D",
+      resumen: "The European Commission approved Teizeild (teplizumab), from Sanofi, the first medicine authorized in the EU able to delay the clinical onset of type 1 diabetes in people in stage 2 of the disease.",
+      cuerpo: [
+        "The European Commission approved the use of Teizeild (teplizumab), from Sanofi, making it the first medicine authorized in the European Union able to delay the clinical onset of type 1 diabetes — specifically, the arrival of stage 3 of the disease in people 8 years and older who are in stage 2.",
+        "Stage 2 of type 1 diabetes is defined by the presence of several disease-related antibodies and already-detectable changes in glucose, but without the clinical symptoms that mark the start of stage 3, the point that until now was considered the \"start\" of type 1 diabetes.",
+        "The approval was based on results from the phase 2 TN-10 trial, which showed the treatment delays the onset of stage 3 by a median of two years compared with placebo. Teplizumab is a monoclonal antibody that acts on T cells, slowing the autoimmune attack that destroys the pancreas's beta cells."
+      ]
+    }
+  },
+  {
+    id: "trasplante-islotes-independencia-insulina-2026",
+    categoria: "estudios",
+    titulo: "Dos ensayos de trasplante de células de los islotes logran que pacientes con diabetes tipo 1 dejen la insulina",
+    tituloSeo: "Trasplante de islotes sin insulina",
+    resumen: "Dos ensayos clínicos independientes —de Eledon Pharmaceuticals con la Universidad de Chicago, y el VX-880 de Vertex Pharmaceuticals— muestran que trasplantar células de los islotes pancreáticos puede devolver la producción de insulina a personas con diabetes tipo 1 de larga evolución.",
+    fecha: "2026-05-28",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/05/28/celulas-madre-y-diabetes-tipo-1-ensayos-abren-una-via-en-la-busqueda-de-una-cura-con-terapias-personalizadas/",
+    cuerpo: [
+      "Dos ensayos clínicos distintos han mostrado resultados prometedores al trasplantar células de los islotes pancreáticos a personas con diabetes tipo 1 de larga evolución, con el objetivo de devolverles la capacidad de producir su propia insulina.",
+      "En un ensayo de Eledon Pharmaceuticals junto con la Universidad de Chicago, el 100% de los participantes lograron independencia de la insulina cuatro semanas después del trasplante, sin signos de rechazo. Por su parte, el producto VX-880 de Vertex Pharmaceuticals logró que 10 de 12 participantes dejaran de necesitar insulina externa a los 365 días del trasplante.",
+      "Ambos enfoques todavía requieren fármacos inmunosupresores para evitar el rechazo de las células trasplantadas, a diferencia de otras líneas de investigación —como la de Sana Biotechnology— que buscan específicamente evitar esa necesidad. Los investigadores consideran estos resultados un paso relevante hacia una futura cura funcional de la diabetes tipo 1."
+    ],
+    en: {
+      titulo: "Two islet cell transplant trials help people with type 1 diabetes stop using insulin",
+      tituloSeo: "Islet transplants: insulin-free trials",
+      resumen: "Two independent clinical trials — Eledon Pharmaceuticals with the University of Chicago, and Vertex Pharmaceuticals' VX-880 — show that transplanting pancreatic islet cells can restore insulin production in people with long-standing type 1 diabetes.",
+      cuerpo: [
+        "Two separate clinical trials have shown promising results transplanting pancreatic islet cells into people with long-standing type 1 diabetes, aiming to restore their ability to produce their own insulin.",
+        "In a trial by Eledon Pharmaceuticals together with the University of Chicago, 100% of participants achieved insulin independence four weeks after the transplant, with no signs of rejection. Separately, Vertex Pharmaceuticals' VX-880 helped 10 of 12 participants stop needing external insulin by 365 days after the transplant.",
+        "Both approaches still require immunosuppressive drugs to prevent rejection of the transplanted cells, unlike other research lines — such as Sana Biotechnology's — that specifically aim to avoid that need. Researchers consider these results a meaningful step toward a future functional cure for type 1 diabetes."
+      ]
+    }
+  },
+  {
+    id: "yoga-12-semanas-hba1c-diabetes-tipo-2",
+    categoria: "ejercicio",
+    titulo: "Practicar yoga durante 12 semanas o más mejora el control de la glucosa en diabetes tipo 2, según un metaanálisis",
+    tituloSeo: "Yoga 12 semanas mejora el control glucémico",
+    resumen: "Un metaanálisis publicado en la revista iScience, con 22 ensayos clínicos y 1.720 participantes de población asiática, encontró que las intervenciones de yoga de 12 semanas o más reducen de forma significativa la HbA1c en personas con diabetes tipo 2, algo que no ocurrió con programas más cortos.",
+    fecha: "2026-04-01",
+    fuenteNombre: "iScience (Cell Press)",
+    fuenteUrl: "https://www.cell.com/iscience/fulltext/S2589-0042(26)00663-2",
+    cuerpo: [
+      "Un metaanálisis publicado en la revista iScience, de Cell Press, analizó 22 ensayos clínicos aleatorizados con un total de 1.720 participantes de entre 18 y 65 años de población asiática, con programas de yoga de entre 5,5 y 24 semanas de duración, para estudiar su efecto sobre el control de la diabetes tipo 2.",
+      "Los autores encontraron que las intervenciones de yoga de 12 semanas o más consiguieron una reducción significativa de la hemoglobina glucosilada (HbA1c), mientras que los programas de menos de 12 semanas no mostraron diferencias estadísticamente significativas frente al grupo de control.",
+      "El hallazgo sugiere que, para obtener beneficios reales sobre el control glucémico, la duración del programa de yoga puede ser tan importante como el propio hecho de practicarlo, algo en línea con lo que ya se sabe sobre otros tipos de ejercicio en diabetes tipo 2: la constancia en el tiempo parece pesar más que la intensidad puntual."
+    ],
+    en: {
+      titulo: "Practicing yoga for 12 weeks or more improves glucose control in type 2 diabetes, meta-analysis finds",
+      tituloSeo: "Yoga 12+ weeks improves glucose control",
+      resumen: "A meta-analysis published in iScience, covering 22 clinical trials and 1,720 participants from Asian populations, found that yoga interventions of 12 weeks or longer significantly reduce HbA1c in people with type 2 diabetes, unlike shorter programs.",
+      cuerpo: [
+        "A meta-analysis published in the journal iScience, from Cell Press, analyzed 22 randomized clinical trials with a total of 1,720 participants aged 18 to 65 from Asian populations, using yoga programs lasting between 5.5 and 24 weeks, to study their effect on type 2 diabetes management.",
+        "The authors found that yoga interventions of 12 weeks or longer achieved a significant reduction in glycated hemoglobin (HbA1c), while programs shorter than 12 weeks showed no statistically significant difference compared with the control group.",
+        "The finding suggests that, to see real benefits for glycemic control, the length of a yoga program may matter as much as practicing it at all — in line with what's already known about other types of exercise in type 2 diabetes: consistency over time seems to matter more than one-off intensity."
+      ]
+    }
+  },
+  {
     id: "calidad-dieta-mas-importante-ultraprocesados",
     categoria: "dietas",
     titulo: "La calidad de la dieta importa más que el nivel de procesamiento para el riesgo de diabetes, según un estudio",
