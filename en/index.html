@@ -72,7 +72,7 @@
       <p>Sensors, medication, clinical studies, diet, exercise and complications: a clear summary of the latest news, always linked to the original source.</p>
       <div class="stats-bar">
         <div class="stat reveal">
-          <span class="stat-number" data-count-to="54">54</span>
+          <span class="stat-number" data-count-to="60">60</span>
           <span class="stat-label">News published</span>
         </div>
         <div class="stat reveal">
@@ -86,6 +86,12 @@
       </div>
     </section>
 
+    <div class="search-box">
+      <label for="search-input" class="sr-only">Search news</label>
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="search-input" placeholder="Search news…" autocomplete="off" />
+    </div>
+
     <div class="filters" role="group" aria-label="Filter by category">
       <button class="filter-btn" data-filtro="todas">🗞️ All</button>
       <button class="filter-btn" data-filtro="sensores">📡 Sensors</button>
@@ -97,18 +103,48 @@
     </div>
 
     <div class="grid" id="grid">
-      <a class="card reveal card--featured" href="articulos/harvard-legumbres-corazon-azucar-sangre.html" data-cat="dietas">
+      <a class="card reveal card--featured" href="articulos/diabetes-tipo-2-empeora-menopausia.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complications
+        </div>
+        <div class="card-body">
+          <span class="card-eyebrow">Latest news</span>
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-08-06">August 6, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">Type 2 diabetes could worsen menopause symptoms, study finds</h3>
+          <p class="card-summary">A study published in the journal Menopause found that women with type 2 diabetes report more numerous and more severe menopause symptoms, at every stage, than women without diabetes.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
+      <a class="card reveal" href="articulos/harvard-legumbres-corazon-azucar-sangre.html" data-cat="dietas">
         <div class="card-banner" style="background:#d97706">
           <span class="card-icon" aria-hidden="true">🥗</span>Diet
         </div>
         <div class="card-body">
-          <span class="card-eyebrow">Latest news</span>
+          
           <div class="card-meta">
             <time class="card-date" datetime="2026-08-04">August 4, 2026</time>
             <span class="reading-time">1 min read</span>
           </div>
           <h3 class="card-title">Harvard recommends adding legumes to your diet for heart health and blood sugar control</h3>
           <p class="card-summary">Harvard Medical School recommends adding legumes — beans, lentils and peas — to your regular diet for their fiber and low glycemic index, two traits that help protect the heart and control blood sugar.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
+      <a class="card reveal" href="articulos/anillo-inteligente-glucosa-alcohol-sudor.html" data-cat="sensores">
+        <div class="card-banner" style="background:#2563eb">
+          <span class="card-icon" aria-hidden="true">📡</span>Sensors
+        </div>
+        <div class="card-body">
+          
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-08-03">August 3, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">A smart ring measures glucose, alcohol and other biomarkers through sweat</h3>
+          <p class="card-summary">Engineers at UC San Diego have developed a smart ring, published in Nature Communications, able to measure glucose, ketones, alcohol and three other biomarkers in sweat, with no finger prick required.</p>
           <span class="card-link">Read more →</span>
         </div>
       </a>
@@ -307,6 +343,21 @@
           <span class="card-link">Read more →</span>
         </div>
       </a>
+      <a class="card reveal" href="articulos/pandemia-metabolica-diabetes-triplica-america.html" data-cat="dietas">
+        <div class="card-banner" style="background:#d97706">
+          <span class="card-icon" aria-hidden="true">🥗</span>Diet
+        </div>
+        <div class="card-body">
+          
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-07-24">July 24, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">Diabetes's &quot;metabolic pandemic&quot; triples across the Americas, reinforcing the importance of a protein-rich diet</h3>
+          <p class="card-summary">According to the Pan American Health Organization, the number of people with diabetes has tripled across the Americas over the past decade, driven by sedentary lifestyles and excess weight; specialists stress the importance of a protein-rich diet and muscle-toning exercise.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
       <a class="card reveal" href="articulos/urv-huella-bioquimica-mortalidad-diabetes.html" data-cat="estudios">
         <div class="card-banner" style="background:#7c3aed">
           <span class="card-icon" aria-hidden="true">🔬</span>Research
@@ -334,6 +385,21 @@
           </div>
           <h3 class="card-title">Orforglipron now has a brand name: Foundayz, Lilly's pill for type 2 diabetes</h3>
           <p class="card-summary">Eli Lilly's oral drug, already authorized in Mexico, showed in the ACHIEVE-3 trial a reduction of up to 2.2 points in HbA1c and an average 9.2% body weight loss over 52 weeks.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
+      <a class="card reveal" href="articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Research
+        </div>
+        <div class="card-body">
+          
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-07-17">July 17, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">Obesity combined with low muscle mass triples type 2 diabetes risk, study finds</h3>
+          <p class="card-summary">A study published in Diabetes Care found that people with sarcopenic obesity — a combination of excess body fat and muscle loss — are more than three and a half times more likely to develop type 2 diabetes.</p>
           <span class="card-link">Read more →</span>
         </div>
       </a>
@@ -394,6 +460,21 @@
           </div>
           <h3 class="card-title">Why type 2 diabetes is increasingly understood as an inflammatory disease too</h3>
           <p class="card-summary">There's growing consensus that, beyond a glucose regulation problem, type 2 diabetes involves chronic low-grade inflammation that feeds back into insulin resistance.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
+      <a class="card reveal" href="articulos/infecciones-riesgo-salud-diabetes-estudio.html" data-cat="complicaciones">
+        <div class="card-banner" style="background:#dc2626">
+          <span class="card-icon" aria-hidden="true">⚠️</span>Complications
+        </div>
+        <div class="card-body">
+          
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-06-10">June 10, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">Infections are a &quot;major health risk&quot; for people with diabetes, study warns</h3>
+          <p class="card-summary">A study of more than 800,000 people, published in the journal Diabetes, found that people with type 1 diabetes, type 2 diabetes or even prediabetes face a clearly higher risk of serious infections, whether treated in primary care or requiring hospitalization.</p>
           <span class="card-link">Read more →</span>
         </div>
       </a>
@@ -604,6 +685,21 @@
           </div>
           <h3 class="card-title">FDA approves Awiqli, the first weekly insulin for type 2 diabetes</h3>
           <p class="card-summary">Insulin icodec, marketed as Awiqli, becomes the first once-weekly basal insulin for adults with type 2 diabetes, with results comparable to daily insulins.</p>
+          <span class="card-link">Read more →</span>
+        </div>
+      </a>
+      <a class="card reveal" href="articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html" data-cat="estudios">
+        <div class="card-banner" style="background:#7c3aed">
+          <span class="card-icon" aria-hidden="true">🔬</span>Research
+        </div>
+        <div class="card-body">
+          
+          <div class="card-meta">
+            <time class="card-date" datetime="2026-03-20">March 20, 2026</time>
+            <span class="reading-time">1 min read</span>
+          </div>
+          <h3 class="card-title">Both type 1 and type 2 diabetes raise dementia risk, large study finds</h3>
+          <p class="card-summary">A study of more than 283,000 people, published in the journal Neurology, found that type 1 diabetes nearly triples dementia risk and type 2 diabetes doubles it, compared with people without diabetes.</p>
           <span class="card-link">Read more →</span>
         </div>
       </a>

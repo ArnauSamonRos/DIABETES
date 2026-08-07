@@ -1,664 +1,856 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://diabeteshoy.com/</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/" />
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/" />
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/anillo-inteligente-glucosa-alcohol-sudor.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/anillo-inteligente-glucosa-alcohol-sudor.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/anillo-inteligente-glucosa-alcohol-sudor.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/anillo-inteligente-glucosa-alcohol-sudor.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/anillo-inteligente-glucosa-alcohol-sudor.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/anillo-inteligente-glucosa-alcohol-sudor.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/diabetes-tipo-2-empeora-menopausia.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-tipo-2-empeora-menopausia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-tipo-2-empeora-menopausia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/diabetes-tipo-2-empeora-menopausia.html</loc>
+    <lastmod>2026-08-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-tipo-2-empeora-menopausia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-tipo-2-empeora-menopausia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/obesidad-sarcopenica-triplica-riesgo-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/infecciones-riesgo-salud-diabetes-estudio.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/infecciones-riesgo-salud-diabetes-estudio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/infecciones-riesgo-salud-diabetes-estudio.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/infecciones-riesgo-salud-diabetes-estudio.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/infecciones-riesgo-salud-diabetes-estudio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/infecciones-riesgo-salud-diabetes-estudio.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/pandemia-metabolica-diabetes-triplica-america.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/pandemia-metabolica-diabetes-triplica-america.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/pandemia-metabolica-diabetes-triplica-america.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/pandemia-metabolica-diabetes-triplica-america.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/pandemia-metabolica-diabetes-triplica-america.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/pandemia-metabolica-diabetes-triplica-america.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://diabeteshoy.com/en/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-tipo-1-tipo-2-riesgo-demencia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/harvard-legumbres-corazon-azucar-sangre.html</loc>
     <lastmod>2026-08-04</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/harvard-legumbres-corazon-azucar-sangre.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/harvard-legumbres-corazon-azucar-sangre.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/harvard-legumbres-corazon-azucar-sangre.html</loc>
     <lastmod>2026-08-04</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/harvard-legumbres-corazon-azucar-sangre.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/harvard-legumbres-corazon-azucar-sangre.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html</loc>
     <lastmod>2026-02-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html</loc>
     <lastmod>2026-02-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sistema-ia-cribado-retinopatia-diabetica-europa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/medtronic-minimed-go-instinct-sensor.html</loc>
     <lastmod>2026-01-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/medtronic-minimed-go-instinct-sensor.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/medtronic-minimed-go-instinct-sensor.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/medtronic-minimed-go-instinct-sensor.html</loc>
     <lastmod>2026-01-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/medtronic-minimed-go-instinct-sensor.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/medtronic-minimed-go-instinct-sensor.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/teizeild-teplizumab-aprobado-europa.html</loc>
     <lastmod>2026-01-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/teizeild-teplizumab-aprobado-europa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/teizeild-teplizumab-aprobado-europa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/teizeild-teplizumab-aprobado-europa.html</loc>
     <lastmod>2026-01-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/teizeild-teplizumab-aprobado-europa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/teizeild-teplizumab-aprobado-europa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/trasplante-islotes-independencia-insulina-2026.html</loc>
     <lastmod>2026-05-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/trasplante-islotes-independencia-insulina-2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/trasplante-islotes-independencia-insulina-2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/trasplante-islotes-independencia-insulina-2026.html</loc>
     <lastmod>2026-05-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/trasplante-islotes-independencia-insulina-2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/trasplante-islotes-independencia-insulina-2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html</loc>
     <lastmod>2026-04-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html</loc>
     <lastmod>2026-04-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/yoga-12-semanas-hba1c-diabetes-tipo-2.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/calidad-dieta-mas-importante-ultraprocesados.html</loc>
     <lastmod>2026-07-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/calidad-dieta-mas-importante-ultraprocesados.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/calidad-dieta-mas-importante-ultraprocesados.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/calidad-dieta-mas-importante-ultraprocesados.html</loc>
     <lastmod>2026-07-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/calidad-dieta-mas-importante-ultraprocesados.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/calidad-dieta-mas-importante-ultraprocesados.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html</loc>
     <lastmod>2026-06-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html</loc>
     <lastmod>2026-06-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-mediana-edad-riesgo-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/abbott-libre-duo-glucosa-cetonas-ce.html</loc>
     <lastmod>2026-05-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/abbott-libre-duo-glucosa-cetonas-ce.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/abbott-libre-duo-glucosa-cetonas-ce.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/abbott-libre-duo-glucosa-cetonas-ce.html</loc>
     <lastmod>2026-05-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/abbott-libre-duo-glucosa-cetonas-ce.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/abbott-libre-duo-glucosa-cetonas-ce.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/eversense-365-estudio-real-world-ada2026.html</loc>
     <lastmod>2026-06-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/eversense-365-estudio-real-world-ada2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/eversense-365-estudio-real-world-ada2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/eversense-365-estudio-real-world-ada2026.html</loc>
     <lastmod>2026-06-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/eversense-365-estudio-real-world-ada2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/eversense-365-estudio-real-world-ada2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/fda-aprueba-foundayo-orforglipron-peso.html</loc>
     <lastmod>2026-04-02</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/fda-aprueba-foundayo-orforglipron-peso.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/fda-aprueba-foundayo-orforglipron-peso.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/fda-aprueba-foundayo-orforglipron-peso.html</loc>
     <lastmod>2026-04-02</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/fda-aprueba-foundayo-orforglipron-peso.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/fda-aprueba-foundayo-orforglipron-peso.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/pie-diabetico-40-60-millones-mundo.html</loc>
     <lastmod>2026-02-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/pie-diabetico-40-60-millones-mundo.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/pie-diabetico-40-60-millones-mundo.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/pie-diabetico-40-60-millones-mundo.html</loc>
     <lastmod>2026-02-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/pie-diabetico-40-60-millones-mundo.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/pie-diabetico-40-60-millones-mundo.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/nc-medicaid-medicamentos-obesidad.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/nc-medicaid-medicamentos-obesidad.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/nc-medicaid-medicamentos-obesidad.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/nc-medicaid-medicamentos-obesidad.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/nc-medicaid-medicamentos-obesidad.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/nc-medicaid-medicamentos-obesidad.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/ia-predice-hipoglucemia-hospitalaria.html</loc>
     <lastmod>2026-06-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ia-predice-hipoglucemia-hospitalaria.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ia-predice-hipoglucemia-hospitalaria.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/ia-predice-hipoglucemia-hospitalaria.html</loc>
     <lastmod>2026-06-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ia-predice-hipoglucemia-hospitalaria.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ia-predice-hipoglucemia-hospitalaria.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/unam-gotas-retinopatia-diabetica.html</loc>
     <lastmod>2026-04-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/unam-gotas-retinopatia-diabetica.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/unam-gotas-retinopatia-diabetica.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/unam-gotas-retinopatia-diabetica.html</loc>
     <lastmod>2026-04-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/unam-gotas-retinopatia-diabetica.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/unam-gotas-retinopatia-diabetica.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/sedentarismo-sueno-actividad-adolescentes.html</loc>
     <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sedentarismo-sueno-actividad-adolescentes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sedentarismo-sueno-actividad-adolescentes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/sedentarismo-sueno-actividad-adolescentes.html</loc>
     <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sedentarismo-sueno-actividad-adolescentes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sedentarismo-sueno-actividad-adolescentes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/life-one-glucosa-tiempo-real.html</loc>
     <lastmod>2026-07-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/life-one-glucosa-tiempo-real.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/life-one-glucosa-tiempo-real.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/life-one-glucosa-tiempo-real.html</loc>
     <lastmod>2026-07-30</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/life-one-glucosa-tiempo-real.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/life-one-glucosa-tiempo-real.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/brasil-anvisa-semaglutida-genericos.html</loc>
     <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/brasil-anvisa-semaglutida-genericos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/brasil-anvisa-semaglutida-genericos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/brasil-anvisa-semaglutida-genericos.html</loc>
     <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/brasil-anvisa-semaglutida-genericos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/brasil-anvisa-semaglutida-genericos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/desestigmatizar-obesidad-enfermedad-cronica.html</loc>
     <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/desestigmatizar-obesidad-enfermedad-cronica.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/desestigmatizar-obesidad-enfermedad-cronica.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/desestigmatizar-obesidad-enfermedad-cronica.html</loc>
     <lastmod>2026-07-29</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/desestigmatizar-obesidad-enfermedad-cronica.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/desestigmatizar-obesidad-enfermedad-cronica.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/predimed-plus-dieta-mediterranea-31.html</loc>
     <lastmod>2026-05-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/predimed-plus-dieta-mediterranea-31.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/predimed-plus-dieta-mediterranea-31.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/predimed-plus-dieta-mediterranea-31.html</loc>
     <lastmod>2026-05-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/predimed-plus-dieta-mediterranea-31.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/predimed-plus-dieta-mediterranea-31.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og-cover.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/perdida-peso-no-siempre-previene-diabetes.html</loc>
     <lastmod>2026-07-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/perdida-peso-no-siempre-previene-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/perdida-peso-no-siempre-previene-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/perdida-peso-no-siempre-previene-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/perdida-peso-no-siempre-previene-diabetes.html</loc>
     <lastmod>2026-07-28</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/perdida-peso-no-siempre-previene-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/perdida-peso-no-siempre-previene-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/perdida-peso-no-siempre-previene-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/urv-huella-bioquimica-mortalidad-diabetes.html</loc>
     <lastmod>2026-07-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/urv-huella-bioquimica-mortalidad-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/urv-huella-bioquimica-mortalidad-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/urv-huella-bioquimica-mortalidad-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/urv-huella-bioquimica-mortalidad-diabetes.html</loc>
     <lastmod>2026-07-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/urv-huella-bioquimica-mortalidad-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/urv-huella-bioquimica-mortalidad-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/urv-huella-bioquimica-mortalidad-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/fda-aprueba-awiqli-insulina-semanal.html</loc>
     <lastmod>2026-03-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/fda-aprueba-awiqli-insulina-semanal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/fda-aprueba-awiqli-insulina-semanal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/fda-aprueba-awiqli-insulina-semanal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/fda-aprueba-awiqli-insulina-semanal.html</loc>
     <lastmod>2026-03-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/fda-aprueba-awiqli-insulina-semanal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/fda-aprueba-awiqli-insulina-semanal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/fda-aprueba-awiqli-insulina-semanal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/celulas-piel-insulina-diabetes-tipo1.html</loc>
     <lastmod>2026-01-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/celulas-piel-insulina-diabetes-tipo1.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/celulas-piel-insulina-diabetes-tipo1.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/celulas-piel-insulina-diabetes-tipo1.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/celulas-piel-insulina-diabetes-tipo1.html</loc>
     <lastmod>2026-01-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/celulas-piel-insulina-diabetes-tipo1.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/celulas-piel-insulina-diabetes-tipo1.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/celulas-piel-insulina-diabetes-tipo1.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/rinon-sensor-precoz-riesgo-cardiovascular.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/rinon-sensor-precoz-riesgo-cardiovascular.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/rinon-sensor-precoz-riesgo-cardiovascular.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/orforglipron-foundayz-achieve3.html</loc>
     <lastmod>2026-07-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/orforglipron-foundayz-achieve3.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/orforglipron-foundayz-achieve3.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/orforglipron-foundayz-achieve3.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/orforglipron-foundayz-achieve3.html</loc>
     <lastmod>2026-07-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/orforglipron-foundayz-achieve3.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/orforglipron-foundayz-achieve3.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/orforglipron-foundayz-achieve3.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/isaac-sensor-aliento-preevnt.html</loc>
     <lastmod>2026-01-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/isaac-sensor-aliento-preevnt.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/isaac-sensor-aliento-preevnt.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/isaac-sensor-aliento-preevnt.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/isaac-sensor-aliento-preevnt.html</loc>
     <lastmod>2026-01-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/isaac-sensor-aliento-preevnt.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/isaac-sensor-aliento-preevnt.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/isaac-sensor-aliento-preevnt.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/rutina-ejercicio-62-por-ciento-riesgo.html</loc>
     <lastmod>2026-06-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/rutina-ejercicio-62-por-ciento-riesgo.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/rutina-ejercicio-62-por-ciento-riesgo.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/rutina-ejercicio-62-por-ciento-riesgo.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/rutina-ejercicio-62-por-ciento-riesgo.html</loc>
     <lastmod>2026-06-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/rutina-ejercicio-62-por-ciento-riesgo.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/rutina-ejercicio-62-por-ciento-riesgo.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/rutina-ejercicio-62-por-ciento-riesgo.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/css-panama-sensores-ninos.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/css-panama-sensores-ninos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/css-panama-sensores-ninos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/css-panama-sensores-ninos.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/css-panama-sensores-ninos.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/css-panama-sensores-ninos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/css-panama-sensores-ninos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/css-panama-sensores-ninos.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/cofepris-orforglipron-oral.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/cofepris-orforglipron-oral.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/cofepris-orforglipron-oral.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/cofepris-orforglipron-oral.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/cofepris-orforglipron-oral.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/cofepris-orforglipron-oral.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/cofepris-orforglipron-oral.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/cofepris-orforglipron-oral.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/actualizacion-2026-cardiorrenal-diabetes.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/actualizacion-2026-cardiorrenal-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/actualizacion-2026-cardiorrenal-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/actualizacion-2026-cardiorrenal-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/actualizacion-2026-cardiorrenal-diabetes.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/actualizacion-2026-cardiorrenal-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/actualizacion-2026-cardiorrenal-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/actualizacion-2026-cardiorrenal-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/ada-2026-prediabetes-perdida-peso.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ada-2026-prediabetes-perdida-peso.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ada-2026-prediabetes-perdida-peso.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ada-2026-prediabetes-perdida-peso.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/ada-2026-prediabetes-perdida-peso.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ada-2026-prediabetes-perdida-peso.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ada-2026-prediabetes-perdida-peso.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ada-2026-prediabetes-perdida-peso.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/ejercicio-movilidad-diabetes-2026.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ejercicio-movilidad-diabetes-2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ejercicio-movilidad-diabetes-2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ejercicio-movilidad-diabetes-2026.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/ejercicio-movilidad-diabetes-2026.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ejercicio-movilidad-diabetes-2026.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ejercicio-movilidad-diabetes-2026.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ejercicio-movilidad-diabetes-2026.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/ada-2026-retinopatia-neuropatia-pie.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ada-2026-retinopatia-neuropatia-pie.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ada-2026-retinopatia-neuropatia-pie.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ada-2026-retinopatia-neuropatia-pie.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/ada-2026-retinopatia-neuropatia-pie.html</loc>
     <lastmod>2026-07-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ada-2026-retinopatia-neuropatia-pie.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ada-2026-retinopatia-neuropatia-pie.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ada-2026-retinopatia-neuropatia-pie.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/diabetes-enfermedad-inflamatoria.html</loc>
     <lastmod>2026-06-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-enfermedad-inflamatoria.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-enfermedad-inflamatoria.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/diabetes-enfermedad-inflamatoria.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/diabetes-enfermedad-inflamatoria.html</loc>
     <lastmod>2026-06-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/diabetes-enfermedad-inflamatoria.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/diabetes-enfermedad-inflamatoria.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/diabetes-enfermedad-inflamatoria.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/sensor-2026-panorama.html</loc>
     <lastmod>2026-02-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sensor-2026-panorama.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sensor-2026-panorama.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sensor-2026-panorama.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/sensor-2026-panorama.html</loc>
     <lastmod>2026-02-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sensor-2026-panorama.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sensor-2026-panorama.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sensor-2026-panorama.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/abbott-glucosa-cetonas.html</loc>
     <lastmod>2026-03-10</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/abbott-glucosa-cetonas.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/abbott-glucosa-cetonas.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/abbott-glucosa-cetonas.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/abbott-glucosa-cetonas.html</loc>
     <lastmod>2026-03-10</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/abbott-glucosa-cetonas.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/abbott-glucosa-cetonas.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/abbott-glucosa-cetonas.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/simplera-sync-desechable.html</loc>
     <lastmod>2026-01-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/simplera-sync-desechable.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/simplera-sync-desechable.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/simplera-sync-desechable.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/simplera-sync-desechable.html</loc>
     <lastmod>2026-01-22</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/simplera-sync-desechable.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/simplera-sync-desechable.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/simplera-sync-desechable.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/tirzepatida-chile.html</loc>
     <lastmod>2026-01-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/tirzepatida-chile.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/tirzepatida-chile.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/tirzepatida-chile.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/tirzepatida-chile.html</loc>
     <lastmod>2026-01-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/tirzepatida-chile.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/tirzepatida-chile.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/tirzepatida-chile.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/bexagliflozina-fda.html</loc>
     <lastmod>2026-02-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/bexagliflozina-fda.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/bexagliflozina-fda.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/bexagliflozina-fda.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/bexagliflozina-fda.html</loc>
     <lastmod>2026-02-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/bexagliflozina-fda.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/bexagliflozina-fda.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/bexagliflozina-fda.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/cagrisema-orforglipron.html</loc>
     <lastmod>2026-01-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/cagrisema-orforglipron.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/cagrisema-orforglipron.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/cagrisema-orforglipron.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/cagrisema-orforglipron.html</loc>
     <lastmod>2026-01-15</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/cagrisema-orforglipron.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/cagrisema-orforglipron.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/cagrisema-orforglipron.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/terapia-genica-kriya.html</loc>
     <lastmod>2026-04-02</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/terapia-genica-kriya.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/terapia-genica-kriya.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/terapia-genica-kriya.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/terapia-genica-kriya.html</loc>
     <lastmod>2026-04-02</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/terapia-genica-kriya.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/terapia-genica-kriya.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/terapia-genica-kriya.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/sana-biotechnology-celulas-madre.html</loc>
     <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sana-biotechnology-celulas-madre.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sana-biotechnology-celulas-madre.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sana-biotechnology-celulas-madre.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/sana-biotechnology-celulas-madre.html</loc>
     <lastmod>2026-03-18</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sana-biotechnology-celulas-madre.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sana-biotechnology-celulas-madre.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sana-biotechnology-celulas-madre.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/semaglutida-riesgo-renal.html</loc>
     <lastmod>2026-02-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/semaglutida-riesgo-renal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/semaglutida-riesgo-renal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/semaglutida-riesgo-renal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/semaglutida-riesgo-renal.html</loc>
     <lastmod>2026-02-20</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/semaglutida-riesgo-renal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/semaglutida-riesgo-renal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/semaglutida-riesgo-renal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/microbiota-diabetes.html</loc>
     <lastmod>2026-05-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/microbiota-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/microbiota-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/microbiota-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/microbiota-diabetes.html</loc>
     <lastmod>2026-05-26</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/microbiota-diabetes.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/microbiota-diabetes.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/microbiota-diabetes.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/nice-2026-nutricion.html</loc>
     <lastmod>2026-02-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/nice-2026-nutricion.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/nice-2026-nutricion.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/nice-2026-nutricion.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/nice-2026-nutricion.html</loc>
     <lastmod>2026-02-01</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/nice-2026-nutricion.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/nice-2026-nutricion.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/nice-2026-nutricion.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/dieta-base-vegetal.html</loc>
     <lastmod>2026-02-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/dieta-base-vegetal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/dieta-base-vegetal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/dieta-base-vegetal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/dieta-base-vegetal.html</loc>
     <lastmod>2026-02-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/dieta-base-vegetal.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/dieta-base-vegetal.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/dieta-base-vegetal.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/perdida-peso-control-metabolico.html</loc>
     <lastmod>2026-02-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/perdida-peso-control-metabolico.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/perdida-peso-control-metabolico.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/perdida-peso-control-metabolico.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/perdida-peso-control-metabolico.html</loc>
     <lastmod>2026-02-05</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/perdida-peso-control-metabolico.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/perdida-peso-control-metabolico.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/perdida-peso-control-metabolico.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/entrenamiento-fuerza-hba1c.html</loc>
     <lastmod>2026-03-04</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/entrenamiento-fuerza-hba1c.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-hba1c.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/entrenamiento-fuerza-hba1c.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-hba1c.html</loc>
     <lastmod>2026-03-04</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/entrenamiento-fuerza-hba1c.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/entrenamiento-fuerza-hba1c.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/entrenamiento-fuerza-hba1c.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/sedentarismo-cada-30-minutos.html</loc>
     <lastmod>2026-04-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sedentarismo-cada-30-minutos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sedentarismo-cada-30-minutos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sedentarismo-cada-30-minutos.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/sedentarismo-cada-30-minutos.html</loc>
     <lastmod>2026-04-14</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/sedentarismo-cada-30-minutos.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/sedentarismo-cada-30-minutos.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/sedentarismo-cada-30-minutos.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/ejercicio-prevencion-diabetes-58.html</loc>
     <lastmod>2026-05-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ejercicio-prevencion-diabetes-58.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ejercicio-prevencion-diabetes-58.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ejercicio-prevencion-diabetes-58.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/ejercicio-prevencion-diabetes-58.html</loc>
     <lastmod>2026-05-08</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/ejercicio-prevencion-diabetes-58.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/ejercicio-prevencion-diabetes-58.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/ejercicio-prevencion-diabetes-58.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/educacion-paciente-cribado-retinopatia.html</loc>
     <lastmod>2026-02-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/educacion-paciente-cribado-retinopatia.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/educacion-paciente-cribado-retinopatia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/educacion-paciente-cribado-retinopatia.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/educacion-paciente-cribado-retinopatia.html</loc>
     <lastmod>2026-02-27</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/educacion-paciente-cribado-retinopatia.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/educacion-paciente-cribado-retinopatia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/educacion-paciente-cribado-retinopatia.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/control-glucemico-neuropatia.html</loc>
     <lastmod>2026-04-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/control-glucemico-neuropatia.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/control-glucemico-neuropatia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/control-glucemico-neuropatia.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/control-glucemico-neuropatia.html</loc>
     <lastmod>2026-04-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/control-glucemico-neuropatia.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/control-glucemico-neuropatia.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/control-glucemico-neuropatia.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/articulos/prevencion-retinopatia-control-glucosa.html</loc>
     <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/prevencion-retinopatia-control-glucosa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/prevencion-retinopatia-control-glucosa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/prevencion-retinopatia-control-glucosa.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/articulos/prevencion-retinopatia-control-glucosa.html</loc>
     <lastmod>2026-05-12</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/articulos/prevencion-retinopatia-control-glucosa.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/articulos/prevencion-retinopatia-control-glucosa.html" />
+    <image:image><image:loc>https://diabeteshoy.com/img/og/prevencion-retinopatia-control-glucosa.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://diabeteshoy.com/quienes-somos.html</loc>
@@ -746,13 +938,13 @@
   </url>
   <url>
     <loc>https://diabeteshoy.com/categoria/sensores.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/categoria/sensores.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/categoria/sensores.html" />
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/categoria/sensores.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/categoria/sensores.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/categoria/sensores.html" />
   </url>
@@ -806,13 +998,13 @@
   </url>
   <url>
     <loc>https://diabeteshoy.com/categoria/complicaciones.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/categoria/complicaciones.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/categoria/complicaciones.html" />
   </url>
   <url>
     <loc>https://diabeteshoy.com/en/categoria/complicaciones.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://diabeteshoy.com/categoria/complicaciones.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://diabeteshoy.com/en/categoria/complicaciones.html" />
   </url>

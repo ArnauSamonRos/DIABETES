@@ -533,6 +533,9 @@ const STRINGS = {
     originalSource: "Fuente original:",
     alsoLike: "También te puede interesar:",
     minRead: "min de lectura",
+    share: "Compartir:",
+    searchPlaceholder: "Buscar noticias…",
+    searchLabel: "Buscar noticias",
     disclaimerGeneric:
       "Este sitio recopila y resume información publicada por otros medios y fuentes especializadas con fines informativos. No constituye consejo médico: consulta siempre con tu equipo de salud antes de tomar decisiones sobre tratamiento, medicación o dieta.",
     langSwitchLabel: "English"
@@ -558,6 +561,9 @@ const STRINGS = {
     originalSource: "Original source:",
     alsoLike: "You might also like:",
     minRead: "min read",
+    share: "Share:",
+    searchPlaceholder: "Search news…",
+    searchLabel: "Search news",
     disclaimerGeneric:
       "This site collects and summarizes information published by other media outlets and specialized sources for informational purposes. It is not medical advice: always consult your healthcare team before making decisions about treatment, medication or diet.",
     langSwitchLabel: "Español"
@@ -668,6 +674,27 @@ function renderFooter(prefix, lang = "es") {
       <span>${t.footerDisclaimer}</span>
     </div>
   </footer>`;
+}
+
+// Enlaces de compartir en redes: son <a> normales con las URLs de intent de
+// cada red, sin JavaScript, para que funcionen igual con o sin JS activado.
+function renderShareLinks(url, title, lang = "es") {
+  const t = STRINGS[lang];
+  const encodedUrl = encodeURIComponent(url);
+  const encodedTitle = encodeURIComponent(title);
+  const links = [
+    { label: "X", icon: "🐦", href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}` },
+    { label: "WhatsApp", icon: "💬", href: `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}` },
+    { label: "LinkedIn", icon: "💼", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}` },
+    { label: "Facebook", icon: "📘", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}` }
+  ];
+  const linksHtml = links
+    .map(l => `<a href="${l.href}" class="share-link" target="_blank" rel="noopener noreferrer" aria-label="${l.label}"><span aria-hidden="true">${l.icon}</span> ${l.label}</a>`)
+    .join("\n      ");
+  return `    <div class="share-box">
+      <span class="share-label">${t.share}</span>
+      ${linksHtml}
+    </div>`;
 }
 
 function renderCard(article, prefix, options = {}, lang = "es") {
@@ -859,6 +886,12 @@ ${statsHtml}
       </div>
     </section>
 
+    <div class="search-box">
+      <label for="search-input" class="sr-only">${t.searchLabel}</label>
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input type="search" id="search-input" placeholder="${t.searchPlaceholder}" autocomplete="off" />
+    </div>
+
     <div class="filters" role="group" aria-label="${lang === "en" ? "Filter by category" : "Filtrar por categoría"}">
 ${filterButtons}
     </div>
@@ -986,6 +1019,7 @@ ${bodyHtml}
     <div class="source-box">
       ${t.originalSource} <a href="${article.fuenteUrl}" target="_blank" rel="noopener noreferrer">${escapeHtml(article.fuenteNombre)}</a>
     </div>
+${renderShareLinks(url, titulo, lang)}
   </main>
 
 ${relatedHtml}
@@ -1905,7 +1939,7 @@ function renderSitemap(articles) {
 
   const entries = [
     { pagePath: "index.html", lastmod: articles.reduce((max, a) => (a.fecha > max ? a.fecha : max), articles[0].fecha) },
-    ...articles.map(a => ({ pagePath: `articulos/${a.id}.html`, lastmod: a.fecha })),
+    ...articles.map(a => ({ pagePath: `articulos/${a.id}.html`, lastmod: a.fecha, image: ogImageForArticle(a) })),
     ...staticPages.map(p => ({ pagePath: p, lastmod: STATIC_PAGES_LASTMOD })),
     ...categoryPages
   ];
@@ -1914,14 +1948,15 @@ function renderSitemap(articles) {
   for (const entry of entries) {
     const esUrl = urlFor(entry.pagePath, "es");
     const enUrl = urlFor(entry.pagePath, "en");
+    const imageTag = entry.image ? `\n    <image:image><image:loc>${entry.image}</image:loc></image:image>` : "";
     for (const loc of [esUrl, enUrl]) {
       urlBlocks.push(
-        `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}" />\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />\n  </url>`
+        `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}" />\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}" />${imageTag}\n  </url>`
       );
     }
   }
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urlBlocks.join("\n")}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urlBlocks.join("\n")}\n</urlset>\n`;
 }
 
 function renderRobotsTxt() {

@@ -2,6 +2,156 @@
 // Cada artículo incluye su fuente original para verificación.
 const ARTICLES = [
   {
+    id: "anillo-inteligente-glucosa-alcohol-sudor",
+    categoria: "sensores",
+    titulo: "Un anillo inteligente mide la glucosa, el alcohol y otros biomarcadores a través del sudor",
+    tituloSeo: "Anillo inteligente mide glucosa y alcohol",
+    resumen: "Ingenieros de la Universidad de California en San Diego han desarrollado un anillo inteligente, publicado en Nature Communications, capaz de medir glucosa, cetonas, alcohol y otros tres biomarcadores en el sudor, sin necesidad de pincharse el dedo.",
+    fecha: "2026-08-03",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/08/03/nuevo-anillo-inteligente-puede-rastrear-azucar-en-sangre-y-alcohol/",
+    cuerpo: [
+      "Ingenieros de la Universidad de California en San Diego han desarrollado un anillo inteligente capaz de medir varios biomarcadores a la vez a partir del sudor, según un estudio publicado en la revista Nature Communications.",
+      "El dispositivo puede analizar hasta seis marcadores químicos: glucosa, cetonas, vitamina C, ácido úrico, lactato y alcohol. Utiliza un hidrogel especializado que absorbe el sudor de forma pasiva, sin necesidad de hacer ejercicio para generar una muestra, y envía los datos de forma inalámbrica a una aplicación móvil.",
+      "El prototipo pesa apenas 5,1 gramos, tiene un tamaño similar al de un anillo convencional y cuenta con una batería recargable de 12 horas de autonomía. Sus creadores lo presentan como una alternativa no invasiva a la punción digital para personas con diabetes, aunque todavía se trata de un prototipo de investigación."
+    ],
+    en: {
+      titulo: "A smart ring measures glucose, alcohol and other biomarkers through sweat",
+      tituloSeo: "Smart ring measures glucose, alcohol",
+      resumen: "Engineers at UC San Diego have developed a smart ring, published in Nature Communications, able to measure glucose, ketones, alcohol and three other biomarkers in sweat, with no finger prick required.",
+      cuerpo: [
+        "Engineers at the University of California San Diego have developed a smart ring able to measure several biomarkers at once from sweat, according to a study published in the journal Nature Communications.",
+        "The device can analyze up to six chemical markers: glucose, ketones, vitamin C, uric acid, lactate and alcohol. It uses a specialized hydrogel that passively absorbs sweat, with no need to exercise to generate a sample, and sends the data wirelessly to a mobile app.",
+        "The prototype weighs just 5.1 grams, is about the size of a regular ring, and has a rechargeable battery lasting 12 hours. Its creators present it as a non-invasive alternative to finger-prick testing for people with diabetes, though it remains a research prototype."
+      ]
+    }
+  },
+  {
+    id: "diabetes-tipo-2-empeora-menopausia",
+    categoria: "complicaciones",
+    titulo: "La diabetes tipo 2 podría empeorar los síntomas de la menopausia, según un estudio",
+    tituloSeo: "Diabetes tipo 2 y síntomas de menopausia",
+    resumen: "Un estudio publicado en la revista Menopause encontró que las mujeres con diabetes tipo 2 reportan más síntomas de la menopausia y de mayor gravedad, en todas las etapas, que las mujeres sin diabetes.",
+    fecha: "2026-08-06",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/08/06/la-diabetes-tipo-2-podria-empeorar-la-menopausia/",
+    cuerpo: [
+      "Un equipo de investigadores liderado por You Lee Kang, de la Universidad Eulji (Corea del Sur), encontró que las mujeres con diabetes tipo 2 reportan un número significativamente mayor de síntomas de la menopausia, y de mayor gravedad general, que las mujeres sin diabetes, en todas las etapas del proceso.",
+      "El estudio, publicado en la revista Menopause, siguió a casi 300 mujeres de entre 40 y 64 años en Corea del Sur. El estado de diabetes se determinó mediante análisis de sangre, y la gravedad de los síntomas se midió con un cuestionario específico sobre síntomas menopáusicos.",
+      "Tanto los autores del estudio como otros especialistas consultados coinciden en que estos resultados sugieren que el manejo de la menopausia debería integrarse en la atención habitual de la diabetes para las mujeres de mediana edad, en lugar de abordarse como dos cuestiones de salud independientes."
+    ],
+    en: {
+      titulo: "Type 2 diabetes could worsen menopause symptoms, study finds",
+      tituloSeo: "Type 2 diabetes and menopause symptoms",
+      resumen: "A study published in the journal Menopause found that women with type 2 diabetes report more numerous and more severe menopause symptoms, at every stage, than women without diabetes.",
+      cuerpo: [
+        "A team of researchers led by You Lee Kang, of Eulji University (South Korea), found that women with type 2 diabetes report a significantly higher number of menopause symptoms, and greater overall severity, than women without diabetes, at every stage of the process.",
+        "The study, published in the journal Menopause, followed nearly 300 women aged 40 to 64 in South Korea. Diabetes status was determined through blood tests, and symptom severity was measured with a specific menopause symptom questionnaire.",
+        "Both the study's authors and other specialists consulted agree that these results suggest menopause management should be integrated into regular diabetes care for middle-aged women, rather than treated as two separate health issues."
+      ]
+    }
+  },
+  {
+    id: "obesidad-sarcopenica-triplica-riesgo-diabetes",
+    categoria: "estudios",
+    titulo: "La obesidad con baja masa muscular triplica el riesgo de diabetes tipo 2, según un estudio",
+    tituloSeo: "Obesidad sarcopénica triplica el riesgo",
+    resumen: "Un estudio publicado en la revista Diabetes Care encontró que las personas con obesidad sarcopénica —una combinación de exceso de grasa corporal y pérdida de masa muscular— tienen más de tres veces y media más riesgo de desarrollar diabetes tipo 2.",
+    fecha: "2026-07-17",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/ciencia/2026/07/17/un-estudio-revela-que-la-obesidad-con-baja-masa-muscular-triplica-el-riesgo-de-diabetes-tipo-2/",
+    cuerpo: [
+      "Un estudio publicado en la revista Diabetes Care, y presentado por investigadores de la Universidad Curtin (Australia), analizó el efecto de la llamada obesidad sarcopénica: un perfil que combina la acumulación de grasa corporal propia de la obesidad con la sarcopenia, es decir, la pérdida de masa y de fuerza muscular.",
+      "Según los resultados, las personas con esta combinación tuvieron más de tres veces y media más probabilidades de desarrollar diabetes tipo 2 que las personas con una composición corporal considerada saludable. En concreto, casi el 15% de las personas con obesidad sarcopénica desarrollaron diabetes tipo 2 en un plazo de 10 años, frente a alrededor del 11% de las personas con obesidad sin sarcopenia y solo el 3% de quienes no tenían ni obesidad ni sarcopenia.",
+      "El autor principal del estudio, Zhongyang Guan, señaló que evaluar el riesgo de diabetes tipo 2 \"debería ir más allá de la báscula\", ya que la salud muscular, y no solo la cantidad de grasa corporal, también forma parte del rompecabezas a la hora de estimar el riesgo real de cada persona."
+    ],
+    en: {
+      titulo: "Obesity combined with low muscle mass triples type 2 diabetes risk, study finds",
+      tituloSeo: "Sarcopenic obesity triples risk",
+      resumen: "A study published in Diabetes Care found that people with sarcopenic obesity — a combination of excess body fat and muscle loss — are more than three and a half times more likely to develop type 2 diabetes.",
+      cuerpo: [
+        "A study published in the journal Diabetes Care, led by researchers at Curtin University (Australia), examined the effect of so-called sarcopenic obesity: a profile that combines the body fat buildup typical of obesity with sarcopenia, meaning the loss of muscle mass and strength.",
+        "According to the results, people with this combination were more than three and a half times more likely to develop type 2 diabetes than people with a body composition considered healthy. Specifically, nearly 15% of people with sarcopenic obesity developed type 2 diabetes within 10 years, compared with about 11% of people with obesity but no sarcopenia, and just 3% of those with neither obesity nor sarcopenia.",
+        "The study's lead author, Zhongyang Guan, said that assessing type 2 diabetes risk \"should go beyond the scale,\" since muscle health, not just the amount of body fat, is also part of the puzzle when estimating each person's real risk."
+      ]
+    }
+  },
+  {
+    id: "infecciones-riesgo-salud-diabetes-estudio",
+    categoria: "complicaciones",
+    titulo: "Las infecciones son un \"gran riesgo para la salud\" de las personas con diabetes, advierte un estudio",
+    tituloSeo: "Infecciones: un gran riesgo en diabetes",
+    resumen: "Un estudio con datos de más de 800.000 personas, publicado en la revista Diabetes, encontró que quienes tienen diabetes tipo 1, tipo 2 o incluso prediabetes presentan un riesgo claramente mayor de infecciones graves, tratadas en atención primaria o que requieren hospitalización.",
+    fecha: "2026-06-10",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/06/10/las-infecciones-son-un-gran-riesgo-para-la-salud-de-las-personas-con-diabetes-advierte-un-gran-estudio/",
+    cuerpo: [
+      "Un estudio con datos de más de 800.000 personas con diabetes o prediabetes, publicado en la revista Diabetes, advierte de que las infecciones son un riesgo para la salud mayor de lo habitualmente reconocido en esta población, con una probabilidad claramente superior de sufrir infecciones graves.",
+      "Según los resultados, las personas con diabetes tipo 1 presentaron el mayor riesgo: un 81% más de probabilidad de que su médico les diagnosticara y tratara una infección, y un 337% más de riesgo de hospitalización por esa causa, en comparación con personas sin diabetes. En diabetes tipo 2, ese riesgo fue un 51% mayor en atención primaria y un 91% mayor en hospitalizaciones, mientras que en prediabetes fue un 35% y un 33% mayor, respectivamente.",
+      "La investigadora principal, Julia Critchley, catedrática de epidemiología en City St George's, de la Universidad de Londres, señaló que \"las infecciones son frecuentes, graves y a menudo prevenibles, pero están prácticamente ausentes de las guías clínicas\" sobre diabetes, lo que sugiere que merecerían más atención en el seguimiento habitual de la enfermedad."
+    ],
+    en: {
+      titulo: "Infections are a \"major health risk\" for people with diabetes, study warns",
+      tituloSeo: "Infections: a major risk in diabetes",
+      resumen: "A study of more than 800,000 people, published in the journal Diabetes, found that people with type 1 diabetes, type 2 diabetes or even prediabetes face a clearly higher risk of serious infections, whether treated in primary care or requiring hospitalization.",
+      cuerpo: [
+        "A study using data from more than 800,000 people with diabetes or prediabetes, published in the journal Diabetes, warns that infections are a bigger health risk than usually recognized in this population, with a clearly higher likelihood of serious infections.",
+        "According to the results, people with type 1 diabetes faced the highest risk: 81% more likely to have an infection diagnosed and treated by their doctor, and 337% more likely to be hospitalized for one, compared with people without diabetes. For type 2 diabetes, that risk was 51% higher in primary care and 91% higher for hospitalizations, while for prediabetes it was 35% and 33% higher, respectively.",
+        "Lead researcher Julia Critchley, professor of epidemiology at City St George's, University of London, said that \"infections are common, serious and often preventable, but are largely absent from clinical guidelines\" on diabetes, suggesting they deserve more attention in routine disease follow-up."
+      ]
+    }
+  },
+  {
+    id: "pandemia-metabolica-diabetes-triplica-america",
+    categoria: "dietas",
+    titulo: "La \"pandemia metabólica\" de la diabetes se triplica en América y refuerza la importancia de la dieta proteica",
+    tituloSeo: "Diabetes se triplica en América",
+    resumen: "Según la Organización Panamericana de la Salud, el número de personas con diabetes se ha triplicado en América en la última década, impulsado por el sedentarismo y el exceso de peso; los especialistas insisten en la importancia de una dieta rica en proteínas y el ejercicio de tonificación muscular.",
+    fecha: "2026-07-24",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/america/agencias/2026/07/24/la-pandemia-metabolica-de-la-diabetes-se-triplica-en-america-e-impulsa-nuevos-farmacos/",
+    cuerpo: [
+      "El número de personas con diabetes se ha triplicado en América en la última década, según datos de la Organización Panamericana de la Salud (OPS), con el sedentarismo extremo y el exceso de peso como principales impulsores de lo que algunos especialistas ya describen como una \"pandemia metabólica\".",
+      "El endocrinólogo argentino Adrián Proietti, investigador clínico internacional y exdirector médico del Instituto de Diabetes y Tecnología Aplicada de Argentina, repasa en este contexto los avances farmacológicos más recientes: una nueva familia de medicamentos basados en incretinas, sustancias que el propio organismo produce a nivel intestinal, entre los que se encuentra la semaglutida.",
+      "Más allá del tratamiento farmacológico, Proietti insiste en que las personas que usan este tipo de medicamentos deben mantener una alimentación rica en proteínas y realizar ejercicios de tonificación muscular para preservar su masa muscular, ya que la reducción del apetito que provocan estos fármacos puede derivar en déficits nutricionales si no se acompaña de una nutrición cuidada."
+    ],
+    en: {
+      titulo: "Diabetes's \"metabolic pandemic\" triples across the Americas, reinforcing the importance of a protein-rich diet",
+      tituloSeo: "Diabetes triples across the Americas",
+      resumen: "According to the Pan American Health Organization, the number of people with diabetes has tripled across the Americas over the past decade, driven by sedentary lifestyles and excess weight; specialists stress the importance of a protein-rich diet and muscle-toning exercise.",
+      cuerpo: [
+        "The number of people with diabetes has tripled across the Americas over the past decade, according to data from the Pan American Health Organization (PAHO), with extreme sedentary behavior and excess weight as the main drivers of what some specialists now describe as a \"metabolic pandemic.\"",
+        "Argentine endocrinologist Adrián Proietti, an international clinical researcher and former medical director of Argentina's Institute of Diabetes and Applied Technology, reviews the latest drug developments in this context: a new family of medicines based on incretins, substances the body itself produces in the gut, which include semaglutide.",
+        "Beyond drug treatment, Proietti stresses that people using these medications should maintain a protein-rich diet and do muscle-toning exercise to preserve muscle mass, since the appetite reduction these drugs cause can lead to nutritional deficits if not paired with careful nutrition."
+      ]
+    }
+  },
+  {
+    id: "diabetes-tipo-1-tipo-2-riesgo-demencia",
+    categoria: "estudios",
+    titulo: "Tanto la diabetes tipo 1 como la tipo 2 aumentan el riesgo de demencia, según un gran estudio",
+    tituloSeo: "Diabetes tipo 1 y 2 aumentan la demencia",
+    resumen: "Un estudio con más de 283.000 personas, publicado en la revista Neurology, encontró que la diabetes tipo 1 casi triplica el riesgo de demencia y la diabetes tipo 2 lo duplica, en comparación con las personas sin diabetes.",
+    fecha: "2026-03-20",
+    fuenteNombre: "Infobae",
+    fuenteUrl: "https://www.infobae.com/salud/2026/03/20/ambos-tipos-de-diabetes-aumentan-el-riesgo-de-demencia/",
+    cuerpo: [
+      "Un estudio con 283.772 personas, con una edad media de 64 años, encontró que tanto la diabetes tipo 1 como la tipo 2 aumentan de forma significativa el riesgo de demencia, según los resultados publicados el 18 de marzo en la revista Neurology.",
+      "Los participantes con diabetes tipo 1 (5.442 personas) tuvieron casi el triple de probabilidades de desarrollar demencia que quienes no tenían diabetes, mientras que los participantes con diabetes tipo 2 (51.511 personas) tuvieron el doble de probabilidades. Es uno de los primeros grandes estudios en establecer esta relación también para la diabetes tipo 1.",
+      "Durante un seguimiento medio de 2,4 años, 2.348 personas desarrollaron demencia; los autores calculan que alrededor del 65% de los casos de demencia entre las personas con diabetes tipo 2 del estudio podrían atribuirse a la propia enfermedad, posiblemente por el daño que la glucosa elevada causa en las células cerebrales, los vasos sanguíneos y la acumulación de proteínas tóxicas relacionadas con el alzhéimer."
+    ],
+    en: {
+      titulo: "Both type 1 and type 2 diabetes raise dementia risk, large study finds",
+      tituloSeo: "Diabetes types 1 and 2 raise dementia risk",
+      resumen: "A study of more than 283,000 people, published in the journal Neurology, found that type 1 diabetes nearly triples dementia risk and type 2 diabetes doubles it, compared with people without diabetes.",
+      cuerpo: [
+        "A study of 283,772 people, with an average age of 64, found that both type 1 and type 2 diabetes significantly raise dementia risk, according to results published on March 18 in the journal Neurology.",
+        "Participants with type 1 diabetes (5,442 people) were nearly three times more likely to develop dementia than those without diabetes, while participants with type 2 diabetes (51,511 people) were twice as likely. It's one of the first large studies to establish this link for type 1 diabetes as well.",
+        "Over an average follow-up of 2.4 years, 2,348 people developed dementia; the authors estimate that around 65% of dementia cases among people with type 2 diabetes in the study could be attributed to the disease itself, possibly due to damage high glucose causes to brain cells and blood vessels, and buildup of toxic proteins linked to Alzheimer's disease."
+      ]
+    }
+  },
+  {
     id: "harvard-legumbres-corazon-azucar-sangre",
     categoria: "dietas",
     titulo: "Harvard recomienda incorporar legumbres a la dieta para cuidar el corazón y controlar el azúcar en sangre",

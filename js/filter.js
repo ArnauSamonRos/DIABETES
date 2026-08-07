@@ -1,5 +1,6 @@
 const PAGE_SIZE = 9;
 let visibleCountTodas = PAGE_SIZE;
+let currentFiltro = "todas";
 
 const FILTER_LANG = document.documentElement.lang === "en" ? "en" : "es";
 const FILTER_STRINGS = {
@@ -83,12 +84,35 @@ function applyFilter(filtro, animate) {
   if (loadMoreWrap) loadMoreWrap.style.display = paginate && remaining > 0 ? "" : "none";
 }
 
+// Búsqueda por texto: independiente del filtro de categoría, muestra todas
+// las coincidencias sin paginar (el usuario está buscando algo concreto).
+function applySearch(query) {
+  const cards = Array.from(document.querySelectorAll(".card"));
+  const q = query.trim().toLowerCase();
+  let visibleCount = 0;
+
+  cards.forEach(card => {
+    const title = (card.querySelector(".card-title")?.textContent || "").toLowerCase();
+    const summary = (card.querySelector(".card-summary")?.textContent || "").toLowerCase();
+    const show = title.includes(q) || summary.includes(q);
+    card.style.display = show ? "" : "none";
+    if (show) visibleCount += 1;
+  });
+
+  const emptyState = document.getElementById("empty-state");
+  if (emptyState) emptyState.hidden = visibleCount > 0;
+
+  const loadMoreWrap = document.getElementById("load-more-wrap");
+  if (loadMoreWrap) loadMoreWrap.style.display = "none";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   if (!document.getElementById("grid")) return;
 
   const validCats = ["sensores", "medicacion", "estudios", "dietas", "ejercicio", "complicaciones"];
   const hash = window.location.hash.replace("#", "");
   const filtroInicial = validCats.includes(hash) ? hash : "todas";
+  currentFiltro = filtroInicial;
 
   setActiveFilterButton(filtroInicial);
   applyFilter(filtroInicial, false);
@@ -96,10 +120,25 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".filter-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       const filtro = btn.dataset.filtro;
+      currentFiltro = filtro;
       if (filtro === "todas") visibleCountTodas = PAGE_SIZE;
       setActiveFilterButton(filtro);
       applyFilter(filtro, true);
       history.replaceState(null, "", filtro === "todas" ? "index.html" : `index.html#${filtro}`);
     });
   });
+
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const q = searchInput.value;
+      if (q.trim()) {
+        document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+        applySearch(q);
+      } else {
+        setActiveFilterButton(currentFiltro);
+        applyFilter(currentFiltro, false);
+      }
+    });
+  }
 });

@@ -29,6 +29,7 @@ Todo el sitio existe también en inglés bajo `/en/` (`en/index.html`, `en/artic
 - La cabecera incluye un selector de idioma (enlace "🌐 English" / "🌐 Español") que enlaza directamente con la página equivalente en el otro idioma — no es un botón de JavaScript, así que funciona sin JS y cada versión es indexable por separado.
 - Los recursos estáticos (`css/`, `js/`, `img/`, `favicon.svg`) no se duplican bajo `en/`: las páginas en inglés enlazan a los mismos archivos de la raíz con una ruta relativa adicional (`../`).
 - `js/filter.js` y `js/motion.js` son scripts compartidos entre los dos idiomas; detectan el idioma de la página con `document.documentElement.lang` para mostrar sus pocos textos generados por JS (el botón "Cargar más noticias"/"Load more news" y el `aria-label` de "Volver arriba"/"Back to top") en el idioma correcto.
+- La portada incluye un buscador (`#search-input`) que filtra las tarjetas ya renderizadas por texto (título y resumen), como mejora progresiva en `js/filter.js`: sin JavaScript, todas las noticias siguen visibles en el HTML.
 
 ## SEO
 
@@ -46,6 +47,8 @@ El sitio está pensado para que los buscadores puedan indexar el contenido sin e
 - Cada artículo tiene su propia imagen para redes sociales en `img/og/<id>.png` (generada a partir de su `tituloSeo` y su categoría). Si un artículo nuevo no tiene imagen todavía en esa carpeta, `build.js` usa automáticamente la genérica `img/og-cover.png` como respaldo — no hace falta generarla a mano para publicar.
 - El JSON-LD `NewsArticle` de cada artículo incluye también `author` (la propia `Organization` de DiabetesHoy, además de `publisher`) y `wordCount` (calculado automáticamente a partir del `cuerpo` con la función `wordCount` de `build.js`), dos señales adicionales de E-E-A-T para los buscadores.
 - Cada tarjeta y cada página de artículo muestran un tiempo de lectura estimado ("X min de lectura"/"X min read", función `readingTimeMinutes` en `build.js`, ~200 palabras/minuto) junto a la fecha, calculado a partir del idioma correspondiente del artículo.
+- `sitemap.xml` incluye una etiqueta `<image:image>` con la imagen social de cada artículo (namespace `xmlns:image`), para facilitar que Google Imágenes indexe esas portadas.
+- Cada página de artículo incluye enlaces para compartir en X, WhatsApp, LinkedIn y Facebook (`renderShareLinks` en `build.js`): son `<a>` normales con las URLs de "intent" de cada red, sin JavaScript, así que funcionan igual con o sin JS activado y no afectan a la indexación.
 - Cada categoría (`categoria/<slug>.html`) tiene ahora su propia página indexable, con título, meta descripción y JSON-LD (`CollectionPage` + `ItemList`) propios. Antes solo existían como ancla dentro de la portada (`index.html#categoria`), invisibles para el buscador como contenido independiente; esto amplía el número de páginas relevantes que pueden posicionar cuando alguien busca, por ejemplo, "sensores de glucosa" o "dietas para diabetes".
 - `glosario.html` añade contenido de cola larga (~20 términos con su definición y JSON-LD `DefinedTermSet`) para búsquedas del tipo "qué es la HbA1c" o "qué es la resistencia a la insulina", con enlaces internos hacia las noticias y guías relacionadas.
 
